@@ -1,0 +1,35 @@
+<section class="header">
+  <div class="back-button" (click)="goBack()">
+    <i class="icon material-icons">chevron_left</i>
+    <span class="label">go back</span>
+  </div>
+  <div class="container">
+    <img class="image" alt="project-image" [src]="project?.image" />
+    <div class="project-details">
+      <span class="detail-title">Project type</span>
+      <span class="detail-value">{{project?.type}}</span>
+      <span class="detail-title">Technologies</span>
+      <div *ngFor="let language of project?.languages" class="tech-item">
+        <i class="icon {{ language | prefixIcon }}"></i>
+        <span class="label">{{language}}</span>
+      </div>
+      <span class="detail-title">Project duration</span>
+      <span class="detail-value">{{project?.duration}}</span>
+      <span class="detail-title">Team size</span>
+      <span class="detail-value">{{project?.teamSize}}</span>
+    </div>
+  </div>
+</section>
+<app-content-block>
+  <div class="content">
+    <h1 class="title">
+      {{project?.title}}
+    </h1>
+    <p class="sub-title">{{project?.description}}</p>
+    <p class="description" *ngFor="let desc of project?.content">
+      {{desc}}
+    </p>
+  </div>
+</app-content-block>
+<app-footer></app-footer>
+<app-back-to-top></app-back-to-top>

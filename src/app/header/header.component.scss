@@ -1,0 +1,85 @@
+$picture-overlap: 4rem;
+
+.header {
+  align-items: center;
+  background-color: var(--col-blue-lightest);
+  background-image: url('../../assets/pattern.svg');
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+  padding-top: 4rem;
+  text-align: center;
+
+  .profile-image {
+    border: 0.5rem var(--col-white) solid;
+    border-radius: 5.5rem;
+    height: 10rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .content {
+    background-color: var(--col-white);
+    border-radius: 2rem;
+    padding: $picture-overlap 1rem 2rem 1rem;
+    position: relative;
+    top: -$picture-overlap;
+    margin-bottom: -14rem;
+
+    -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
+    -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
+    box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
+
+    .title {
+      color: var(--col-blue-darker);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      padding-bottom: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    .sub-title {
+      color: var(--col-blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.5rem 0 1rem 2rem;
+
+      .row {
+        align-items: center;
+        color: var(--col-blue-darker);
+        display: flex;
+        padding-bottom: 1rem;
+
+        .icon {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .header {
+    padding-top: 8rem;
+
+    .content {
+      padding: $picture-overlap 4rem 2rem 4rem;
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .sub-title {
+        font-size: 1rem;
+      }
+    }
+  }
+}

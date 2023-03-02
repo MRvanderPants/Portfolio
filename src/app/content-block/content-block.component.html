@@ -1,0 +1,8 @@
+<section class="content-block {{theme}}">
+  <div class="content">
+    <h3 *ngIf="blockTitle.length > 0" class="title">
+      {{blockTitle}}
+    </h3>
+    <ng-content></ng-content>
+  </div>
+</section>

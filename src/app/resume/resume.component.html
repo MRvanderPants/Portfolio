@@ -1,0 +1,20 @@
+<section class="resume">
+  <div class="entry" *ngFor="let job of jobs">
+    <p class="start">{{job.date_end ? job.date_end : 'Present'}}</p>
+    <div class="content">
+      <p class="role">{{job.role}}</p>
+      <div class="client" *ngFor="let client of job.clients">
+        <i class="icon material-icons">location_on</i>
+        <span class="label">{{client}}</span>
+      </div>
+      <div class="description-wrapper">
+        <p class="description">{{job.description}}</p>
+        <div class="tech-tags">
+          <div class="tag" *ngFor="let skill of job.skills">
+            {{skill}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

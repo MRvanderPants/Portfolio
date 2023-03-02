@@ -1,0 +1,13 @@
+<section class="projects">
+  <div class="project" *ngFor="let project of projects" (click)="goToPage(project.id)">
+    <img class="image" [src]="project.image" alt="project-image" />
+    <div class="title-bar">
+      <p class="title">{{project.title}}</p>
+      <div class="tech">
+        <div *ngFor="let language of project.languages" class="item">
+          <i class="icon {{ language | prefixIcon }}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

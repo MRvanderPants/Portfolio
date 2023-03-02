@@ -1,0 +1,51 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  .project {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0 1rem 1rem 0;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s;
+    width: calc(33% - 1rem);
+
+    -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
+    -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
+    box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .image {
+      aspect-ratio: 16/9;
+      width: 100%;
+    }
+
+    .title-bar {
+      background-color: var(--col-white);
+      bottom: 0;
+      display: flex;
+      padding: 0.5rem 1rem;
+      position: absolute;
+      width: calc(100% - 2rem);
+
+      .title {
+        color: var(--col-grey-medium);
+        flex-grow: 1;
+      }
+
+      .tech {
+        align-items: center;
+        display: flex;
+
+        .icon {
+          color: var(--col-grey);
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}

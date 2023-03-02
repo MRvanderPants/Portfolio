@@ -1,0 +1,26 @@
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+
+  .item {
+    align-items: center;
+    color: var(--col-grey-darker);
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    padding-bottom: 2rem;
+    width: calc(33% - 1rem);
+
+    .icon {
+      color: var(--col-grey-60);
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .label {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}

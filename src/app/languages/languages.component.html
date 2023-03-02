@@ -1,0 +1,6 @@
+<div class="tech-stack">
+  <div *ngFor="let language of languages" class="item">
+    <i class="icon {{ language.icon | prefixIcon }}"></i>
+    <span class="label">{{language.name}}</span>
+  </div>
+</div>
