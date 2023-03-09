@@ -1,6 +1,6 @@
 <section class="resume">
   <div class="entry" *ngFor="let job of jobs">
-    <p class="start">{{job.date_end ? job.date_end : 'Present'}}</p>
+    <p class="start">{{job.date_start}}</p>
     <div class="content">
       <p class="role">{{job.role}}</p>
       <div class="client" *ngFor="let client of job.clients">

@@ -2,14 +2,21 @@ $picture-overlap: 4rem;
 
 .header {
   align-items: center;
-  background-color: var(--col-blue-lightest);
   display: flex;
   flex-direction: column;
-  height: 10rem;
-  margin-bottom: 8rem;
   padding-top: 4rem;
   position: relative;
   text-align: center;
+
+  .back {
+    position: absolute;
+    background-color: var(--col-blue-lightest);
+    background-image: url('../../../assets/pattern.svg');
+    height: 10rem;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 
   .back-button {
     align-items: center;
@@ -17,12 +24,13 @@ $picture-overlap: 4rem;
     display: flex;
     left: 0;
     padding: 1rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     transition: all .2s;
 
     &:hover {
       opacity: 0.6;
+      transform: scale(1.05);
     }
 
     &:active {
@@ -37,13 +45,15 @@ $picture-overlap: 4rem;
 
   .container {
     display: flex;
+    flex-direction: column;
     margin: auto;
     width: 80vw;
 
     .image {
+      aspect-ratio: 16/9;
       border-radius: 1rem;
-      margin-right: 2rem;
-      width: 60%;
+      margin-bottom: 1rem;
+      width: 100%;
     }
 
     .project-details {
@@ -88,9 +98,7 @@ $picture-overlap: 4rem;
 }
 
 .content {
-  padding: $picture-overlap 1rem 2rem 1rem;
-  position: relative;
-  top: -2rem;
+  padding: 1rem 1rem 2rem 1rem;
 
   .title {
     color: var(--col-blue-darker);
@@ -98,7 +106,6 @@ $picture-overlap: 4rem;
     font-size: 1.25rem;
     font-weight: 900;
     padding-bottom: 0.5rem;
-    padding-top: 1rem;
   }
 
   .sub-title {
@@ -117,6 +124,17 @@ $picture-overlap: 4rem;
 }
 
 @media screen and (min-width: 640px) {
+  .header {
+    .container {
+      flex-direction: row;
+
+      .image {
+        margin-right: 2rem;
+        margin-bottom: 0;
+        width: 60%;
+      }
+    }
+  }
   .content {
     .title {
       font-size: 2rem;

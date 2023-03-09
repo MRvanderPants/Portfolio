@@ -9,10 +9,10 @@ export class ResumeComponent {
   public jobs = [{
     role: 'Fullstack developer',
     skills: ['React', 'React-native', 'Vue', 'Next/ Nuxt', 'Typescript', 'NodeJS'],
-    date_start: '2021',
+    date_start: '2022',
     date_end: '',
     clients: ['Livewall Group'],
-    description: `Working as a all-round software engineer on a software package that generates complex underground networks, with a focus on implementing map and interface features.`
+    description: `Working as a full-stack developer on a number of different apps and websites for a large number of customers, with a large variety of technologies.`
   }, {
     role: 'Software developer',
     skills: ['Angular', 'Typescript', 'RXJS', 'Jest', 'NodeJS'],

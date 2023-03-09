@@ -118,6 +118,10 @@
       width: 4.25rem;
     }
 
+    &.blue::before {
+      background-color: var(--col-blue-desaturated);
+    }
+
     .content {
       flex-direction: row;
 

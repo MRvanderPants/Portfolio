@@ -8,7 +8,7 @@ import { Project, projects } from 'src/assets/projects';
   styleUrls: ['./project-grid.component.scss']
 })
 export class ProjectGridComponent {
-  public projects: Project[] = projects;
+  public projects: Project[] = projects.sort((a, b) => b.id - a.id);
 
   constructor(public readonly router: Router) {}
 

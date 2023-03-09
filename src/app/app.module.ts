@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { DetailScreenComponent } from './screens/detail-screen/detail-screen.component';
 import { ProjectGridComponent } from './project-grid/project-grid.component';
+import { PictureCarouselComponent } from './picture-carousel/picture-carousel.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProjectGridComponent } from './project-grid/project-grid.component';
     HomeScreenComponent,
     DetailScreenComponent,
     ProjectGridComponent,
+    PictureCarouselComponent,
   ],
   imports: [
     BrowserModule,
