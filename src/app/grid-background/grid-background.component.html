@@ -1,0 +1,14 @@
+<div id="grid-background" class="wrapper">
+  <div class="container"
+    [ngStyle]="{'margin-top': -containerMargin + 'px'}">
+    <div
+      *ngFor="let item of items; let i = index"
+      class="grid-item"
+      [ngStyle]="{
+        height: itemHeight + 'px',
+        width: itemWidth + 'px',
+        'background-image': 'url(\'' + item + '\')'
+      }">
+    </div>
+  </div>
+</div>

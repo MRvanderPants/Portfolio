@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: calc(200% - 2rem);
+    padding: 0.5rem;
+    pointer-events: none;
+    width: 100%;
+    transition: margin .005s;
+
+    &:before {
+      background: linear-gradient(0deg, rgba(0,0,0,0.033) 0%, rgba(0,0,0,0) 100%);
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2rem;
+      width: 100%;
+    }
+
+    &:after {
+      background-color: #00000050;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .grid-item {
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 0.33rem solid var(--col-grey);
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+
+
+      -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
+      -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
+      box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
+
+      &:nth-child(odd) {
+        position: relative;
+        top: -25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    display: none;
+  }
+}

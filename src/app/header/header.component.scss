@@ -2,29 +2,69 @@ $picture-overlap: 4rem;
 
 .header {
   align-items: center;
-  background-color: var(--col-blue-lightest);
+  background-color: var(--col-blue);
   background-image: url('../../assets/pattern.svg');
   display: flex;
   flex-direction: column;
   margin-bottom: 8rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
+  position: relative;
   text-align: center;
 
+  &:after {
+    background-color: var(--col-grey-lightest);
+    bottom: 0;
+    content: '';
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+    height: 6rem;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .iso-wrapper {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .profile-image {
-    border: 0.5rem var(--col-white) solid;
-    border-radius: 5.5rem;
-    height: 10rem;
     position: relative;
-    z-index: 1;
+    pointer-events: none;
+
+    img {
+      border: 0.5rem var(--col-white) solid;
+      border-radius: 5.5rem;
+      height: 10rem;
+      position: relative;
+      width: 10rem;
+      z-index: 100;
+    }
+
+    &:before {
+      background-image: url('../../assets/gfx/shape_white.svg');
+      background-size: cover;
+      content: '';
+      height: 12rem;
+      left: -0.5rem;
+      position: absolute;
+      top: -0.5rem;
+      width: 12rem;
+    }
   }
 
   .content {
     background-color: var(--col-white);
+    background-size: auto 100%;
     border-radius: 2rem;
     padding: $picture-overlap 1rem 2rem 1rem;
     position: relative;
-    top: -$picture-overlap;
+    pointer-events: none;
+    top: -5rem;
     margin-bottom: -14rem;
+    z-index: 10;
 
     -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
     -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
@@ -36,7 +76,7 @@ $picture-overlap: 4rem;
       font-size: 1.25rem;
       font-weight: 900;
       padding-bottom: 0.5rem;
-      padding-top: 1rem;
+      padding-top: 2rem;
     }
 
     .sub-title {
@@ -68,6 +108,8 @@ $picture-overlap: 4rem;
 
 @media screen and (min-width: 640px) {
   .header {
+    background-color: var(--col-blue-darker);
+    background-image: none;
     padding-top: 8rem;
 
     .content {

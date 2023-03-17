@@ -1,5 +1,26 @@
-.description {
-  color: var(--col-grey-medium);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+.row {
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    justify-content: center;
+    color: var(--col-grey-medium);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .row {
+    flex-direction: row;
+
+    .description {
+      margin-right: 4rem;
+      width: 50vw;
+    }
+
+    .languages {
+      margin-top: -2rem;
+    }
+  }
 }

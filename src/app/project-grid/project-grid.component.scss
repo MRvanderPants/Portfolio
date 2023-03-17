@@ -1,15 +1,22 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 
   .project {
+    align-items: center;
+    background-color: var(--col-grey);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0.5rem;
     cursor: pointer;
+    display: flex;
     margin: 0 1rem 1rem 0;
     overflow: hidden;
+    padding: 1rem 0 3rem 0;
     position: relative;
     transition: all .2s;
-    width: calc(33% - 1rem);
+    width: 100%;
 
     -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
     -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
@@ -17,6 +24,17 @@
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    .project-logo {
+      aspect-ratio: 1/1;
+      border-radius: 0.5rem;
+      margin: 2rem;
+      width: 20%;
+
+      -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
+      -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
+      box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
     }
 
     .image {
@@ -46,6 +64,16 @@
           margin-left: 0.5rem;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .projects {
+    flex-direction: row;
+
+    .project {
+      width: calc(33% - 1rem);
     }
   }
 }
