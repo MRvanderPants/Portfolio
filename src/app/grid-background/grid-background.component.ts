@@ -16,7 +16,7 @@ export class GridBackgroundComponent implements OnInit {
   public ngOnInit() {
     this.itemHeight = this.calculateHeight();
     this.itemWidth = this.calculateWidth();
-    this.itemMarginTop = this.calculateMarginTop();
+    // this.itemMarginTop = this.calculateMarginTop();
 
     const itemList = projects.flatMap(p => p.screenshots ?? []);
     this.items = this.shuffle(itemList);
@@ -26,13 +26,13 @@ export class GridBackgroundComponent implements OnInit {
     window.addEventListener('resize', () => {
       this.itemHeight = this.calculateHeight();
       this.itemWidth = this.calculateWidth();
-      this.itemMarginTop = this.calculateMarginTop();
+      // this.itemMarginTop = this.calculateMarginTop();
       wrapperHeight = background.clientHeight;
     });
 
     background.addEventListener('mousemove', (event: any) => {
       const percentage = (event.y / wrapperHeight) * 100;
-      this.containerMargin = percentage + 25;
+      this.containerMargin = percentage;
     });
   }
 

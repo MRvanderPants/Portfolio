@@ -19,6 +19,9 @@ export class DetailScreenComponent implements OnInit {
   ngOnInit() {
     const id = parseInt(this.route.snapshot.paramMap.get('id') ?? '-1', 10);
     this.project = projects.find(p => p.id === id)!;
+    setTimeout(() => {
+      window.scroll({top: 0, behavior: 'smooth'})
+    }, 50);
   }
 
   public goBack() {

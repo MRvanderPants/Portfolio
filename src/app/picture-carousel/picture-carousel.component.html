@@ -4,5 +4,12 @@
     *ngFor="let url of project?.screens"
     [src]="url"
     [style]="imageStyles()"
+    (click)="openImage(url)"
   />
 </section>
+<div *ngIf="targetPanelOpen" class="viewbox" (click)="closeModal()">
+  <img
+    class="image"
+    [src]="targetImageUrl"
+  />
+</div>

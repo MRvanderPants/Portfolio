@@ -1,5 +1,8 @@
 .content-block {
+  display: flex;
+  flex-direction: column;
   padding: 6rem 1.5rem;
+  position: relative;
 
   &.blue {
     background-color: var(--col-blue-desaturated);

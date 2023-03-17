@@ -6,21 +6,10 @@ $picture-overlap: 4rem;
   background-image: url('../../assets/pattern.svg');
   display: flex;
   flex-direction: column;
-  margin-bottom: 8rem;
+  height: 75vh;
   padding-top: 2rem;
   position: relative;
   text-align: center;
-
-  &:after {
-    background-color: var(--col-grey-lightest);
-    bottom: 0;
-    content: '';
-    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
-    height: 6rem;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-  }
 
   .iso-wrapper {
     height: 100%;
@@ -56,9 +45,12 @@ $picture-overlap: 4rem;
   }
 
   .content {
+    align-items: center;
     background-color: var(--col-white);
     background-size: auto 100%;
     border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
     padding: $picture-overlap 1rem 2rem 1rem;
     position: relative;
     pointer-events: none;
@@ -110,7 +102,19 @@ $picture-overlap: 4rem;
   .header {
     background-color: var(--col-blue-darker);
     background-image: none;
+    margin-bottom: 4rem;
     padding-top: 8rem;
+
+    &:after {
+      background-color: var(--col-grey-lightest);
+      bottom: 0;
+      content: '';
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+      height: 3rem;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
 
     .content {
       padding: $picture-overlap 4rem 2rem 4rem;

@@ -8,7 +8,23 @@
     cursor: pointer;
     display: block;
     margin-bottom: 1rem;
+    max-width: 25vw;
     transition: all .2s;
+    width: 100%;
+  }
+}
+
+.viewbox {
+  background-color: #00000050;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 200;
+
+  .image {
+    height: auto;
     width: 100%;
   }
 }
@@ -23,6 +39,20 @@
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+
+  .viewbox {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .image {
+      border-radius: 0.5rem;
+      max-height: 90vh;
+      max-width: 80vw;
+      margin: auto;
+      width: auto;
     }
   }
 }

@@ -1,11 +1,14 @@
 <app-header></app-header>
-<app-content-block blockTitle="My tech stack" id="tech">
+<app-content-block blockTitle="My tech stack" id="tech" #tech>
+  <div class="move-down" (click)="moveToDescription()">
+    <i class="icon material-icons">expand_more</i>
+  </div>
   <div class="row">
     <p class="description">During my years working as a javascript developer I have come in contact with a plethora of MVCs, frameworks and related technologies.<br /><br />I love the variation that Javascript provides in the modern web development space, like being able to write consise back-end code using Node, or reactive applications in the front-end.</p>
     <app-languages class="languages"></app-languages>
   </div>
 </app-content-block>
-<app-content-block theme="blue" blockTitle="Projects that I have worked on">
+<app-content-block theme="blue" blockTitle="Projects I have worked on">
   <app-project-grid></app-project-grid>
 </app-content-block>
 <app-content-block blockTitle="Resume" id="resume">
