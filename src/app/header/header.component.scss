@@ -101,7 +101,8 @@ $picture-overlap: 4rem;
 @media screen and (min-width: 640px) {
   .header {
     background-color: var(--col-blue-darker);
-    background-image: none;
+    background: rgb(51,130,209);
+    background: linear-gradient(149deg, rgba(74,165,255,1) 0%, rgb(64, 92, 121) 100%);
     margin-bottom: 4rem;
     padding-top: 8rem;
 

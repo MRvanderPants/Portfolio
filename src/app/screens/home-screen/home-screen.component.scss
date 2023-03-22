@@ -1,7 +1,7 @@
 @keyframes bop {
-  0% {top: -16rem;}
-  50% {top: -18rem;}
-  100% {top: -16rem;}
+  0% {top: -7rem;}
+  50% {top: -9rem;}
+  100% {top: -7rem;}
 }
 
 .move-down {
@@ -32,9 +32,9 @@
     justify-content: center;
     height: 4rem;
     margin: auto;
+    left: calc(50% - 2rem);
     pointer-events: all;
-    position: relative;
-    top: -16rem;
+    position: absolute;
     transition: all .2s ease-in-out;
     width: 4rem;
     z-index: 999;

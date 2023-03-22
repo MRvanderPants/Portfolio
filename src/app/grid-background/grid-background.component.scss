@@ -6,6 +6,16 @@
   overflow: hidden;
   position: relative;
 
+  &:after {
+    background-color: #00000050;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -15,34 +25,25 @@
     pointer-events: none;
     width: 100%;
     transition: margin .005s;
+    transform: rotateX(45deg) rotateY(0deg) rotateZ(-30deg);
 
-    &:before {
-      background: linear-gradient(0deg, rgba(0,0,0,0.033) 0%, rgba(0,0,0,0) 100%);
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2rem;
-      width: 100%;
-    }
-
-    &:after {
-      background-color: #00000050;
-      bottom: 0;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    // &:before {
+    //   background: linear-gradient(0deg, rgba(0,0,0,0.033) 0%, rgba(0,0,0,0) 100%);
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   height: 2rem;
+    //   width: 100%;
+    // }
 
     .grid-item {
       background-color: white;
       background-size: cover;
       background-position: center;
       border-radius: 0.5rem;
-      margin-bottom: 0.5rem;
-
+      margin-bottom: 1.5rem;
+      position: relative;
 
       -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
       -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
@@ -51,6 +52,32 @@
       &:nth-child(odd) {
         position: relative;
         top: -25%;
+      }
+
+      &::after {
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        content: '';
+        height: calc(100% + 0.3rem);
+        left: -0.5rem;
+        position: absolute;
+        top: 0.1rem;
+        width: calc(100% + 0.4rem);
+        z-index: -1;
+      }
+
+      &::before {
+        // background-color: #e4e4e4;
+        background: linear-gradient(45deg, #ffffff 0%, #bebebe 10%);
+        border-radius: 0.5rem;
+        content: '';
+        height: calc(100% + 0.3rem);
+        left: -0.5rem;
+        position: absolute;
+        top: 0.1rem;
+        width: calc(100% + 0.4rem);
+        z-index: -1;
       }
     }
   }
