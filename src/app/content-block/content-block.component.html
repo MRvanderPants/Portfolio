@@ -1,4 +1,7 @@
-<section class="content-block {{theme}}">
+<section class="content-block {{theme}}" [class.rounded]="rounded">
+  <div class="cover a" *ngIf="rounded"></div>
+  <div class="cover b" *ngIf="rounded"></div>
+  <div class="cover c" *ngIf="rounded"></div>
   <div class="content">
     <h3 *ngIf="blockTitle.length > 0" class="title">
       {{blockTitle}}

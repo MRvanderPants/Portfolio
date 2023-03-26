@@ -8,15 +8,67 @@
   display: none;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
+.text-description {
+  background-color: var(--col-blue-desaturated);
+  border-radius: 1rem;
+  justify-content: center;
+  color: var(--col-grey-medium);
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  padding: 3rem 2rem 1rem 2rem;
+}
 
-  .description {
-    justify-content: center;
-    color: var(--col-grey-medium);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+.work {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  
+  .sub {
+    align-items: center;
+    background: url('../../../assets/gfx/shape_white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0.5rem;
+    position: relative;
+    width: 33%;
+
+    &:after {
+      background: url('../../../assets/gfx/shape_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      height: calc(100% + 4rem);
+      opacity: 0.33;
+      left: -2rem;
+      position: absolute;
+      top: -2rem;
+      transform: rotateZ(180deg);
+      width: calc(100% + 4rem);
+      z-index: -1;
+    }
+
+    .img {
+      aspect-ratio: 1/1;
+      width: 50%;
+    }
+
+    .sub-title {
+      color: var(--col-blue-darker);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    .description {
+      color: var(--col-grey-medium);
+      text-align: center;
+    }
   }
 }
 
@@ -26,15 +78,16 @@
     background-color: var(--col-white);
     background: url('../../../assets/gfx/shape_blue.svg');
     background-size: cover;
+    bottom: -90vh;
     color: var(--col-white);
     cursor: pointer;
     display: flex;
     justify-content: center;
     height: 4rem;
+    left: calc(50vw - 2rem);
     margin: auto;
-    left: calc(50% - 2rem);
     pointer-events: all;
-    position: absolute;
+    position: fixed;
     transition: all .2s ease-in-out;
     width: 4rem;
     z-index: 999;
@@ -47,6 +100,11 @@
       animation-play-state: paused;
       filter: brightness(80%);
       transform: scale(1.05);
+    }
+
+    &.hidden {
+      pointer-events: none;
+      opacity: 0;
     }
   
     .icon {

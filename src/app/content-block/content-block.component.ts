@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ContentBlockComponent {
   @Input() public blockTitle: string = '';
   @Input() public theme: 'default' | 'blue' = 'default';
+  @Input() public rounded: boolean = false;
 }

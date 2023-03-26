@@ -1,7 +1,10 @@
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem 0;
+  justify-content: space-between;
+  margin: auto;
+  padding: 4rem 0;
+  width: 80%;
 
   .item {
     align-items: center;
@@ -10,7 +13,6 @@
     flex-direction: column;
     margin-right: 1rem;
     padding-bottom: 2rem;
-    width: calc(33% - 1rem);
 
     .icon {
       color: var(--col-grey-60);

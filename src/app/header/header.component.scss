@@ -1,97 +1,155 @@
-$picture-overlap: 4rem;
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg) scale(1.3);
+  }
+  25% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  75% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.3);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(270deg) scale(1.5);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
 
 .header {
-  align-items: center;
-  background-color: var(--col-blue);
-  background-image: url('../../assets/pattern.svg');
+  background-color: var(--col-blue-desaturated);
+  background: linear-gradient(180deg, #ffffff 0%, #eaeaf7 100%);
   display: flex;
   flex-direction: column;
-  height: 75vh;
-  padding-top: 2rem;
+  overflow: hidden;
   position: relative;
-  text-align: center;
+  width: 100%;
 
   .iso-wrapper {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    margin: auto;
+    width: 60%;
   }
 
-  .profile-image {
-    position: relative;
-    pointer-events: none;
-
-    img {
-      border: 0.5rem var(--col-white) solid;
-      border-radius: 5.5rem;
-      height: 10rem;
-      position: relative;
-      width: 10rem;
-      z-index: 100;
-    }
-
-    &:before {
-      background-image: url('../../assets/gfx/shape_white.svg');
-      background-size: cover;
-      content: '';
-      height: 12rem;
-      left: -0.5rem;
-      position: absolute;
-      top: -0.5rem;
-      width: 12rem;
-    }
-  }
-
-  .content {
+  .wrapper {
     align-items: center;
-    background-color: var(--col-white);
-    background-size: auto 100%;
-    border-radius: 2rem;
     display: flex;
-    flex-direction: column;
-    padding: $picture-overlap 1rem 2rem 1rem;
-    position: relative;
-    pointer-events: none;
-    top: -5rem;
-    margin-bottom: -14rem;
-    z-index: 10;
 
-    -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
-    -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
-    box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
+    .profile-image {
+      margin-right: 2rem;
+      position: relative;
+      pointer-events: none;
 
-    .title {
-      color: var(--col-blue-darker);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 900;
-      padding-bottom: 0.5rem;
-      padding-top: 2rem;
+      .picture {
+        border: 0.5rem var(--col-blue-lightest) solid;
+        border-radius: 5.5rem;
+        height: 10rem;
+        position: relative;
+        width: 10rem;
+        z-index: 100;
+      }
+
+      .logo {
+        bottom: 0;
+        height: 4rem;
+        position: absolute;
+        right: 0;
+        width: 4rem;
+        z-index: 101;
+      }
+
+      &:before {
+        background-image: url('../../assets/gfx/shape_blue_light.svg');
+        background-size: cover;
+        content: '';
+        height: 12rem;
+        left: -0.5rem;
+        opacity: 0.2;
+        position: absolute;
+        top: -0.5rem;
+        width: 12rem;
+
+        animation-name: rotateRight;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+      }
+
+      &:after {
+        background-image: url('../../assets/gfx/shape_blue.svg');
+        background-size: cover;
+        content: '';
+        height: 12rem;
+        left: -0.5rem;
+        opacity: 0.1;
+        position: absolute;
+        top: -0.5rem;
+        transform: rotate(180deg);
+        width: 12rem;
+
+        animation-name: rotateLeft;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+      }
     }
 
-    .sub-title {
-      color: var(--col-blue);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .info {
+    .content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 1.5rem 0 1rem 2rem;
+      padding: 20vh 1rem;
+      pointer-events: none;
+      position: relative;
+      top: -5rem;
+      margin-bottom: -14rem;
+      z-index: 10;
 
-      .row {
-        align-items: center;
+      .title {
         color: var(--col-blue-darker);
-        display: flex;
-        padding-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 900;
+        padding-bottom: 0.5rem;
+        padding-top: 2rem;
+      }
 
-        .icon {
-          margin-right: 0.5rem;
+      .sub-title {
+        color: var(--col-blue);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 0 1rem 2rem;
+
+        .row {
+          align-items: center;
+          color: var(--col-blue-darker);
+          display: flex;
+          padding-bottom: 1rem;
+
+          .icon {
+            margin-right: 0.5rem;
+          }
         }
       }
     }
@@ -100,32 +158,25 @@ $picture-overlap: 4rem;
 
 @media screen and (min-width: 640px) {
   .header {
-    background-color: var(--col-blue-darker);
-    background: rgb(51,130,209);
-    background: linear-gradient(149deg, rgba(74,165,255,1) 0%, rgb(64, 92, 121) 100%);
-    margin-bottom: 4rem;
-    padding-top: 8rem;
+    padding-bottom: 4rem;
 
-    &:after {
-      background-color: var(--col-grey-lightest);
-      bottom: 0;
-      content: '';
-      clip-path: polygon(0 0, 100% 100%, 0 100%);
-      height: 3rem;
-      position: absolute;
-      width: 100%;
-      z-index: 0;
-    }
+    .wrapper {
+      padding-bottom: 4rem;
 
-    .content {
-      padding: $picture-overlap 4rem 2rem 4rem;
-
-      .title {
-        font-size: 2rem;
+      .profile-image {
+        margin-left: 10vw;
       }
 
-      .sub-title {
-        font-size: 1rem;
+      .content {
+        padding: 20vh 4rem 30vh 4rem;
+
+        .title {
+          font-size: 2.5rem;
+        }
+
+        .sub-title {
+          font-size: 1rem;
+        }
       }
     }
   }

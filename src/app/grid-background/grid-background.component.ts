@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project, projects } from 'src/assets/projects';
 
 @Component({
@@ -7,18 +8,23 @@ import { Project, projects } from 'src/assets/projects';
   styleUrls: ['./grid-background.component.scss']
 })
 export class GridBackgroundComponent implements OnInit {
-  public items: string[] = [];
+  @ViewChild('wrapper', {read: ElementRef})wrapper?: ElementRef;
+
   public itemHeight: number = 0;
   public itemWidth: number = 0;
   public itemMarginTop: number = 0;
   public containerMargin: number = 50;
+  public columns: Project[][] = [];
+  public numberOfRows = 4;
+
+  constructor(public readonly router: Router){}
 
   public ngOnInit() {
     this.itemHeight = this.calculateHeight();
     this.itemWidth = this.calculateWidth();
 
-    const itemList = projects.flatMap(p => p.screenshots ?? []);
-    this.items = this.shuffle(itemList);
+    const itemList = this.compileProjects();
+    this.columns = this.createColums(itemList);
     const background = document.querySelector('#grid-background')!;
     let wrapperHeight = background.clientHeight;
 
@@ -35,33 +41,61 @@ export class GridBackgroundComponent implements OnInit {
   }
 
   public calculateWidth(): number {
-    return (document.body.clientWidth / 4) - 20;
+    const el = document.querySelector('.iso-wrapper')!;
+    return (el.clientWidth / this.numberOfRows) - 20;
   }
 
   public calculateHeight(): number {
-    return (this.calculateWidth() * 16) / 8.7;
+    return (this.calculateWidth() * 16) / 8.1;
   }
 
-  public calculateMarginTop(): number {
-    const height = this.calculateHeight();
-    return height * 0.5;
+  public calculateMarginTop(index: number): number {
+    return index % 2 === 0 ? -(this.itemHeight / 2) : 0;
   }
 
-  public shuffle(array: string[]) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-  
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+  public calculateSideLeft(index: number): string {
+    const width = this.calculateWidth();
+    if (!this.displayCardRight(index)) {
+      return `${width + 16}px`
     }
-  
-    return array;
+    return `-${width + 16}px`;
+  }
+
+  public goToPage(id: number) {
+    this.router.navigate([`/details`, {id}]);
+  }
+
+  private compileProjects(): Project[] {
+    const newProjects: Project[] = [];
+    projects.forEach(project => {
+      project.screenshots?.forEach(screen => {
+        const newProject = Object.assign({}, project);
+        newProject.screenshots = [screen];
+        newProjects.push(newProject);
+      });
+    });
+    return newProjects;
+  }
+
+  private displayCardRight(index: number): boolean {
+    const colIndex = index % this.numberOfRows;
+    return colIndex >= Math.floor(this.numberOfRows / 2);
+  }
+
+  private createColums(items: Project[]) {
+    const rows: Project[][] = [];
+    rows.push([]);
+    let rowCount = 0;
+    let count = 0;
+    items.forEach((item) => {
+      rows[rowCount].push(item);
+      count++;
+      if (count == this.numberOfRows) {
+        rowCount++;
+        count = 0;
+        rows.push([]);
+      }
+    });
+    return rows; 
   }
 }

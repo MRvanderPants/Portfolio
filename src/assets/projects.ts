@@ -33,6 +33,9 @@ export const projects: Project[] = [
       'In my day to day activities working on the application I focussed on creating UIs for new features, pushing and parsing data to and from our Python application and handle map interactions using the OpenLayers framework. Due to this there was a lot of variation in working on this project, and every developer was expected to be able to work on each part of the application, which greatly increased my skills as a developer.'
     ],
     logo: '../../assets/gfx/geofiber/logo.png',
+    screenshots: [
+      '../../assets/gfx/geofiber/screenshot0.jpg',
+    ],
     screens: [
       '../../assets/gfx/geofiber/geofiber.png',
     ],
@@ -53,7 +56,6 @@ export const projects: Project[] = [
     ],
     logo: '../../assets/gfx/switch_the_gym/logo.png',
     screenshots: [
-      '../../assets/gfx/switch_the_gym/screenshot0.jpg',
       '../../assets/gfx/switch_the_gym/screenshot1.jpg',
     ],
     screens: [
@@ -81,7 +83,6 @@ export const projects: Project[] = [
     ],
     logo: '../../assets/gfx/vanmossel/logo.png',
     screenshots: [
-      '../../assets/gfx/vanmossel/screenshot0.jpg',
       '../../assets/gfx/vanmossel/screenshot1.jpg',
     ],
   }, {
@@ -101,6 +102,9 @@ export const projects: Project[] = [
       'Using Autodesk Forge and Three.js we were able to render complex 3D BIM Models and add various features with great ease. Navigating and interacting with the model would in large parts already be handled by the Autodesk framework, and we would only have to expand on this to make the viewer usable on tablets, and add the features we needed.',
     ],
     logo: '../../assets/gfx/planon/logo.png',
+    screenshots: [
+      '../../assets/gfx/planon/screenshot1.jpg',
+    ],
   }, {
     id: 0,
     type: 'Enterprise software',
@@ -118,6 +122,9 @@ export const projects: Project[] = [
       'My job at Planon Software was my first job after graduating university. I started of as a blank canvas, and was able to develop a robust skillset in Angular and Typescript whilst diving into this very complex application. Due to all my daily activities revolving around Typescript I also started favoring working with Javascript over other languages like C# due to its flexibility and ease of use.',
     ],
     logo: '../../assets/gfx/planon/logo.png',
+    screenshots: [
+      '../../assets/gfx/planon/screenshot0.jpg',
+    ],
   }, {
     id: 5,
     type: 'Android / iOS Application',
@@ -136,7 +143,6 @@ export const projects: Project[] = [
     ],
     logo: '../../assets/gfx/dpg_bezorg/logo.png',
     screenshots: [
-      '../../assets/gfx/dpg_bezorg/screenshot0.jpg',
       '../../assets/gfx/dpg_bezorg/screenshot1.jpg',
     ],
     screens: [
@@ -168,6 +174,9 @@ export const projects: Project[] = [
       '../../assets/gfx/bf_all_in/screen2.png',
       '../../assets/gfx/bf_all_in/screen3.png',
     ],
+    screenshots: [
+      '../../assets/gfx/bf_all_in/screenshot0.jpg',
+    ],
   }, {
     id: 7,
     type: 'Android / iOS Application',
@@ -186,7 +195,6 @@ export const projects: Project[] = [
     ],
     logo: '../../assets/gfx/timechimp/logo.png',
     screenshots: [
-      '../../assets/gfx/timechimp/screenshot0.jpg',
       '../../assets/gfx/timechimp/screenshot1.jpg',
     ],
     screens: [

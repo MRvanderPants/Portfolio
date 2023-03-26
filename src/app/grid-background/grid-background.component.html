@@ -1,14 +1,36 @@
 <div id="grid-background" class="wrapper">
-  <div class="container"
-    [ngStyle]="{'margin-top': -containerMargin + 'px'}">
-    <div
-      *ngFor="let item of items; let i = index"
-      class="grid-item"
-      [ngStyle]="{
-        height: itemHeight + 'px',
-        width: itemWidth + 'px',
-        'background-image': 'url(\'' + item + '\')'
-      }">
+  <div class="container">
+    <div class="column" *ngFor="let column of columns">
+      <div
+        *ngFor="let item of column; let i = index"
+        class="grid-item"
+        (click)="goToPage(item.id)"
+        [ngStyle]="{
+          height: itemHeight + 'px',
+          width: itemWidth + 'px',
+          top: calculateMarginTop(i) + 'px',
+          'background-image': 'url(\'' + item.screenshots![0] + '\')'
+        }">
+        <img *ngIf="item.logo" class="logo" [src]="item.logo" alt="logo" />
+        <div
+          class="side-panel"
+          [ngStyle]="{
+            width: itemWidth + 'px',
+            left: calculateSideLeft(i)
+          }">
+          <div class="wrapper">
+            <p class="title">{{ item.title }}</p>
+            <p class="description">{{ item.description }}</p>
+          </div>
+          <div class="tech-wrapper">
+            <div class="tech" *ngFor="let language of item.languages">
+              <div class="fold">
+                <i class="icon {{ language | prefixIcon }}"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
