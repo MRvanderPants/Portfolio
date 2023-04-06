@@ -1,0 +1,46 @@
+.content {
+  color: var(--col-grey-darker);
+  font-size: 1.1rem;
+  line-height: 2rem;
+  margin: auto;
+  padding: 1rem 0;
+  width: 80%;
+
+  .impact {
+    color: var(--col-grey-lightest);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    margin: 0 0.25rem 0.25rem 0;
+    position: relative;
+
+    &::after {
+      background: url('../../assets/gfx/shape_blue.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      left: -1.75rem;
+      padding: 1.5rem;
+      position: absolute;
+      top: -0.75rem;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &::before {
+      background: url('../../assets/gfx/shape_blue.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      left: -2rem;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1.5rem;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

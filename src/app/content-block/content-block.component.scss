@@ -22,6 +22,30 @@
   }
 }
 
+@keyframes morphC {
+  0% {
+    border-radius: 0 0 150% 75%;
+  }
+  50% {
+    border-radius: 0 0 100% 100%;
+  }
+  100% {
+    border-radius: 0 0 150% 75%;
+  }
+}
+
+@keyframes morphD {
+  0% {
+    border-radius: 0 0 50% 100%;
+  }
+  50% {
+    border-radius: 0 0 150% 75%;
+  }
+  100% {
+    border-radius: 0 0 50% 100%;
+  }
+}
+
 .content-block {
   display: flex;
   flex-direction: column;
@@ -29,10 +53,17 @@
   position: relative;
   z-index: 1000;
 
+  &.extraHigh {
+    padding: 12rem 1.5rem;
+  }
+
   &.rounded {
+    padding-bottom: 0;
     padding-top: 0;
+    z-index: 1001;
 
     .content {
+      padding-bottom: 6rem;
       padding-top: 6rem;
     }
   }
@@ -40,28 +71,6 @@
   &.blue {
     background-color: var(--col-blue-desaturated);
     position: relative;
-
-    &::before {
-      background-color: var(--col-blue-desaturated);
-      content: '';
-      clip-path: polygon(0 0, 1.5rem 1.5rem, 3rem 0, 2.5rem 0, 3.5rem 0.5rem, 4.25rem 0);
-      height: 1.5rem;
-      position: absolute;
-      bottom: -1.5rem;
-      right: 0;
-      width: 4.25rem;
-    }
-
-    &::after {
-      background-color: var(--col-blue-desaturated);
-      content: '';
-      clip-path: polygon(0 1.5rem, 1.5rem 0, 3rem 1.5rem, 2.5rem 1.5rem, 3.5rem 1rem, 4.25rem 1.5rem);
-      height: 1.5rem;
-      position: absolute;
-      top: -1.5rem;
-      left: 0;
-      width: 4.25rem;
-    }
   }
 
   .cover {
@@ -101,6 +110,25 @@
       animation-duration: 6s;
       animation-iteration-count: infinite;
     }
+
+    &.inverted {
+      border-radius: 0 0 100% 100%;
+      margin: 0 -1.5rem -3rem -1.5rem;
+
+      &.b {
+        border-radius: 0 0 150% 75%;
+        bottom: -0.5rem;
+        top: unset;
+        animation-name: morphC;
+      }
+
+      &.c {
+        border-radius: 0 0 50% 100%;
+        bottom: -1rem;
+        top: unset;
+        animation-name: morphD;
+      }
+    }
   }
 
   .content {
@@ -110,6 +138,7 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 1.25rem;
       font-weight: 600;
+      letter-spacing: 0.075rem;
       padding-bottom: 0.5rem;
     }
   }

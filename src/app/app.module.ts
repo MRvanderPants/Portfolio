@@ -15,6 +15,10 @@ import { DetailScreenComponent } from './screens/detail-screen/detail-screen.com
 import { ProjectGridComponent } from './project-grid/project-grid.component';
 import { PictureCarouselComponent } from './picture-carousel/picture-carousel.component';
 import { GridBackgroundComponent } from './grid-background/grid-background.component';
+import { ResumeItemComponent } from './resume-item/resume-item.component';
+import { WorkPanelComponent } from './work-panel/work-panel.component';
+import { ParagraphComponent } from './paragraph/paragraph.component';
+import { TagListComponent } from './tag-list/tag-list.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { GridBackgroundComponent } from './grid-background/grid-background.compo
     ProjectGridComponent,
     PictureCarouselComponent,
     GridBackgroundComponent,
+    ResumeItemComponent,
+    WorkPanelComponent,
+    ParagraphComponent,
+    TagListComponent,
   ],
   imports: [
     BrowserModule,

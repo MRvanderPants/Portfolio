@@ -1,0 +1,70 @@
+.work {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+  
+  .sub {
+    align-items: center;
+    background: url('../../assets/gfx/shape_white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0.5rem;
+    position: relative;
+    width: 33%;
+
+    &:after {
+      background: url('../../assets/gfx/shape_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      height: calc(100% + 4rem);
+      opacity: 0.33;
+      left: -2rem;
+      position: absolute;
+      top: -2rem;
+      transform: rotateZ(180deg);
+      width: calc(100% + 4rem);
+      z-index: -1;
+    }
+
+    .img {
+      aspect-ratio: 1/1;
+      width: 40%;
+    }
+
+    .sub-title {
+      color: var(--col-blue-darker);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    .description {
+      color: var(--col-grey-medium);
+      line-height: 1.6rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .row {
+    flex-direction: row;
+
+    .description {
+      margin-right: 4rem;
+      width: 50vw;
+    }
+
+    .languages {
+      margin-top: -2rem;
+    }
+  }
+}
+

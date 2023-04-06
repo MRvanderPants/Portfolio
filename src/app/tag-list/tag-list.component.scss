@@ -1,0 +1,17 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  width: 80%;
+
+  .tag {
+    background-color: var(--col-blue-lighter);
+    border-radius: 0.25rem;
+    color: var(--col-white);
+    height: 1.5rem;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.25rem 1rem;
+  }
+}

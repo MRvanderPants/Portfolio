@@ -8,14 +8,14 @@
 
   .item {
     align-items: center;
-    color: var(--col-grey-darker);
+    color: var(--col-grey-medium);
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
     padding-bottom: 2rem;
 
     .icon {
-      color: var(--col-grey-60);
+      color: var(--col-blue-darker);
       font-size: 2rem;
       margin: 0 0 0.5rem 0;
     }
