@@ -4,7 +4,6 @@
   line-height: 2rem;
   margin: auto;
   padding: 1rem 0;
-  width: 80%;
 
   .impact {
     color: var(--col-grey-lightest);
@@ -42,5 +41,11 @@
       width: 100%;
       z-index: -1;
     }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .content {
+    width: 80%;
   }
 }

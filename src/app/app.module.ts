@@ -19,6 +19,7 @@ import { ResumeItemComponent } from './resume-item/resume-item.component';
 import { WorkPanelComponent } from './work-panel/work-panel.component';
 import { ParagraphComponent } from './paragraph/paragraph.component';
 import { TagListComponent } from './tag-list/tag-list.component';
+import { SideProjectListComponent } from './side-project-list/side-project-list.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TagListComponent } from './tag-list/tag-list.component';
     WorkPanelComponent,
     ParagraphComponent,
     TagListComponent,
+    SideProjectListComponent,
   ],
   imports: [
     BrowserModule,

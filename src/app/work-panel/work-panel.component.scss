@@ -1,6 +1,4 @@
 .work {
-  display: flex;
-  justify-content: space-between;
   padding-bottom: 6rem;
   
   .sub {
@@ -13,7 +11,6 @@
     flex-direction: column;
     padding: 2rem 0.5rem;
     position: relative;
-    width: 33%;
 
     &:after {
       background: url('../../assets/gfx/shape_white.svg');
@@ -42,28 +39,31 @@
       font-size: 1.25rem;
       font-weight: 600;
       padding: 0.5rem 0;
-      text-align: center;
+      width: 100%;
     }
 
     .description {
       color: var(--col-grey-medium);
       line-height: 1.6rem;
-      text-align: center;
     }
   }
 }
 
 @media screen and (min-width: 640px) {
-  .row {
-    flex-direction: row;
+  .work {
+    display: flex;
+    justify-content: space-between;
 
-    .description {
-      margin-right: 4rem;
-      width: 50vw;
-    }
+    .sub {
+      width: 33%;
 
-    .languages {
-      margin-top: -2rem;
+      .sub-title {
+        text-align: center;
+      }
+
+      .description {
+        text-align: center;
+      }
     }
   }
 }

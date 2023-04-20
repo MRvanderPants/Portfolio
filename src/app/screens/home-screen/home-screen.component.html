@@ -19,9 +19,11 @@
 </app-content-block>
 <app-content-block title="My personal projects" theme="blue" [extraHigh]="true">
   <app-paragraph intro="Be">
-    sides my professional work, I also like to tinker on a bunch of different personal projects. Have a look:
+    sides my professional work, I also like to tinker on a bunch of different personal projects. Take a look:
   </app-paragraph>
-  <p>TODO add gifs of perilous parking, face 2.0 and that kind of stuff</p>
+  <app-paragraph>
+    <app-side-project-list></app-side-project-list>
+  </app-paragraph>
   <!-- <app-project-grid></app-project-grid> -->
 </app-content-block>
 <app-content-block blockTitle="Where I've worked" id="resume" [rounded]="true">

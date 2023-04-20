@@ -54,7 +54,7 @@
   z-index: 1000;
 
   &.extraHigh {
-    padding: 12rem 1.5rem;
+    padding: 8rem 1.5rem;
   }
 
   &.rounded {
@@ -63,8 +63,8 @@
     z-index: 1001;
 
     .content {
-      padding-bottom: 6rem;
-      padding-top: 6rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
     }
   }
 
@@ -153,6 +153,20 @@
       .title {
         font-size: 1.5rem;
         padding-bottom: 1rem;
+      }
+
+      &.rounded {
+        padding-bottom: 0;
+        padding-top: 0;
+    
+        .content {
+          padding-bottom: 6rem;
+          padding-top: 6rem;
+        }
+      }
+
+      &.extraHigh {
+        padding: 12rem 1.5rem;
       }
     }
   }

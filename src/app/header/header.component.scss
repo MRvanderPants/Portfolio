@@ -39,21 +39,21 @@
   background: linear-gradient(180deg, #ffffff 0%, #eaeaf7 100%);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  padding-bottom: 4rem;
   position: relative;
   width: 100%;
 
   .iso-wrapper {
-    margin: auto;
-    width: 60%;
+    padding: 4rem 1rem 1rem 1rem;
   }
 
   .wrapper {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
 
     .profile-image {
-      margin-right: 2rem;
       position: relative;
       pointer-events: none;
 
@@ -61,7 +61,6 @@
         border: 0.5rem var(--col-blue-lightest) solid;
         border-radius: 5.5rem;
         height: 10rem;
-        position: relative;
         width: 10rem;
         z-index: 100;
       }
@@ -112,7 +111,7 @@
     .content {
       display: flex;
       flex-direction: column;
-      padding: 20vh 1rem;
+      padding: 20vh 2rem;
       pointer-events: none;
       position: relative;
       top: -5rem;
@@ -159,12 +158,22 @@
 
 @media screen and (min-width: 640px) {
   .header {
-    padding-bottom: 4rem;
+    overflow: hidden;
+
+    .iso-wrapper {
+      margin: auto;
+      padding: 0;
+      width: 60%;
+    }
 
     .wrapper {
+      align-items: center;
+      flex-direction: row;
+      margin-top: 0;
       padding-bottom: 4rem;
 
       .profile-image {
+        margin-right: 2rem;
         margin-left: 10vw;
       }
 
