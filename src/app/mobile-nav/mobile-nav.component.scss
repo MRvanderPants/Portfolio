@@ -1,0 +1,65 @@
+.wrapper {
+  align-items: center;
+  background-color: var(--col-blue);
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  
+  &::after {
+    background-color: var(--col-blue);
+    border-radius: 100% 100% 0 0;
+    content: '';
+    height: 1rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .item {
+    align-items: center;
+    color: var(--col-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    position: relative;
+    width: 20%;
+
+    &::after {
+      background: url('../../assets/gfx/shape_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity .5s;
+      height: 100%;
+      width: 100%;
+    }
+
+    &.active{
+      &::after {
+        opacity: 0.2;
+      }
+    }
+
+    .label {
+      font-size: 0.7rem;
+      margin-top: 0.25rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .wrapper {
+    display: none;
+  }
+}

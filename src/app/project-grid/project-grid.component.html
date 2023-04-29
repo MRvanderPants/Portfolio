@@ -1,17 +1,22 @@
-<section class="projects">
-  <div class="project"
-    [ngStyle]="{'background-image': 'url(' + project.image + ')'}"
-    *ngFor="let project of projects"
-    (click)="goToPage(project.id)">
-    <!-- <img class="image" [src]="project.image" alt="project-image" /> -->
-    <img class="project-logo" [src]="project.logo" alt="logo" />
-    <div class="title-bar">
-      <p class="title">{{project.title}}</p>
-      <div class="tech">
-        <div *ngFor="let language of project.languages" class="item">
-          <i class="icon {{ language | prefixIcon }}"></i>
+<div>
+  <h3 class="main-title">
+    Projects I've worked on
+  </h3>
+  <section class="projects">
+    <div class="project"
+      [ngStyle]="{'background-image': 'url(' + project.image + ')'}"
+      *ngFor="let project of projects"
+      (click)="goToPage(project.id)">
+      <!-- <img class="image" [src]="project.image" alt="project-image" /> -->
+      <img class="project-logo" [src]="project.logo" alt="logo" />
+      <div class="title-bar">
+        <p class="title">{{project.title}}</p>
+        <div class="tech">
+          <div *ngFor="let language of project.languages" class="item">
+            <i class="icon {{ language | prefixIcon }}"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

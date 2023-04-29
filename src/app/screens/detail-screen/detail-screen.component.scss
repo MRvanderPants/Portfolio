@@ -11,11 +11,22 @@ $picture-overlap: 4rem;
   .back {
     position: absolute;
     background-color: var(--col-blue-lightest);
-    background-image: url('../../../assets/pattern.svg');
     height: 10rem;
     top: 0;
     width: 100%;
     z-index: -1;
+
+    &::after {
+      background-color: var(--col-grey-lightest);
+      border-radius: 100% 100% 0 0;
+      bottom: 0;
+      content: '';
+      height: 1rem;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
   }
 
   .back-button {
@@ -27,6 +38,7 @@ $picture-overlap: 4rem;
     position: fixed;
     top: 0;
     transition: all .2s;
+    z-index: 99999999999;
 
     &:hover {
       opacity: 0.6;
@@ -35,6 +47,21 @@ $picture-overlap: 4rem;
 
     &:active {
       opacity: 0.4;
+    }
+
+    &::after {
+      background: url('../../../assets/gfx/shape_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: -15rem;
+      content: '';
+      height: 20rem;
+      left: -7.5rem;
+      opacity: 0.8;
+      position: absolute;
+      width: 20rem;
+      z-index: -1;
     }
 
     .icon {
@@ -47,7 +74,7 @@ $picture-overlap: 4rem;
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 80vw;
+    padding: 1rem;
 
     .image {
       aspect-ratio: 16/9;
@@ -63,7 +90,7 @@ $picture-overlap: 4rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      padding: 2rem;
+      padding: 2rem 1rem 1rem 1rem;
 
       -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
       -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
@@ -127,6 +154,7 @@ $picture-overlap: 4rem;
   .header {
     .container {
       flex-direction: row;
+      width: 80vw;
 
       .image {
         margin-right: 2rem;
@@ -142,6 +170,12 @@ $picture-overlap: 4rem;
 
     .sub-title {
       font-size: 1rem;
+    }
+  }
+
+  .back-button {
+    &::after {
+      display: none;
     }
   }
 }

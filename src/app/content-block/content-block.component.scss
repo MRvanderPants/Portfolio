@@ -153,6 +153,7 @@
       .title {
         font-size: 1.5rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
       }
 
       &.rounded {
@@ -164,10 +165,10 @@
           padding-top: 6rem;
         }
       }
+    }
 
-      &.extraHigh {
-        padding: 12rem 1.5rem;
-      }
+    &.extraHigh {
+      padding: 12rem 1.5rem;
     }
   }
 }

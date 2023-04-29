@@ -35,3 +35,14 @@
     margin-right: 0.5rem;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .back-to-top {
+    border-radius: 0.25rem;
+
+    &.visible {
+      bottom: 4.5rem;
+      right: 0.5rem;
+    }
+  }
+}

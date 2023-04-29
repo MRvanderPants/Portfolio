@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     id: 4,
     type: 'Enterprise software',
-    title: 'Geofiber',
+    title: 'TPG Geofiber',
     image: '../../assets/gfx/geofiber/geofiber.jpg',
     languages: [
       'angularjs',

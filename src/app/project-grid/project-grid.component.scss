@@ -1,3 +1,12 @@
+.main-title {
+  color: var(--col-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  padding-bottom: 2.5rem;
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
