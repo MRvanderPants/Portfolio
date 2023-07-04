@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { jobs } from 'src/assets/jobs';
 
 @Component({
   selector: 'app-home-screen',
@@ -9,9 +10,15 @@ export class HomeScreenComponent implements OnInit {
   @ViewChild('tech', {read: ElementRef})techWrapper?: ElementRef;
   public showButton = true;
   public yearsOfExp = 0;
+  public jobTags: string[] = [];
 
   public ngOnInit() {
     this.yearsOfExp = this.yearsOfExperience();
+    this.jobTags = [
+      ...new Set(jobs.flatMap(job => {
+        return job.skills
+      }).sort())
+    ];
     window.addEventListener('scroll', _ => {
       this.showButton = document.documentElement.scrollTop < 500;
     });

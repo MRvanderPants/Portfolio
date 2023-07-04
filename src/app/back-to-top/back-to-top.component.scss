@@ -11,7 +11,7 @@
   position: fixed;
   right: 5vw;
   transition: all 0.2s;
-  z-index: 9999999999;
+  z-index: var(--z-navigation-overlay);
 
   -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000015;
   -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000015;
@@ -38,11 +38,20 @@
 
 @media screen and (max-width: 640px) {
   .back-to-top {
-    border-radius: 0.25rem;
+    border-radius: 1.5rem;
+    padding: 0.75rem;
 
     &.visible {
-      bottom: 4.5rem;
-      right: 0.5rem;
+      bottom: 5rem;
+      right: 1rem;
+    }
+
+    .label {
+      display: none;
+    }
+
+    .icon {
+      margin: 0;
     }
   }
 }

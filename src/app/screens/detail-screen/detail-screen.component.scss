@@ -1,175 +1,184 @@
 $picture-overlap: 4rem;
 
-.header {
+.back-button {
   align-items: center;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  padding-top: 4rem;
-  position: relative;
-  text-align: center;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  transition: all .2s;
+  z-index: var(--z-back-button);
 
-  .back {
+  &:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::after {
+    background: url('../../../assets/gfx/shape_white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -15rem;
+    content: '';
+    height: 20rem;
+    left: -7.5rem;
+    opacity: 0.8;
     position: absolute;
-    background-color: var(--col-blue-lightest);
-    height: 10rem;
-    top: 0;
+    width: 20rem;
+    z-index: var(--z-down);
+  }
+
+  .icon {
+    margin-right: 0.25rem;
+    margin-top: 0.125rem;
+  }
+}
+
+.header {
+  margin-bottom: 2rem;
+  margin-left: -0.5rem;
+
+  .logo {
+    border-radius: 0.5rem;
+    height: 100%;
+    margin-bottom: 2rem;
     width: 100%;
-    z-index: -1;
-
-    &::after {
-      background-color: var(--col-grey-lightest);
-      border-radius: 100% 100% 0 0;
-      bottom: 0;
-      content: '';
-      height: 1rem;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      z-index: -1;
-    }
   }
 
-  .back-button {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    left: 0;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    transition: all .2s;
-    z-index: 99999999999;
-
-    &:hover {
-      opacity: 0.6;
-      transform: scale(1.05);
-    }
-
-    &:active {
-      opacity: 0.4;
-    }
-
-    &::after {
-      background: url('../../../assets/gfx/shape_white.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      top: -15rem;
-      content: '';
-      height: 20rem;
-      left: -7.5rem;
-      opacity: 0.8;
-      position: absolute;
-      width: 20rem;
-      z-index: -1;
-    }
-
-    .icon {
-      margin-right: 0.25rem;
-      margin-top: 0.125rem;
-    }
+  a {
+    color: #000000;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem;
+  .title-wrapper {
+    margin: 0 0 0 1rem;
 
-    .image {
-      aspect-ratio: 16/9;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-      width: 100%;
+    .title {
+      color: var(--col-blue-darker);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      padding-bottom: 0.5rem;
+      position: relative;
+
+      &::after {
+        background: url('../../../assets/gfx/shape_blue_light.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+        left: -1.75rem;
+        padding: 1.5rem;
+        position: absolute;
+        top: -0.5rem;
+        width: 3rem;
+        z-index: var(--z-down);
+      }
+
+      &::before {
+        background: url('../../../assets/gfx/shape_blue_light.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+        left: -1rem;
+        padding: 0.5rem;
+        position: absolute;
+        top: 1.75rem;
+        width: 1rem;
+        z-index: var(--z-down);
+      }
     }
 
-    .project-details {
-      align-items: flex-start;
-      background-color: var(--col-white);
-      border-radius: 1rem;
+    .meta-info {
       display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      padding: 2rem 1rem 1rem 1rem;
+      font-size: 0.8rem;
+      opacity: 0.5;
 
-      -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000005;
-      -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000005;
-      box-shadow:         0 0.25rem 1rem 0.25rem #00000005;
-
-      .detail-title {
-        color: var(--col-grey-medium);
-        font-size: 0.9rem;
-        margin-bottom: 0.25rem;
-      }
-
-      .detail-value {
-        margin-bottom: 1.5rem;
-      }
-
-      .tech-item {
+      .meta-item {
         align-items: center;
+        background-color: var(--col-grey);
+        border-radius: 0.25rem;
         display: flex;
-        margin-bottom: 1.25rem;
+        margin-right: 0.5rem;
+        padding: 0.125rem 0.5rem 0.125rem 0.25rem;
 
         .icon {
-          color: var(--col-grey-medium);
-          margin-right: 0.5rem;
-        }
-
-        .label {
-          text-transform: capitalize;
+          font-size: 1rem;
+          margin-right: 0.25rem;
         }
       }
+    }
+
+    .sub-title {
+      color: var(--col-blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 1rem 0;
     }
   }
 }
 
-.content {
-  padding: 1rem 1rem 2rem 1rem;
-
-  .title {
-    color: var(--col-blue-darker);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 900;
-    padding-bottom: 0.5rem;
+.wrapper {
+  .image {
+    display: none;
   }
 
-  .sub-title {
-    color: var(--col-blue);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
+  .content {
+    padding: 0 0.5rem 2rem 0.5rem;
 
-  .description {
-    color: var(--col-grey-medium);
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    .description {
+      color: var(--col-grey-medium);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 }
 
 @media screen and (min-width: 640px) {
   .header {
-    .container {
-      flex-direction: row;
-      width: 80vw;
+    background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 1.5rem;
 
-      .image {
-        margin-right: 2rem;
-        margin-bottom: 0;
-        width: 60%;
-      }
+    .logo {
+      height: 8rem;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+      width: 8rem;
     }
   }
-  .content {
-    .title {
-      font-size: 2rem;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+      padding: 1rem 7rem 2rem 1rem;
+      width: 40%;
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .sub-title {
+        font-size: 1rem;
+      }
     }
 
-    .sub-title {
-      font-size: 1rem;
+    .image {
+      border-radius: 0.5rem;
+      display: block;
+      height: fit-content;
+      margin-top: 1rem;
+      width: 60%;
     }
   }
 

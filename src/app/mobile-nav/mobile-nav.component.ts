@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class MobileNavComponent implements OnInit {
 
   public targetId: string = '';
+  public headerHidden = false;
 
   constructor(private router: Router) {}
 
@@ -16,6 +17,7 @@ export class MobileNavComponent implements OnInit {
     this.updateId();
     window.addEventListener('scroll', () => {
       this.updateId();
+      this.headerHidden = document.documentElement.scrollTop > 1200;
     })
   }
 

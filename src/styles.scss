@@ -14,6 +14,15 @@ body {
   width: 100vw;
 }
 
+.observable {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 640px) {
   body {
     padding-bottom: 1.75rem;

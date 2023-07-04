@@ -1,0 +1,71 @@
+.contact-form {
+
+  .contract__input-wrapper {
+    .contact-form__input {
+      padding: 0.5rem 0;
+
+      .contact-form__input__text,
+      .contact-form__input__area {
+        background-color: var(--col-blue-deepest);
+        border-radius: 0.5rem;
+        border: none;
+        color: var(--col-white);
+        padding: 0.75rem 1.5rem;
+        resize: none;
+        width: calc(100% - 3rem);
+      }
+    }
+  }
+
+  .contract__description {
+    color: var(--col-white);
+    opacity: 0.6;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .contract__succesMessage,
+  .contact-form__error {
+    color: var(--col-white);
+    display: flex;
+    opacity: 0.6;
+    width: 100%;
+
+    .material-icons {
+      margin-right: 1rem;
+    }
+  }
+
+  .contact-form__submit {
+    align-items: center;
+    background-color: var(--col-blue);
+    border-radius: 0.25rem;
+    border: none;
+    color: var(--col-white);
+    cursor: pointer;
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .label {
+      margin-right: 0.5rem;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: var(--col-blue-darker);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .contact-form {
+    width: 30vw;
+  }
+}

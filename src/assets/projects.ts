@@ -11,9 +11,12 @@ export interface Project {
   logo: string;
   screenshots?: string[];
   screens?: string[];
+  technologies?: string[];
+  url?: string;
+  isC2a?: boolean;
 }
 
-export type ProjectType = 'Enterprise software' | 'Android / iOS Application';
+export type ProjectType = 'Enterprise software' | 'Android / iOS Application' | 'Web Application';
 
 export const projects: Project[] = [
   {
@@ -39,6 +42,12 @@ export const projects: Project[] = [
     screens: [
       '../../assets/gfx/geofiber/geofiber.png',
     ],
+    technologies: [
+      'Angular',
+      'Typescript',
+      'Open Layers',
+      'NodeJS',
+    ]
   }, {
     id: 3,
     type: 'Android / iOS Application',
@@ -65,6 +74,10 @@ export const projects: Project[] = [
       '../../assets/gfx/switch_the_gym/screen3.png',
       '../../assets/gfx/switch_the_gym/screen4.png',
     ],
+    technologies: [
+      'React-native',
+      'Typescript',
+    ]
   }, {
     id: 2,
     type: 'Android / iOS Application',
@@ -85,6 +98,11 @@ export const projects: Project[] = [
     screenshots: [
       '../../assets/gfx/vanmossel/screenshot1.jpg',
     ],
+    technologies: [
+      'Angular',
+      'Typescript',
+      'Ionic',
+    ]
   }, {
     id: 1,
     type: 'Enterprise software',
@@ -105,6 +123,13 @@ export const projects: Project[] = [
     screenshots: [
       '../../assets/gfx/planon/screenshot1.jpg',
     ],
+    technologies: [
+      'Angular',
+      'Typescript',
+      'Autodesk Forge',
+      'Three.js',
+      'Web GL'
+    ]
   }, {
     id: 0,
     type: 'Enterprise software',
@@ -125,6 +150,11 @@ export const projects: Project[] = [
     screenshots: [
       '../../assets/gfx/planon/screenshot0.jpg',
     ],
+    technologies: [
+      'Angular',
+      'Typescript',
+      'Snap SVG',
+    ]
   }, {
     id: 5,
     type: 'Android / iOS Application',
@@ -151,6 +181,11 @@ export const projects: Project[] = [
       '../../assets/gfx/dpg_bezorg/screen2.png',
       '../../assets/gfx/dpg_bezorg/screen3.png',
     ],
+    technologies: [
+      'React-native',
+      'Typescript',
+      'WatermelonDB',
+    ]
   }, {
     id: 6,
     type: 'Android / iOS Application',
@@ -177,6 +212,11 @@ export const projects: Project[] = [
     screenshots: [
       '../../assets/gfx/bf_all_in/screenshot0.jpg',
     ],
+    technologies: [
+      'React-native',
+      'Typescript',
+      'Contentful',
+    ]
   }, {
     id: 7,
     type: 'Android / iOS Application',
@@ -203,5 +243,79 @@ export const projects: Project[] = [
       '../../assets/gfx/timechimp/screen2.png',
       '../../assets/gfx/timechimp/screen3.png',
     ],
+    technologies: [
+      'React-native',
+      'Typescript',
+    ]
+  }, {
+    id: 8,
+    type: 'Web Application',
+    title: 'Cheflix',
+    image: '../../assets/gfx/cheflix/cheflix-overview.jpg',
+    languages: [
+      'vuejs',
+    ],
+    duration: '6 months',
+    teamSize: '2',
+    url: 'https://www.cheflix.com/',
+    description: 'A online video platform for high quality masterclasses in food and drinks.',
+    content: [
+      'Continuing on the solid foundation build by my predecessor, I have been adding more features, fixes and improvements to the Cheflix platform. Some of the new additions I\'ve added are the in-depth filtering of videos, personal notes per video and a way to switch your prefered method of payment in your account settings.',
+      'Due to the large amount of data that needs to be displayed at once in this project, I really had to think about clever ways to handle topics like data fetching and persistance. Working with Google Tag Manager and Analytics was also a great learning experience for me, being able to really take note on what users tend to do on their visits and improving the application based on that.',
+      '',
+    ],
+    logo: '../../assets/gfx/cheflix/logo.png',
+    screenshots: [
+      '../../assets/gfx/cheflix/screenshot0.jpg',
+    ],
+    screens: [
+      '../../assets/gfx/cheflix/screen0.png',
+      '../../assets/gfx/cheflix/screen1.png',
+      '../../assets/gfx/cheflix/screen2.png',
+      '../../assets/gfx/cheflix/screen3.png',
+    ],
+    technologies: [
+      'Vuejs',
+      'Audience Player',
+      'Contentful',
+      'Google Tag Manager',
+      'Google Analytics'
+    ]
+  }, {
+    id: 9,
+    type: 'Web Application',
+    title: 'Partou Acquisition Platform',
+    image: '../../assets/gfx/partou/partou_overview.jpg',
+    languages: [
+      'vuejs',
+      'typescript',
+    ],
+    duration: '6 months',
+    teamSize: '2',
+    url: 'https://www.werkenbijpartou.nl/',
+    description: 'A three part web application to handle the whole acquisition process of Partou.',
+    content: [
+      'Partou is a large daycare chain in the Netherlands, and wanted a large web platform to help them in the acquisition process.There are three parts to this platform: the vacancy board, the preboarding process and the onboarding process.',
+      'I personally had an active role in developing the preboarding and onboarding applications, and held a supporting role for the vacancy board.',
+      'The preboarding part of the application was all about getting both the information necessary to complete the hiring process, as well as getting the new hire ready to for their first day. ',
+      'The onboarding section was a tool foor new hires to get acquainted with all the facilities and parts of the job using quizes and playful elements.',
+    ],
+    logo: '../../assets/gfx/partou/logo.png',
+    screenshots: [
+      '../../assets/gfx/partou/screen0.png',
+    ],
+    screens: [
+      '../../assets/gfx/partou/screen0.png',
+      '../../assets/gfx/partou/screen1.png',
+      '../../assets/gfx/partou/screen2.png',
+      '../../assets/gfx/partou/screen3.png',
+    ],
+    technologies: [
+      'Vue-3',
+      'Nuxt',
+      'Typescript',
+      'Contentful',
+      'Tailwind'
+    ]
   },
 ];

@@ -1,8 +1,9 @@
-.wrapper {
+.grid-background-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
+  margin-top: -4rem;
   
   .container {
     padding: 0.5rem;
@@ -32,7 +33,7 @@
 
       &:hover {
         transform: translate(25px, -50px);
-        z-index: 100;
+        z-index: var(--z-content);
 
         -webkit-box-shadow: -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
         -moz-box-shadow:    -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
@@ -40,10 +41,15 @@
 
         .side-panel {
           opacity: 1;
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(30deg) scaleX(1.25) scaleY(1.6);
 
           -webkit-box-shadow: -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
           -moz-box-shadow:    -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
           box-shadow:         -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+
+          .fold {
+            transform: rotateY(0deg) rotateX(-45deg) scaleX(0.8) scaleY(1.2) translateX(13px) translateY(5px) !important;
+          }
         }
       }
 
@@ -77,10 +83,10 @@
         opacity: 0;
         position: absolute;
         pointer-events: none;
-        transition: all .2s ease-in-out;
+        transition: opacity .2s ease-in-out, transform .2s ease-in-out 1s;
         text-align: left;
-        z-index: 9999;
-
+        z-index: var(--z-content-overlay);
+        
         -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000015;
         -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000015;
         box-shadow:         0 0.25rem 1rem 0.25rem #00000015;
@@ -110,7 +116,8 @@
               position: absolute;
               width: 2.5rem;
               transform: rotateY(-40deg) rotateX(45deg);
-              z-index: 9999;
+              transition: transform .2s ease-in-out 1s;
+              z-index: var(--z-navigation-overlay);
 
               .icon {
                 color: var(--col-white);
@@ -148,7 +155,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .wrapper {
+  .grid-background-wrapper {
     display: none;
   }
 }

@@ -6,7 +6,11 @@
   justify-content: space-around;
   position: fixed;
   width: 100%;
-  z-index: 999999;
+  z-index: var(--z-navigation);
+
+  .logo-wrapper {
+    display: none;
+  }
   
   &::after {
     background-color: var(--col-blue);
@@ -17,7 +21,7 @@
     top: -0.5rem;
     left: 0;
     width: 100%;
-    z-index: -1;
+    z-index: var(--z-down);
   }
 
   .item {
@@ -25,10 +29,11 @@
     color: var(--col-white);
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
     padding: 0.5rem;
     position: relative;
-    width: 20%;
+    transform: scale(0.9);
 
     &::after {
       background: url('../../assets/gfx/shape_white.svg');
@@ -60,6 +65,73 @@
 
 @media screen and (min-width: 640px) {
   .wrapper {
-    display: none;
+    bottom: unset;
+    opacity: 1;
+    top: 0;
+    transition: opacity .2s;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .logo-wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .logo {
+        height: 2rem;
+        margin: 0 1rem;
+        width: 2rem;
+      }
+
+      .title {
+        color: var(--col-white);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 900;
+        letter-spacing: 0.05rem;
+        margin-right: 2rem;
+        white-space: nowrap;
+      }
+    }
+
+    .item {
+      border-bottom: 0.25rem solid var(--col-blue);
+      cursor: pointer;
+      flex-direction: row;
+      justify-content: center;
+      padding: 1rem 0.5rem;
+      transition: all .2s;
+      transform: none;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background-color: var(--col-blue-lighter);
+        border-bottom: 0.25rem solid var(--col-white);
+      }
+
+      &.active {
+        border-bottom: 0.25rem solid var(--col-white);
+      }
+
+      .label {
+        font-size: 0.9rem;
+        margin-top: 0;
+        margin-left: 0.75rem;
+      }
+
+      .icon {
+        font-size: 1rem;
+      }
+    }
   }
 }

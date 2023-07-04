@@ -61,8 +61,18 @@ export class GridBackgroundComponent implements OnInit {
     return `-${width + 16}px`;
   }
 
-  public goToPage(id: number) {
-    this.router.navigate([`/details`, {id}]);
+  public goToPage(item: Project) {
+    if (item.isC2a) {
+      this.scrollToElement(item.url ?? '#footer')
+      return;
+    }
+    this.router.navigate([`/details`, {id: item.id}]);
+  }
+
+  private scrollToElement(url: string) {
+    const element = document.querySelector(url)! as HTMLElement;
+    const top = element.offsetTop ?? 0;
+    window.scroll({top, behavior: 'smooth'});
   }
 
   private compileProjects(): Project[] {
@@ -74,7 +84,22 @@ export class GridBackgroundComponent implements OnInit {
         newProjects.push(newProject);
       });
     });
-    return newProjects;
+    const c2aProject: Project = {
+      id: -1,
+      type: 'Web Application',
+      title: 'This could be your project',
+      image: '../../assets/gfx/empty_screenshot.png',
+      languages: [],
+      duration: '',
+      teamSize: '',
+      url: '#footer',
+      description: 'Feel free to get in touch with me if you think I would be a good fit for your project or team.',
+      content: [],
+      logo: '../../assets/gfx/empty-logo.png',
+      screenshots: ['../../assets/gfx/empty_screenshot.png'],
+      isC2a: true,
+    };
+    return [c2aProject, ...newProjects];
   }
 
   private displayCardRight(index: number): boolean {

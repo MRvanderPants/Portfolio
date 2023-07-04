@@ -26,6 +26,7 @@
     --col-blue-darkest: #2563a0;
     --col-blue-deep: #2e465e;
     --col-blue-deepest: #0f1a25;
+    --col-blue-desaturated-dark: #253e57;
 
     --col-white: #ffffff;
     --col-beige-lighter: #f8f8ee;
@@ -43,4 +44,13 @@
 
     --size-page: 60%;
     --size-page-wide: 80%;
+
+    --z-down: -1;
+    --z-up: 1;
+    --z-content: 30;
+    --z-content-overlay: 31;
+    --z-back-button: 40;
+    --z-navigation: 50;
+    --z-navigation-overlay: 60;
+    --z-overlay: 100;
 }

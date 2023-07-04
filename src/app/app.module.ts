@@ -21,6 +21,13 @@ import { ParagraphComponent } from './paragraph/paragraph.component';
 import { TagListComponent } from './tag-list/tag-list.component';
 import { SideProjectListComponent } from './side-project-list/side-project-list.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { DataService } from 'src/services/data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FadeInPipe } from './pipes/fade-in.pipe';
+import { TimelineComponent } from './timeline/timeline.component';
+import { IntersectionObserverModule } from 'ngx-intersection-observer';
 
 @NgModule({
   declarations: [
@@ -43,12 +50,21 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
     TagListComponent,
     SideProjectListComponent,
     MobileNavComponent,
+    ContactFormComponent,
+    FadeInPipe,
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    IntersectionObserverModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

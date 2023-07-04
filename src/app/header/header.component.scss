@@ -62,7 +62,7 @@
         border-radius: 5.5rem;
         height: 10rem;
         width: 10rem;
-        z-index: 100;
+        z-index: var(--z-content);
       }
 
       .logo {
@@ -71,7 +71,7 @@
         position: absolute;
         right: 0;
         width: 4rem;
-        z-index: 101;
+        z-index: var(--z-content-overlay);
       }
 
       &:before {
@@ -116,7 +116,7 @@
       position: relative;
       top: -5rem;
       margin-bottom: -14rem;
-      z-index: 10;
+      z-index: var(-z-up);
 
       .title {
         color: var(--col-blue-darker);

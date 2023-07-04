@@ -1,0 +1,34 @@
+<section class="timeline">
+  <div class="wrapper">
+    <div class="item" *ngFor="let job of jobs">
+      <div class="item__wrapper">
+        <a *ngIf="job.url" [href]="job.url" target="_blank" class="title">
+          <span class="sub-title" *ngFor="let client of job.clients">
+            @{{client}}
+          </span>
+        </a>
+        <div *ngIf="!job.url" class="title no-url">
+          <span class="sub-title" *ngFor="let client of job.clients">
+            @{{client}}
+          </span>
+        </div>
+        <div class="content">
+          <span class="role">{{job.role}}</span>
+          <app-tag-list [tags]="job.skills"></app-tag-list>
+          <p class="description">{{job.description}}</p>
+        </div>
+      </div>
+      <div class="pin">
+        <span class="label">
+          {{getYearForJob(job)}}
+        </span>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+  <div class="timeline-nav">
+    <div *ngFor="let slide of slides; let i = index" class="slide" (click)="activateSlide(i)">
+      <div class="fill" [class.active]="activeSlide == i"></div>
+    </div>
+  </div>
+</section>

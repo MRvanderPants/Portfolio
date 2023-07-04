@@ -1,8 +1,8 @@
 <app-header></app-header>
-<app-content-block blockTitle="What I do" id="tech" #tech [rounded]="true">
-  <div class="move-down" (click)="moveToDescription()" [class.hidden]="!showButton">
-    <i class="icon material-icons">expand_more</i>
-  </div>
+<div class="move-down" (click)="moveToDescription()" [class.hidden]="!showButton">
+  <i class="icon material-icons">expand_more</i>
+</div>
+<app-content-block [ngClass]="'' | fadeIn" blockTitle="What I do" id="tech" #tech [rounded]="true">
   <app-work-panel></app-work-panel>
   <div class="description">
     <app-paragraph intro="Hi,">
@@ -14,20 +14,19 @@
     <app-paragraph>
       These are some of the technologies that I am familiar with:
     </app-paragraph>
-    <app-tag-list></app-tag-list>
+    <app-tag-list class="tech-list" [tags]="jobTags" variant="large"></app-tag-list>
   </div>
 </app-content-block>
-<app-content-block id="personalProjects" title="My personal projects" theme="blue" [extraHigh]="true">
+<app-content-block [ngClass]="'' | fadeIn" id="personalProjects" theme="blue" [extraHigh]="true">
   <app-paragraph intro="Be">
     sides my professional work, I also like to tinker on a bunch of different personal projects. Take a look:
   </app-paragraph>
   <app-paragraph>
     <app-side-project-list></app-side-project-list>
   </app-paragraph>
-  <!-- <app-project-grid></app-project-grid> -->
 </app-content-block>
-<app-content-block blockTitle="Where I've worked" id="resume" [rounded]="true">
-  <app-resume></app-resume>
+<app-content-block [ngClass]="'' | fadeIn" blockTitle="Where I've worked" id="resume" [rounded]="true">
+  <app-timeline></app-timeline>
 </app-content-block>
 <app-footer></app-footer>
 <app-back-to-top></app-back-to-top>

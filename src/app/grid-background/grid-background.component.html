@@ -1,10 +1,10 @@
-<div id="grid-background" class="wrapper">
+<div id="grid-background" class="grid-background-wrapper">
   <div class="container">
     <div class="column" *ngFor="let column of columns">
       <div
         *ngFor="let item of column; let i = index"
         class="grid-item"
-        (click)="goToPage(item.id)"
+        (click)="goToPage(item)"
         [ngStyle]="{
           height: itemHeight + 'px',
           width: itemWidth + 'px',

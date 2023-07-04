@@ -1,22 +1,32 @@
 .tag-list {
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.8rem;
+  opacity: 0.5;
   margin: auto;
 
-  .tag {
-    background-color: var(--col-blue-lighter);
-    border-radius: 0.25rem;
-    color: var(--col-white);
-    height: 1.5rem;
-    margin: 0 0.5rem 0.5rem 0;
-    padding: 0.25rem 1rem;
+  &.large {
+    font-size: 0.9rem;
+    opacity: 1;
   }
-}
 
-@media screen and (min-width: 640px) {
-  .tag-list {
-    justify-content: center;
-    padding: 1rem;
-    width: 80%;
+  .tag {
+    background-color: var(--col-grey);
+    border-radius: 0.25rem;
+    display: flex;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.125rem 0.5rem 0.125rem 0.25rem;
+    white-space: nowrap;
+
+    &.large {
+      align-items: center;
+      background-color: var(--col-blue-lighter);
+      border-radius: 0.25rem;
+      color: var(--col-white);
+      font-size: 0.9rem;
+      height: 1.5rem;
+      margin: 0 0.5rem 0.5rem 0;
+      padding: 0.25rem 1rem;
+    }
   }
 }

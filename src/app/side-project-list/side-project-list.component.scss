@@ -18,6 +18,25 @@
       .description {
         padding-bottom: 2rem;
       }
+
+      .c2a {
+        align-items: center;
+        background-color: var(--col-blue);
+        border-radius: 0.25rem;
+        color: var(--col-white);
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 1.5rem;
+
+        .icon {
+          margin-left: 0.5rem;
+        }
+
+        &:hover {
+          background-color: var(--col-blue-darker);
+        }
+      }
     }
 
     .side-content {
@@ -43,8 +62,16 @@
         width: 3rem;
 
         .icon {
+          color: var(--col-white);
           height: 2rem;
           width: 2rem;
+
+          &.scale {
+            align-items: center;
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: center;
+          }
         }
       }
     }
@@ -67,6 +94,10 @@
       .text-content {
         padding-right: 5rem;
         padding-left: 0;
+
+        .c2a {
+          width: fit-content;
+        }
       }
 
       &:nth-child(odd) {

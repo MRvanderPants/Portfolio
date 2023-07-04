@@ -51,7 +51,7 @@
   flex-direction: column;
   padding: 6rem 1.5rem;
   position: relative;
-  z-index: 1000;
+  z-index: var(--z-content);
 
   &.extraHigh {
     padding: 8rem 1.5rem;
@@ -60,7 +60,7 @@
   &.rounded {
     padding-bottom: 0;
     padding-top: 0;
-    z-index: 1001;
+    z-index: var(--z-content-overlay);
 
     .content {
       padding-bottom: 2rem;
@@ -79,7 +79,7 @@
     margin: -3rem -1.5rem 0 -1.5rem;
     position: relative;
     width: calc(100% + 3rem);
-    z-index: 1;
+    z-index: var(--z-up);
 
     &.a {
       background-color: var(--col-grey-lightest);

@@ -1,25 +1,39 @@
-<footer class="footer" [class.blue]="theme === 'blue'">
+<footer class="footer" [class.blue]="theme === 'blue'" id="footer">
   <div class="cover a"></div>
   <div class="cover b"></div>
   <div class="cover c"></div>
   <div class="content">
-    <div class="row shade">
-      <h4 class="title">Sjoerd van den Broek</h4>
-      <h5 class="sub-title">Full-stack web developer and<br />software engineer</h5>
+    <div class="content-wrapper">
+      <div class="content-description-wrapper">
+        <img class="contact-image" src="assets/gfx/contact.svg" alt="contact-image" />
+        <h2 class="footer-title">Would you like to get in touch?</h2>
+        <p class="footer-description">
+          The easiest way to get in touch is to either send me a email or leave a message using the form.
+        </p>
+      </div>
+      <div class="contact-form">
+        <app-contact-form></app-contact-form>
+      </div>
     </div>
-    <div class="row grow">
-      <a class="item" href="mailto:inquiries@mrvanderpants.com" target="_blank">
-        <i class="icon material-icons">mail</i>
-        <span class="label">inquiries@mrvanderpants.com</span>
-      </a>
-      <a class="item" href="https://www.linkedin.com/in/mrvanderpants/" target="_blank">
-        <img class="icon linkedin" src="assets/linkedin.svg" alt="icon" />
-        <span class="label">LinkedIn</span>
-      </a>
-      <a class="item" href="https://twitter.com/MRvanderPants" target="_blank">
-        <img class="icon twitter" src="assets/twitter.svg" alt="icon" />
-        <span class="label">Twitter</span>
-      </a>
+    <div class="wrapper">
+      <div class="row shade">
+        <h4 class="title">Sjoerd van den Broek</h4>
+        <h5 class="sub-title">Full-stack web developer and<br />software engineer</h5>
+      </div>
+      <div class="row grow">
+        <a class="item" href="mailto:inquiries@mrvanderpants.com" target="_blank">
+          <i class="icon material-icons">mail</i>
+          <span class="label">inquiries@mrvanderpants.com</span>
+        </a>
+        <a class="item" href="https://www.linkedin.com/in/mrvanderpants/" target="_blank">
+          <img class="icon linkedin" src="assets/linkedin.svg" alt="icon" />
+          <span class="label">LinkedIn</span>
+        </a>
+        <a class="item" href="https://twitter.com/MRvanderPants" target="_blank">
+          <img class="icon twitter" src="assets/twitter.svg" alt="icon" />
+          <span class="label">Twitter</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

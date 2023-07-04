@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { jobs } from 'src/assets/jobs';
 
 @Component({
@@ -7,7 +7,6 @@ import { jobs } from 'src/assets/jobs';
   styleUrls: ['./tag-list.component.scss']
 })
 export class TagListComponent {
-  public tags = new Set(jobs.flatMap(job => {
-    return job.skills
-  }).sort());
+  @Input() public tags: string[] = [];
+  @Input() public variant: 'large' | 'default' = 'default';
 }

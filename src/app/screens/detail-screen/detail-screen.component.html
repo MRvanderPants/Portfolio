@@ -1,35 +1,41 @@
-<section class="header">
-  <div class="back"></div>
-  <div class="back-button" (click)="goBack()">
-    <i class="icon material-icons">chevron_left</i>
-    <span class="label">go back</span>
-  </div>
-  <div class="container">
-    <img class="image" alt="project-image" [src]="project?.image" />
-    <div class="project-details">
-      <span class="detail-title">Project type</span>
-      <span class="detail-value">{{project?.type}}</span>
-      <span class="detail-title">Technologies</span>
-      <div *ngFor="let language of project?.languages" class="tech-item">
-        <i class="icon {{ language | prefixIcon }}"></i>
-        <span class="label">{{language}}</span>
+<div class="back-button" (click)="goBack()">
+  <i class="icon material-icons">chevron_left</i>
+  <span class="label">go back</span>
+</div>
+<app-content-block>
+  <div class="header">
+    <img class="logo" alt="project-logo" [src]="project?.logo" />
+    <div class="title-wrapper">
+      <h1 class="title">
+        {{project?.title}}
+      </h1>
+      <div class="meta-info">
+        <div class="meta-item" title="Team size">
+          <i class="icon material-icons">person</i>
+          <span class="label">{{project?.teamSize}}</span>
+        </div>
+        <div class="meta-item" title="Project duration">
+          <i class="icon material-icons">timer</i>
+          <span class="label">{{project?.duration}}</span>
+        </div>
+        <a *ngIf="project?.url" [href]="project?.url" target="_blank">
+          <div class="meta-item" title="Visit the live project">
+            <i class="icon material-icons">ios_share</i>
+            <span class="label">Visit</span>
+          </div>
+        </a>
       </div>
-      <span class="detail-title">Project duration</span>
-      <span class="detail-value">{{project?.duration}}</span>
-      <span class="detail-title">Team size</span>
-      <span class="detail-value">{{project?.teamSize}}</span>
+      <p class="sub-title">{{project?.description}}</p>
     </div>
   </div>
-</section>
-<app-content-block>
-  <div class="content">
-    <h1 class="title">
-      {{project?.title}}
-    </h1>
-    <p class="sub-title">{{project?.description}}</p>
-    <p class="description" *ngFor="let desc of project?.content">
-      {{desc}}
-    </p>
+  <div class="wrapper">
+    <div class="content">
+      <p class="description" *ngFor="let desc of project?.content">
+        {{desc}}
+      </p>
+      <app-tag-list variant="large" *ngIf="project" [tags]="project!.technologies!"></app-tag-list>
+    </div>
+    <img class="image" alt="project-image" [src]="project?.image" />
   </div>
 </app-content-block>
 <app-content-block theme="blue">
