@@ -1,19 +1,32 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { Job, jobs } from 'src/assets/jobs';
+
+export interface TimelineItem {
+  titles: string[];
+  description: string;
+  tags: string[];
+  url?: string;
+}
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
 })
-export class TimelineComponent {
+export class TimelineComponent implements AfterViewInit {
+
+  @Input() public hasTimeline = true;
+
   public jobs = jobs;
   public slides: number[] = [];
   public activeSlide = 0;
-
-  public constructor() {
-    const slideCount = Math.ceil(jobs.length / 3);
-    this.slides = new Array(slideCount);
+  
+  public ngAfterViewInit() {
+    setTimeout(() => {
+      const children = document.querySelectorAll('.timeline .item')!;
+      const slideCount = Math.ceil(children.length / 3);
+      this.slides = new Array(slideCount);
+    });
   }
 
   public getYearForJob(job: Job): string {

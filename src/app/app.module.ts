@@ -28,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FadeInPipe } from './pipes/fade-in.pipe';
 import { TimelineComponent } from './timeline/timeline.component';
 import { IntersectionObserverModule } from 'ngx-intersection-observer';
+import { TimelineResumeItemComponent } from './timeline-resume-item/timeline-resume-item.component';
+import { TimelineProjectsItemComponent } from './timeline-projects-item/timeline-projects-item.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { IntersectionObserverModule } from 'ngx-intersection-observer';
     ContactFormComponent,
     FadeInPipe,
     TimelineComponent,
+    TimelineResumeItemComponent,
+    TimelineProjectsItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -66,34 +66,6 @@ $picture-overlap: 4rem;
       font-weight: 900;
       padding-bottom: 0.5rem;
       position: relative;
-
-      &::after {
-        background: url('../../../assets/gfx/shape_blue_light.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: '';
-        left: -1.75rem;
-        padding: 1.5rem;
-        position: absolute;
-        top: -0.5rem;
-        width: 3rem;
-        z-index: var(--z-down);
-      }
-
-      &::before {
-        background: url('../../../assets/gfx/shape_blue_light.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: '';
-        left: -1rem;
-        padding: 0.5rem;
-        position: absolute;
-        top: 1.75rem;
-        width: 1rem;
-        z-index: var(--z-down);
-      }
     }
 
     .meta-info {
@@ -142,9 +114,17 @@ $picture-overlap: 4rem;
   }
 }
 
+.more-title {
+  color: var(--col-blue-darker);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 0;
+}
+
 @media screen and (min-width: 640px) {
   .header {
-    background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
+    // background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
     border-radius: 0.5rem;
     display: flex;
     padding: 1.5rem;

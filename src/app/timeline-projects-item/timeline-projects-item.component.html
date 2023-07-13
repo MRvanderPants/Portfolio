@@ -1,0 +1,25 @@
+<a class="item" [href]="'details;id=' + project.id">
+  <div class="item__wrapper">
+    <img class="item__image" [src]="project.image" />
+    <div class="item__header">
+      <img class="item__icon" [src]="project.logo" />
+      <div>
+        <a *ngIf="project.url" [href]="project.url" target="_blank" class="title">
+          <span class="sub-title">
+            {{project.title}}
+          </span>
+        </a>
+        <div *ngIf="!project.url" class="title no-url">
+          <span class="sub-title">
+            {{project.title}}
+          </span>
+        </div>
+        <app-tag-list [tags]="project.languages"></app-tag-list>
+      </div>
+    </div>
+    <div class="content">
+      <p class="description">{{project.description}}</p>
+    </div>
+  </div>
+</a>
+

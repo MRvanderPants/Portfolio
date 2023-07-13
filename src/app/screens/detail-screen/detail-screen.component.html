@@ -38,8 +38,18 @@
     <img class="image" alt="project-image" [src]="project?.image" />
   </div>
 </app-content-block>
-<app-content-block theme="blue">
+<app-content-block theme="blue" [rounded]="true">
   <app-picture-carousel *ngIf="project?.screens" [project]="project"></app-picture-carousel>
+</app-content-block>
+<app-content-block>
+  <h4 class="more-title">See also</h4>
+  <app-timeline>
+    <app-timeline-projects-item
+      *ngFor="let proj of otherProjects()"
+      [project]="proj"
+      [current]="project!">
+    </app-timeline-projects-item>
+  </app-timeline>
 </app-content-block>
 <app-footer theme="blue"></app-footer>
 <app-back-to-top></app-back-to-top>

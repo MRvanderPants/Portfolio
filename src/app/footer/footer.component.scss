@@ -3,42 +3,14 @@
   z-index: var(--z-navigation);
 
   .cover {
+    background-color: var(--col-blue-desaturated-dark);
     border-radius: 100% 100% 0 0;
     height: 3rem;
     margin: -3rem -1.5rem 0 -1.5rem;
     position: relative;
     width: calc(100% + 3rem);
+    z-index: 100;
     z-index: var(--z-up);
-
-    &.a {
-      background-color: var(--col-blue-desaturated-dark);
-      z-index: 100
-    }
-
-    &.b {
-      background-color: var(--col-blue);
-      border-radius: 150% 75% 0 0;
-      opacity: 0.1;
-      top: -0.5rem;
-      width: calc(100% + 5rem);
-
-      animation-name: morphA;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-
-    &.c {
-      background-color: var(--col-blue-lightest);
-      border-radius: 50% 100% 0 0;
-      opacity: 0.2;
-      top: -1rem;
-      width: calc(100% + 2rem);
-      z-index: -100;
-
-      animation-name: morphB;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-    }
   }
   
   .content {

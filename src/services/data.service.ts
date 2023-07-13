@@ -6,9 +6,7 @@ export class DataService {
 
   private emailAPI = 'https://www.mrvanderpants.com/email.php';
 
-  constructor(
-    private httpClient: HttpClient
-  ) { }
+  constructor(private httpClient: HttpClient) { }
 
 
   /**
@@ -17,7 +15,7 @@ export class DataService {
    */
   public sendMail (formData: any): Promise <any> {
 
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve) => {
 
       this.httpClient.get(
         this.emailAPI + `?email=${formData.email}&message=${formData.message}&name=${formData.name}&subject=${formData.subject}&check1=${formData.check1}&check2=${formData.check2}`

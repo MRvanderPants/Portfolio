@@ -1,14 +1,10 @@
 <section class="content-block {{theme}}" [class.rounded]="rounded" [class.extraHigh]="extraHigh">
-  <div class="cover a" *ngIf="rounded"></div>
-  <div class="cover b" *ngIf="rounded"></div>
-  <div class="cover c" *ngIf="rounded"></div>
+  <div class="cover" *ngIf="rounded"></div>
   <div class="content">
     <h3 *ngIf="blockTitle.length > 0" class="title">
       {{blockTitle}}
     </h3>
     <ng-content></ng-content>
   </div>
-  <div class="cover inverted a" *ngIf="rounded"></div>
-  <div class="cover inverted b" *ngIf="rounded"></div>
-  <div class="cover inverted c" *ngIf="rounded"></div>
+  <div class="cover inverted" *ngIf="rounded"></div>
 </section>

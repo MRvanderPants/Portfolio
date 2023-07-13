@@ -82,7 +82,7 @@ export const projects: Project[] = [
     id: 2,
     type: 'Android / iOS Application',
     title: 'Mijn van Mossel',
-    image: '../../assets/gfx/VanMossel1.jpg',
+    image: '../../assets/gfx/vanmossel/VanMossel1.jpg',
     languages: [
       'angularjs',
       'typescript',
@@ -293,7 +293,7 @@ export const projects: Project[] = [
     duration: '6 months',
     teamSize: '2',
     url: 'https://www.werkenbijpartou.nl/',
-    description: 'A three part web application to handle the whole acquisition process of Partou.',
+    description: 'A three part web application to handle the whole acquisition process of the Partou daycare franchise.',
     content: [
       'Partou is a large daycare chain in the Netherlands, and wanted a large web platform to help them in the acquisition process.There are three parts to this platform: the vacancy board, the preboarding process and the onboarding process.',
       'I personally had an active role in developing the preboarding and onboarding applications, and held a supporting role for the vacancy board.',

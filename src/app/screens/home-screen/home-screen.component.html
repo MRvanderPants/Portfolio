@@ -26,7 +26,12 @@
   </app-paragraph>
 </app-content-block>
 <app-content-block [ngClass]="'' | fadeIn" blockTitle="Where I've worked" id="resume" [rounded]="true">
-  <app-timeline></app-timeline>
+  <app-timeline>
+    <app-timeline-resume-item
+      *ngFor="let job of jobs; let i = index"
+      [job]="job">
+    </app-timeline-resume-item>
+  </app-timeline>
 </app-content-block>
 <app-footer></app-footer>
 <app-back-to-top></app-back-to-top>

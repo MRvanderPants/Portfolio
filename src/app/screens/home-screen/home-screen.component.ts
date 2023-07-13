@@ -11,6 +11,7 @@ export class HomeScreenComponent implements OnInit {
   public showButton = true;
   public yearsOfExp = 0;
   public jobTags: string[] = [];
+  public jobs = jobs;
 
   public ngOnInit() {
     this.yearsOfExp = this.yearsOfExperience();

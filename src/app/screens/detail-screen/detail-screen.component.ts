@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Project, projects } from 'src/assets/projects';
 import {Location} from '@angular/common';
 
@@ -26,5 +26,9 @@ export class DetailScreenComponent implements OnInit {
 
   public goBack() {
     this.location.back();
+  }
+
+  public otherProjects() {
+    return projects.filter(proj => proj.id != this.project?.id);
   }
 }
