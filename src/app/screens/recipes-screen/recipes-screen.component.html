@@ -1,0 +1,9 @@
+<div class="page">
+  <h1 class="title">Recepten</h1>
+  <a class="route" *ngFor="let route of routes" [routerLink]="'/recipe/' + getFilename(route)">
+    {{ route.key }}
+    <i class="material-icons">
+      chevron_right
+    </i>
+  </a>
+</div>

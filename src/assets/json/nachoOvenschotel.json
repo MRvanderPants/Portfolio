@@ -1,0 +1,44 @@
+{
+    "title": "Nacho ovenschotel",
+    "ingredients": [{
+        "key": "Gehakt",
+        "value": "500 gr"
+    }, {
+        "key": "Mayonaise",
+        "value": "3 El"
+    }, {
+        "key": "UI",
+        "value": "2 St"
+    }, {
+        "key": "Grove Salsa",
+        "value": "1 Pot"
+    }, {
+        "key": "Maïs",
+        "value": "1 Bl"
+    }, {
+        "key": "Nacho's",
+        "value": "1 Zak"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }, {
+        "key": "Chilipoeder",
+        "value": "1/2 Tl"
+    }],
+    "directions": [{
+        "key": "Bak het gehakt en de uien voor 5 tot 10 minuten."
+    }, {
+        "key": "Voeg de mayonaise, salse, maïs, chilipoeder, zout en peper toe aan het gehakt en meng tot gelijkmatig dik."
+    }, {
+        "key": "Doe de nacho's in een broodbuil en rol deze tot kruimels met een deegroller."
+    }, {
+        "key": "Doe het gehaktmengsel in een ovenschaal, en bestrooi met nacho kruimels en geraspte kaas."
+    }, {
+        "key": "Plaats de ovenschaal ongeveer een kwartier in de oven op 175 graden, of tot de kaas gesmolten is."
+    }],
+    "tags": [
+        "gehakt",
+        "hoofdgerecht",
+        "ovenschotel"
+    ]
+}

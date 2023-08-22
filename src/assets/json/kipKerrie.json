@@ -1,0 +1,62 @@
+{
+    "title": "Kip Kerrie",
+    "ingredients": [{
+        "key": "Rijst",
+        "value": "1 Kop"
+    }, {
+        "key": "Kipfilet",
+        "value": "4 Stk"
+    }, {
+        "key": "Wortel",
+        "value": "1 Stk"
+    }, {
+        "key": "Appel",
+        "value": "1 St"
+    }, {
+        "key": "Courgette",
+        "value": "2 Tl"
+    }, {
+        "key": "Paprika",
+        "value": "2 Stk"
+    }, {
+        "key": "UI",
+        "value": "1 Stk"
+    }, {
+        "key": "Kerrie",
+        "value": "3 El"
+    }, {
+        "key": "Zout",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Knoflook",
+        "value": "2 T"
+    }, {
+        "key": "Cocosmelk",
+        "value": "1 Bl"
+    }, {
+        "key": "Kippenbouillonblokje",
+        "value": "1 St"
+    }, {
+        "key": "Water",
+        "value": "1/4 Kop"
+    }],
+    "directions": [{
+        "key": "Breng water aan de kook, en kook de rijst voor 10 minuten."
+    }, {
+        "key": "Bak de kip tot goudbruin en voeg wat zout en peper toe."
+    }, {
+        "key": "Voeg de paprika, courgette, wortel en ui toe, en bak mee voor 5 minuten."
+    }, {
+        "key": "Voeg de cocosmelk, kerrie, het bouillonblokje en wat water toe aan de kip, en laat dit 5 minuten indikken."
+    }, {
+        "key": "Voeg de appelblokjes toe aan de saus, en laat deze verder indikken tot de saus gelijkmatig en dik is."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "rijst"
+    ]
+}

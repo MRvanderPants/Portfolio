@@ -1,0 +1,63 @@
+{
+    "title": "Spagethi met Tomatensaus",
+    "ingredients": [{
+        "key": "Gehakt",
+        "value": "500 gr"
+    }, {
+        "key": "Ui",
+        "value": "2 Stk"
+    }, {
+        "key": "Gezeefde tomaten",
+        "value": "2 Pk"
+    }, {
+        "key": "Peterselie",
+        "value": "1/2 El"
+    }, {
+        "key": "Oregano",
+        "value": "1/2 El"
+    }, {
+        "key": "Rozemarijn",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Tijm",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Knoflook",
+        "value": "1 Tn"
+    }, {
+        "key": "Water",
+        "value": "1/2 Kop"
+    }, {
+        "key": "Prei",
+        "value": "7 cm"
+    }, {
+        "key": "Champignons",
+        "value": "4 Stk"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }, {
+        "key": "Spagethi",
+        "value": "1/2 Zak"
+    }],
+    "directions": [{
+        "key": "Bak het gehakt en ui tot bruin."
+    }, {
+        "key": "Voeg de tomaten, water, kruiden en geraspte kaas toe aan het gehakt."
+    }, {
+        "key": "Roer tot gelijkmatig, dikke saus."
+    }, {
+        "key": "Breng water aan de kook, en kook de spagethi voor 10 minuten."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "spagethi"
+    ]
+}

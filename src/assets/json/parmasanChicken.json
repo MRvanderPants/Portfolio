@@ -1,0 +1,59 @@
+{
+    "title": "Parmazaanse Kip Overschotel",
+    "ingredients": [{
+        "key": "Spagethi",
+        "value": "1/4 Pak"
+    }, {
+        "key": "Kipfilet",
+        "value": "4 Stk"
+    }, {
+        "key": "Champignion",
+        "value": "4 Stk"
+    }, {
+        "key": "Prei",
+        "value": "1/3 Prei"
+    }, {
+        "key": "Boter",
+        "value": "2 El"
+    }, {
+        "key": "Ui",
+        "value": "1 Stk"
+    }, {
+        "key": "Basilicum",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Knoflook poeder",
+        "value": "1/8 Tl"
+    }, {
+        "key": "Geraspte Parmazaanse kaas",
+        "value": "1 Zak"
+    }, {
+        "key": "Tomaten Pastasaus",
+        "value": "1 Pot"
+    }, {
+        "key": "Breadcrumbs",
+        "value": "1/2 Kop"
+    }],
+    "directions": [{
+        "key": "Breng water aan de kook, en kook de spagethi voor 10 minuten."
+    }, {
+        "key": "Snijd de kip in stukjes en bak deze tot ze goud-bruin zijn en voeg de kruiden hier aan toe. Verspreid deze over de bodem van een ingevette kleine ovenschaal."
+    }, {
+        "key": "Voeg de prei, champignons en ui toe aan de ovenschaal en giet de pastasaus er overheen."
+    }, {
+        "key": "Verspreid de breadcrumbs over de saus en strooi de Parmazaanse kaas hier over uit."
+    }, {
+        "key": "Plaats de ovenschaal in de oven voor 10 tot 15 minuten op 180 graden."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "spagethi"
+    ]
+}

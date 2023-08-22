@@ -1,0 +1,59 @@
+{
+    "title": "Gehakt Tortillia's",
+    "ingredients": [{
+        "key": "Gehakt",
+        "value": "500 gr"
+    }, {
+        "key": "Ui",
+        "value": "2 Stk"
+    }, {
+        "key": "Tomaten",
+        "value": "2 Stk"
+    }, {
+        "key": "Courgette",
+        "value": "1 Stk"
+    }, {
+        "key": "Paprika poeder",
+        "value": "1 El"
+    }, {
+        "key": "Knoflook poeder",
+        "value": "1 El"
+    }, {
+        "key": "Oregano",
+        "value": "1/2 El"
+    }, {
+        "key": "Peper",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Tortillia wraps",
+        "value": "8 Stk"
+    }, {
+        "key": "Creme Fraich",
+        "value": "1 Stk"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }, {
+        "key": "Tomaten puree",
+        "value": "1 Blk"
+    }],
+    "directions": [{
+        "key": "Bak het gehakt en ui tot bruin."
+    }, {
+        "key": "Voeg de tomaten, courgette en kruiden toe aan het gehakt, en roer tot gelijkmatig verdeeld."
+    }, {
+        "key": "Smeer de wraps in met tomaten puree, vul de wraps met het mengsel. Verdeel wraps over twee ingevette ovenschalen."
+    }, {
+        "key": "Smeer de bovenkant van de wraps in met de creme fraiche en plaats de geraspte kaas bovenop."
+    }, {
+        "key": "Zet de ovenschalen 20 minuten in de oven op 200 graden."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "ovenschotel"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "title": "Verse Tomaten Pasta met Bacon",
+    "ingredients": [{
+        "key": "Pasta",
+        "value": "1 Kop"
+    }, {
+        "key": "Gerookte bacon of spekreepjes",
+        "value": "1 - 2 Pk"
+    }, {
+        "key": "Tomaten",
+        "value": "4 St"
+    }, {
+        "key": "Ui",
+        "value": "1 Stk"
+    }, {
+        "key": "Paprika",
+        "value": "1 Stk"
+    }, {
+        "key": "Basilicum",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Knoflook poeder",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1/4 Cup"
+    }, {
+        "key": "Water",
+        "value": "1 Kop"
+    }],
+    "directions": [{
+        "key": "Breng water aan de kook, en kook de pasta voor 10 tot 12 minuten."
+    }, {
+        "key": "Bak de bacon of spekreepjes."
+    }, {
+        "key": "Snijd de tomaten in halve plakken, en doe deze bij het vlees met wat water. Breng het geheel aan de kook tot de tomaat uit elkaar begint te vallen. Roer de tomaten tot een pasta met een houte lepel."
+    }, {
+        "key": "Voeg de groenten, kruiden en geraspte kaas toe, en eventueel wat extra water voor meer volume."
+    }, {
+        "key": "Laat het geheel indikken voor een aantal minuten."
+    }],
+    "tags": [
+        "bacon",
+        "hoofdgerecht",
+        "pasta"
+    ]
+}

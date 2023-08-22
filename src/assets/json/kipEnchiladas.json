@@ -1,0 +1,61 @@
+{
+    "title": "Kip Enchilada's",
+    "ingredients": [{
+        "key": "Kipfilets",
+        "value": "2 Stk"
+    }, {
+        "key": "Ui",
+        "value": "2 Stk"
+    }, {
+        "key": "Gezeefde tomaten",
+        "value": "1 Pk"
+    }, {
+        "key": "Peterselie",
+        "value": "1 El"
+    }, {
+        "key": "Oregano",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Knoflook",
+        "value": "1 Tn"
+    }, {
+        "key": "Water",
+        "value": "1/2 Kop"
+    }, {
+        "key": "Tortillia wraps",
+        "value": "8 Stk"
+    }, {
+        "key": "Taco saus",
+        "value": "1 Pot"
+    }, {
+        "key": "Creme Fraiche",
+        "value": "1/2 Pak"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }],
+    "directions": [{
+        "key": "Bak de kip en ui tot goudbruin."
+    }, {
+        "key": "Giet vet uit de pan, en voeg creme fraiche, kaas, peterselie, oregano, en peper toe. Roer tot de kaas gesmolten is."
+    }, {
+        "key": "Voeg de zout, tomatensaus, water, chili poeder en knoflook toe, en meng tot gelijkmatig."
+    }, {
+        "key": "Rol het mengsel in de wraps, en verdeel deze over twee ingevette schalen."
+    }, {
+        "key": "Smeer de bovenkant van de wraps in met creme fraich en taco saus, en verspreid geraspte kaas er bovenop."
+    }, {
+        "key": "Plaats het geheel in de oven voor 20 minuten op 180 graden."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "ovenschotel"
+    ]
+}

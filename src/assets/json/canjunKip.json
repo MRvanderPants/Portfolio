@@ -1,0 +1,56 @@
+{
+    "title": "Cajun Kip Spagethi",
+    "ingredients": [{
+        "key": "Spagethi",
+        "value": "1/2 Pak"
+    }, {
+        "key": "Kipfilet",
+        "value": "2 Stk"
+    }, {
+        "key": "Champignion",
+        "value": "4 Stk"
+    }, {
+        "key": "Boter",
+        "value": "2 El"
+    }, {
+        "key": "Cajun kruiden",
+        "value": "2 Tl"
+    }, {
+        "key": "Paprika",
+        "value": "2 Stk"
+    }, {
+        "key": "UI",
+        "value": "1 Stk"
+    }, {
+        "key": "Basilicum",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Knoflook poeder",
+        "value": "1/8 Tl"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1/2 Cup"
+    }],
+    "directions": [{
+        "key": "Breng water aan de kook, en kook de spagethi voor 10 minuten."
+    }, {
+        "key": "Doe de kip en cajun kruiden in een plastic zak. Schud zak totdat de kruiden gelijkmatig verdeeld zijn. Bak de kip vervolgens tot goudbruin."
+    }, {
+        "key": "Voeg de paprika, champignons en ui toe, en bak mee voor 3 minuten."
+    }, {
+        "key": "Voeg de creme fraich en kruiden toe aan de kip, en roer tot gelijkmatig verdeeld."
+    }, {
+        "key": "Voeg de spagethi en saus samen in een kom, en roer het door elkaar."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "spagethi"
+    ]
+}

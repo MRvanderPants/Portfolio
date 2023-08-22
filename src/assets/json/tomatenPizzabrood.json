@@ -1,0 +1,50 @@
+{
+    "title": "Mango Salsa met komkommer",
+    "ingredients": [{
+        "key": "Groot Chiabatta Brood",
+        "value": "1 St"
+    }, {
+        "key": "Tomaten puree",
+        "value": "1 Blk"
+    }, {
+        "key": "Paprika",
+        "value": "1 Stk"
+    }, {
+        "key": "Ui",
+        "value": "1 Stk"
+    }, {
+        "key": "Spekreepjes",
+        "value": "1 Pak"
+    }, {
+        "key": "Zout",
+        "value": "1/2 TL"
+    }, {
+        "key": "Peper",
+        "value": "1/4 TL"
+    }, {
+        "key": "Italiaanse kruiden",
+        "value": "1/2 EL"
+    }, {
+        "key": "Cheddar",
+        "value": "2 Plakjes"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1/2 Zk"
+    }],
+    "directions": [{
+        "key": "Bak de spekreepjes en ui."
+    }, {
+        "key": "Mix de tomatenpuree met de kruiden, en voeg water toe tot de gewenste hoeveelheid is bereikt."
+    }, {
+        "key": "Snijd het brood horizontaal door de helft, en smeer beide kanten in met de tomatenpuree."
+    }, {
+        "key": "Bestrooi de broden met de groenten en bacon, en strooi hier vervolgens snippers cheddar kaas en geraspte kaas overheen."
+    }, {
+        "key": "Doe het brood 12 tot 15 minuten in de oven op 200 graden."
+    }],
+    "tags": [
+        "pizza",
+        "brood",
+        "bacon"
+    ]
+}

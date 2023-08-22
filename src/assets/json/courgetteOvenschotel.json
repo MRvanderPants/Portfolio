@@ -1,0 +1,47 @@
+{
+    "title": "Courgette ovenschotel",
+    "ingredients": [{
+        "key": "Gehakt",
+        "value": "500 gr"
+    }, {
+        "key": "Courgette",
+        "value": "1 Stk"
+    }, {
+        "key": "UI",
+        "value": "2 St"
+    }, {
+        "key": "Pesto",
+        "value": "120 gr"
+    }, {
+        "key": "Aardappelschijfjes",
+        "value": "500 gr"
+    }, {
+        "key": "Tomaten",
+        "value": "4 St"
+    }, {
+        "key": "Kookroom",
+        "value": "150 gr"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }],
+    "directions": [{
+        "key": "Bak het gehakt en de uien voor 5 tot 10 minuten."
+    }, {
+        "key": "Voeg de pesto, zout en peper toe aan het gehakt."
+    }, {
+        "key": "Kook de aardappelschijfjes voor 10 minuten, en plaats deze op de bodem van een ovenschaal."
+    }, {
+        "key": "Plaats de tomatenschijfjes op de aardappelschijfjes, gevolgt door de courgette en het gehakt."
+    }, {
+        "key": "Breng de kookroom gelijkmatig aan over het mengsel, en plaats het geheel in de oven voor 40 minuten."
+    }, {
+        "key": "Na 40 minuten, breng een laagje kaas aan op de ovenschaal, en plaats de schaal terug in de oven totdat de kaas gesmolten is."
+    }],
+    "tags": [
+        "gehakt",
+        "groenten",
+        "hoofdgerecht",
+        "ovenschotel"
+    ]
+}

@@ -1,0 +1,26 @@
+<div class="page" *ngIf="recipe">
+  <div class="header">
+    <a routerLink="/recipes">
+      <i class="material-icons">
+        chevron_left
+      </i>
+    </a>
+    <h1 class="title">{{recipe.title}}</h1>
+  </div>
+  <div class="tags">
+    <div class="tag" *ngFor="let tag of recipe.tags">{{tag}}</div>
+  </div>
+  <h2 class="subtitle">Ingredienten</h2>
+  <div class="ingredients">
+    <div class="ingredient" *ngFor="let ingredient of recipe.ingredients">
+      <span>{{ingredient.key}}</span>
+      <span>{{ingredient.value}}</span>
+    </div>
+  </div>
+  <h2 class="subtitle">Bereiding</h2>
+  <div class="directions">
+    <div class="direction" *ngFor="let ingredient of recipe.directions">
+      {{ingredient.key}}
+    </div>
+  </div>
+</div>

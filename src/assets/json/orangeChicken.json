@@ -1,0 +1,68 @@
+{
+    "title": "Orange Chicken",
+    "ingredients": [{
+        "key": "Water",
+        "value": "1 1/2 Kop"
+    }, {
+        "key": "Sinasappelsap",
+        "value": "23 El"
+    }, {
+        "key": "Citroensap",
+        "value": "1/4 Kop"
+    }, {
+        "key": "Rijst azijn",
+        "value": "1/3 Kop"
+    }, {
+        "key": "Ketjap",
+        "value": "2 1/2 El"
+    }, {
+        "key": "Sinasappel pulp",
+        "value": "1 El"
+    }, {
+        "key": "UI",
+        "value": "1 Stk"
+    }, {
+        "key": "Basterdsuiker",
+        "value": "1/4 Kop"
+    }, {
+        "key": "Gemberwortel",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Knoflook poeder",
+        "value": "1/2 Tl"
+    }, {
+        "key": "Peper",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Zout",
+        "value": "1/4 Tl"
+    }, {
+        "key": "Bloem",
+        "value": "1 Kop"
+    }, {
+        "key": "Maïszetmeel",
+        "value": "3 El"
+    }, {
+        "key": "Kipfilet",
+        "value": "2 El"
+    }],
+    "directions": [{
+        "key": "In een sauspan, voeg de sinasappelsap, water, citroensap, rijst azijn en ketjap toe. Roer vervolgens de sinasappel pulp, basterdsuiker, gember, knoflook, ui en peper door de saus, en kook het geheel voor 15 minuten."
+    }, {
+        "key": "Roer de kip door de saus zodat de kip volledig bedekt is."
+    }, {
+        "key": "Haal de kip uit de saus, en plaats deze in een plastic zak. Voeg hier de bloem, zout en peper aan toe, en schud tot de bloem gelijkmatig verspreid is over de kip."
+    }, {
+        "key": "Breng de saus opnieuw aan de kook voor 15 minuten, en bak de kip in een koekenpan tot gaar."
+    }, {
+        "key": "Voeg de saus en de kip samen in de koekenpan en voeg hier de maïszetmeel en water aan toe. Verhit en roer tot de saus dik wordt."
+    }],
+    "tags": [
+        "kip",
+        "hoofdgerecht",
+        "rijst"
+    ]
+}

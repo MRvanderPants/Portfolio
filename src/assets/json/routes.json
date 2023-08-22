@@ -1,0 +1,57 @@
+[
+  {
+    "key": "Zoet Zure Kip",
+    "value": "assets/json/zoetZureKip.json"
+  }, {
+    "key": "Zoet Zure Kip met Ananas",
+    "value": "assets/json/zoetZureKip2.json"
+  }, {
+    "key": "Zweedse Balletjes",
+    "value": "assets/json/zweedseBalletjes.json"
+  }, {
+    "key": "Nacho Ovenschotel",
+    "value": "assets/json/nachoOvenschotel.json"
+  }, {
+    "key": "Courgette Ovenschotel",
+    "value": "assets/json/courgetteOvenschotel.json"
+  }, {
+    "key": "Romige Aardappel Ovenschotel",
+    "value": "assets/json/romigeAardappelOvenschotel.json"
+  }, {
+    "key": "Terriyaki Marinade",
+    "value": "assets/json/terriyakiMarinade.json"
+  }, {
+    "key": "Kip Enchiladas",
+    "value": "assets/json/kipEnchiladas.json"
+  }, {
+    "key": "Spagethi met Tomatensaus",
+    "value": "assets/json/spagethiTomatensaus.json"
+  }, {
+    "key": "Gehakt Tortillia's",
+    "value": "assets/json/gehaktTortillias.json"
+  }, {
+    "key": "Cajun Kip Spagethi",
+    "value": "assets/json/canjunKip.json"
+  }, {
+    "key": "Orange Chicken",
+    "value": "assets/json/orangeChicken.json"
+  }, {
+    "key": "Parmazaanse Kip Ovenschotel",
+    "value": "assets/json/parmasanChicken.json"
+  }, {
+    "key": "Kip Kerrie",
+    "value": "assets/json/kipKerrie.json"
+  }, {
+    "key": "Verse Tomaten Pasta met Bacon",
+    "value": "assets/json/tomatenPasta.json"
+  }, {
+    "key": "Pizzabrood met tomatensaus",
+    "value": "assets/json/tomatenPizzabrood.json"
+  }, {
+    "key": "Pizzabrood met roomsaus",
+    "value": "assets/json/roomPizzabrood.json"
+  }, {
+    "key": "Mango Salsa met komkommer",
+    "value": "assets/json/mangoSalsa.json"
+  }
+]

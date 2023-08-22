@@ -1,0 +1,32 @@
+{
+    "title": "Mango Salsa met komkommer",
+    "ingredients": [{
+        "key": "Mango",
+        "value": "1 St"
+    }, {
+        "key": "Komkommer",
+        "value": "1/2 St"
+    }, {
+        "key": "Chillisaus",
+        "value": "3el"
+    }, {
+        "key": "Citroensap",
+        "value": "1el"
+    }, {
+        "key": "Rode Ui",
+        "value": "1/2 Stk"
+    }],
+    "directions": [{
+        "key": "Snijd de mango and komkommer in stukjes van ongeveer 1-2cm, en de ui in kleine snippers."
+    }, {
+        "key": "Doe deze in een schaal en schenk hier de chillisaus en cintroensap overheen."
+    }, {
+        "key": "Roer het geheel goed door en serveer met bijvoorbeeld wraps en groenten."
+    }],
+    "tags": [
+        "mango",
+        "komkommer",
+        "salsa",
+        "bijgerecht"
+    ]
+}

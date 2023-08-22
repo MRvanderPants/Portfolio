@@ -1,0 +1,30 @@
+{
+    "title": "Terriyaki Marinade",
+    "ingredients": [{
+        "key": "Ketchup",
+        "value": "1/2 Kop"
+    }, {
+        "key": "Honing",
+        "value": "2 El"
+    }, {
+        "key": "Ketjap",
+        "value": "2 El"
+    }, {
+        "key": "Knoflook",
+        "value": "2 Tn"
+    }, {
+        "key": "Vlees naar keuze",
+        "value": ""
+    }],
+    "directions": [{
+        "key": "Meng de ketchup, honing, ketjap en knoflook in een schaal."
+    }, {
+        "key": "Plaats het vlees in de schaal, en meng tot de marianade gelijkmatig verdeeld is."
+    }, {
+        "key": "Bak het vlees in een koekenpan en draai het vlees regelmatig om."
+    }],
+    "tags": [
+        "saus",
+        "bijgerecht"
+    ]
+}

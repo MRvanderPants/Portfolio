@@ -1,0 +1,49 @@
+{
+    "title": "Zoet-zure Kip",
+    "ingredients": [{
+        "key": "Kipfilet",
+        "value": "2 Stk"
+    }, {
+        "key": "Groente olie",
+        "value": "2 El"
+    }, {
+        "key": "Groene Paprika",
+        "value": "1 Stk"
+    }, {
+        "key": "Rode Paprika",
+        "value": "1 Stk"
+    }, {
+        "key": "Wortel snippers",
+        "value": "1 Kop"
+    }, {
+        "key": "Knoflook",
+        "value": "1 Tn"
+    }, {
+        "key": "Champignons",
+        "value": "3-4 Stk"
+    }, {
+        "key": "Maïs zetmeel",
+        "value": "1 el"
+    }, {
+        "key": "Ketjap",
+        "value": "1/4 Kop"
+    }, {
+        "key": "Basterd Suiker",
+        "value": "1 El"
+    }, {
+        "key": "Gember",
+        "value": "1/2 Tl"
+    }],
+    "directions": [{
+        "key": "Bak de kip tot bruin in een wokpan. Voeg de gesneden paprika en knoflook toe en bak voor 2-5 minuten."
+    }, {
+        "key": "In een kom, voeg de maïszetmeel, ketjap, suiker en gember samen en roer tot een gelijkmatige structuur."
+    }, {
+        "key": "Voeg de saus toe aan de wokpan samen met de wortel en champignons en breng het geheel aan de kook voor ongeveer 5 minuten."
+    }],
+    "tags": [
+        "kip",
+        "groenten",
+        "hoofdgerecht"
+    ]
+}

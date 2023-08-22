@@ -40,7 +40,7 @@ export class MobileNavComponent implements OnInit {
     this.targetId = ids[ids.length - 1] ?? 'top';
 
     if (url) {
-      if (!window.location.href.includes('/details')) {
+      if (!window.location.href.includes('/details') && !window.location.href.includes('/recipe')) {
         this.scrollToElement(url);
       } else {
         this.router.navigateByUrl(`/${url}`);

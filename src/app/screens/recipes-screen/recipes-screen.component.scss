@@ -1,0 +1,29 @@
+.page {
+  padding-bottom: 4rem;
+
+  .title {
+    color: var(--col-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .route {
+    align-items: center;
+    border-bottom: 1px solid var(--col-grey-lighter);
+    color: var(--col-black);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: var(--col-blue-desaturated);
+    }
+
+    .material-icons {
+      color: var(--col-grey);
+    }
+  }
+}

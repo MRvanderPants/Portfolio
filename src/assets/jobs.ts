@@ -37,7 +37,7 @@ export const jobs: Job[] = [{
   date_start: '2018',
   date_end: '2019',
   clients: ['NoBears'],
-  description: `worked as a front-end javascript developer in a web-development office creating both websites, web-apps and hybrid javascript apps for clients both small and large`,
+  description: `Worked as a front-end javascript developer in a web-development office creating both websites, web-apps and hybrid javascript apps for clients both small and large`,
   url: 'https://www.nobears.nl/',
 }, {
   role: 'Front-end developer',
@@ -45,7 +45,7 @@ export const jobs: Job[] = [{
   date_start: '2016',
   date_end: '2017',
   clients: ['Planon Software'],
-  description: `worked as a front-end developer in various teams to build the office and facility management software called ‘Planon’. Mostly worked on a cad-viewer plugin to display and use construction drawings inside the Planon-application, and a bim-model viewer, to render 3D models in the browser.`,
+  description: `Worked as a front-end developer in various teams to build the office and facility management software called ‘Planon’. Mostly worked on a cad-viewer plugin to display and use construction drawings inside the Planon-application, and a bim-model viewer, to render 3D models in the browser.`,
   url: 'https://planonsoftware.com',
 }, {
   role: 'Game Design intern',

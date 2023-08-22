@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailScreenComponent } from './screens/detail-screen/detail-screen.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
+import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.component';
+import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
 
 const routes: Routes = [
   { path: 'details', component: DetailScreenComponent },
+  { path: 'recipes', component: RecipesScreenComponent },
+  { path: 'recipe/:id', component: RecipeScreenComponent },
   { path: '', component: HomeScreenComponent },
 ];
 

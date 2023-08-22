@@ -1,0 +1,47 @@
+{
+    "title": "Romige aardappel ovenschotel",
+    "ingredients": [{
+        "key": "Rösti aardappelen",
+        "value": "750 gr"
+    }, {
+        "key": "Hamblokjes",
+        "value": "1 Pk"
+    }, {
+        "key": "Cheddar",
+        "value": "1 Pk"
+    }, {
+        "key": "Boter",
+        "value": "2 El"
+    }, {
+        "key": "Melk",
+        "value": "250 ml"
+    }, {
+        "key": "Bloem",
+        "value": "1 El"
+    }, {
+        "key": "Bouillionblokje",
+        "value": "1/2 Stk"
+    }, {
+        "key": "Creme Fraiche",
+        "value": "1/2 Pak"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1 Zak"
+    }],
+    "directions": [{
+        "key": "Bak de aardappelen en ham in een pan tot goudbruin."
+    }, {
+        "key": "In een losse pan smelt boter, en voeg de melk, bloem, kaas, creme fraiche en het bouillionblokje toe in de pan. Roer tot een gelijkmatige saus."
+    }, {
+        "key": "Plaats het aardappel mengsel in een ovenschaal en giet de saus eroverheen."
+    }, {
+        "key": "Spreid de geraspte kaas over de ovenschaal, en voeg wat versnipperde cheddar bovenop."
+    }, {
+        "key": "Doe de ovenschaal 10 minuten in de oven op 180 graden, of totdat de kaas gesmolten is."
+    }],
+    "tags": [
+        "gehakt",
+        "hoofdgerecht",
+        "ovenschotel"
+    ]
+}

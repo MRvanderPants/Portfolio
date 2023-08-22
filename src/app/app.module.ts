@@ -30,6 +30,8 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { IntersectionObserverModule } from 'ngx-intersection-observer';
 import { TimelineResumeItemComponent } from './timeline-resume-item/timeline-resume-item.component';
 import { TimelineProjectsItemComponent } from './timeline-projects-item/timeline-projects-item.component';
+import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.component';
+import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { TimelineProjectsItemComponent } from './timeline-projects-item/timeline
     TimelineComponent,
     TimelineResumeItemComponent,
     TimelineProjectsItemComponent,
+    RecipesScreenComponent,
+    RecipeScreenComponent,
   ],
   imports: [
     BrowserModule,

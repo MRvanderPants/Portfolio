@@ -38,8 +38,8 @@
     <img class="image" alt="project-image" [src]="project?.image" />
   </div>
 </app-content-block>
-<app-content-block theme="blue" [rounded]="true">
-  <app-picture-carousel *ngIf="project?.screens" [project]="project"></app-picture-carousel>
+<app-content-block theme="blue" [rounded]="true" *ngIf="project?.screens">
+  <app-picture-carousel [project]="project"></app-picture-carousel>
 </app-content-block>
 <app-content-block>
   <h4 class="more-title">See also</h4>
