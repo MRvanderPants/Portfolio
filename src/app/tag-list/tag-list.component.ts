@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { jobs } from 'src/assets/jobs';
 
 @Component({
   selector: 'app-tag-list',

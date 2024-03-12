@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Job } from 'src/assets/jobs';
+import { Job } from 'src/types';
 
 @Component({
   selector: 'app-resume-item',

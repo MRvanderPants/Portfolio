@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project, projects } from 'src/assets/projects';
+import { Project } from 'src/types';
 
 @Component({
   selector: 'app-project-grid',
@@ -8,11 +8,11 @@ import { Project, projects } from 'src/assets/projects';
   styleUrls: ['./project-grid.component.scss']
 })
 export class ProjectGridComponent {
-  public projects: Project[] = projects.sort((a, b) => b.id - a.id);
+  @Input() public projects: Project[] = [];
 
   constructor(public readonly router: Router) {}
 
-  public goToPage(id: number) {
+  public goToPage(id: string) {
     this.router.navigate([`/details`, {id}]);
   }
 }

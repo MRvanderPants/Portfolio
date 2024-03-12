@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from '../../assets/projects';
+import { Project } from 'src/types';
 
 @Component({
   selector: 'app-picture-carousel',

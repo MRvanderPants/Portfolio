@@ -21,20 +21,21 @@
 
       .c2a {
         align-items: center;
-        background-color: var(--col-blue);
+        background-color: var(--col-green-dark);
         border-radius: 0.25rem;
         color: var(--col-white);
         display: flex;
         justify-content: space-between;
         padding: 0.5rem 1.5rem;
         margin-bottom: 1.5rem;
+        transition: all .2s;
 
         .icon {
           margin-left: 0.5rem;
         }
 
         &:hover {
-          background-color: var(--col-blue-darker);
+          background-color: var(--col-green-darker);
         }
       }
     }

@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
-import { Job, jobs } from 'src/assets/jobs';
+import { AfterViewInit, Component, Input, OnChanges } from '@angular/core';
+import { Job } from 'src/types';
 
 export interface TimelineItem {
   titles: string[];
@@ -13,15 +13,15 @@ export interface TimelineItem {
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
 })
-export class TimelineComponent implements AfterViewInit {
+export class TimelineComponent implements OnChanges {
 
+  @Input() public jobs: Job[] = [];
   @Input() public hasTimeline = true;
 
-  public jobs = jobs;
   public slides: number[] = [];
   public activeSlide = 0;
-  
-  public ngAfterViewInit() {
+
+  public ngOnChanges() {
     setTimeout(() => {
       const children = document.querySelectorAll('.timeline .item')!;
       const slideCount = Math.ceil(children.length / 3);

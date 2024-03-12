@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 thumbnails.psd
 *.psd
+.env
+src/environment

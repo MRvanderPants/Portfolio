@@ -1,14 +1,15 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project, projects } from 'src/assets/projects';
+import { Project } from 'src/types';
 
 @Component({
   selector: 'app-grid-background',
   templateUrl: './grid-background.component.html',
   styleUrls: ['./grid-background.component.scss']
 })
-export class GridBackgroundComponent implements OnInit {
+export class GridBackgroundComponent implements OnChanges {
   @ViewChild('wrapper', {read: ElementRef})wrapper?: ElementRef;
+  @Input() public projects: Project[] = [];
 
   public itemHeight: number = 0;
   public itemWidth: number = 0;
@@ -19,7 +20,7 @@ export class GridBackgroundComponent implements OnInit {
 
   constructor(public readonly router: Router){}
 
-  public ngOnInit() {
+  public ngOnChanges() {
     this.itemHeight = this.calculateHeight();
     this.itemWidth = this.calculateWidth();
 
@@ -77,7 +78,7 @@ export class GridBackgroundComponent implements OnInit {
 
   private compileProjects(): Project[] {
     const newProjects: Project[] = [];
-    projects.forEach(project => {
+    this.projects.forEach(project => {
       project.screenshots?.forEach(screen => {
         const newProject = Object.assign({}, project);
         newProject.screenshots = [screen];
@@ -85,7 +86,7 @@ export class GridBackgroundComponent implements OnInit {
       });
     });
     const c2aProject: Project = {
-      id: -1,
+      id: '-1',
       type: 'Web Application',
       title: 'This could be your project',
       image: '../../assets/gfx/empty_screenshot.png',

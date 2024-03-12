@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { PrefixIconPipe } from './pipes/prefix-icon.pipe';
 import { ContentBlockComponent } from './content-block/content-block.component';
 import { LanguagesComponent } from './languages/languages.component';
-import { ResumeComponent } from './resume/resume.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
@@ -40,7 +39,6 @@ import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.com
     PrefixIconPipe,
     ContentBlockComponent,
     LanguagesComponent,
-    ResumeComponent,
     BackToTopComponent,
     FooterComponent,
     HomeScreenComponent,
