@@ -24,6 +24,9 @@
             <span class="label">Visit</span>
           </div>
         </a>
+        <div class="meta-item" *ngFor="let tech of project?.technologies">
+          <span class="label">{{tech}}</span>
+        </div>
       </div>
       <p class="sub-title">{{project?.description}}</p>
     </div>
@@ -33,7 +36,6 @@
       <p class="description" *ngFor="let desc of project?.content">
         {{desc}}
       </p>
-      <app-tag-list variant="large" *ngIf="project" [tags]="project!.technologies!"></app-tag-list>
     </div>
     <img class="image" alt="project-image" [src]="project?.image" />
   </div>
@@ -41,7 +43,10 @@
 <app-content-block theme="blue" [rounded]="true" *ngIf="project?.screens">
   <app-picture-carousel [project]="project"></app-picture-carousel>
 </app-content-block>
-<app-content-block>
+<app-content-block *ngIf="project?.job">
+  <app-job-details [job]="project!.job!"></app-job-details>
+</app-content-block>
+<app-content-block theme="blue" [rounded]="true">
   <h4 class="more-title">See also</h4>
   <app-timeline>
     <app-timeline-projects-item

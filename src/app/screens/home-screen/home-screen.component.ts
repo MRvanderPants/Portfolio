@@ -81,7 +81,8 @@ export class HomeScreenComponent implements OnInit {
           technologies: fields.technologies,
           url: fields.url ?? null,
           isC2a: fields.isC2a,
-          job: fields.job ? getJobById(fields.job.id) : undefined,
+          job: fields.job ? getJobById(fields.job.sys.id) : undefined,
+          slug: fields.slug,
         };
 
         if (project.isC2a) {

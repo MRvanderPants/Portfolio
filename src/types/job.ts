@@ -1,5 +1,6 @@
 export type Job = {
   id: string;
+  slug: string;
   role: string;
   skills: string[];
   date_start: string;
@@ -12,6 +13,7 @@ export type Job = {
 export function responseToJob(id: string, fields: any): Job {
   return {
     id,
+    slug: fields.slug,
     role: fields.role,
     skills: fields.skills,
     date_start: fields.dateStart,

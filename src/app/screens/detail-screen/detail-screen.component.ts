@@ -78,10 +78,11 @@ export class DetailScreenComponent implements OnInit {
           technologies: fields.technologies,
           url: fields.url ?? null,
           isC2a: fields.isC2a,
-          job: fields.job ? getJobById(fields.job.id) : undefined,
+          job: fields.job ? getJobById(fields.job.sys.id) : undefined,
+          slug: fields.slug,
         };
 
-        if (project.id === id) {
+        if (project.slug === id) {
           this.project = project;
         } else {
           parsedProjects.push(project);

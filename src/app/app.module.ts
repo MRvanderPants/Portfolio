@@ -31,6 +31,8 @@ import { TimelineResumeItemComponent } from './timeline-resume-item/timeline-res
 import { TimelineProjectsItemComponent } from './timeline-projects-item/timeline-projects-item.component';
 import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.component';
 import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { JobDetailScreenComponent } from './screens/job-detail-screen/job-detail-screen.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.com
     FooterComponent,
     HomeScreenComponent,
     DetailScreenComponent,
+    JobDetailScreenComponent,
     ProjectGridComponent,
     PictureCarouselComponent,
     GridBackgroundComponent,
@@ -59,6 +62,7 @@ import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.com
     TimelineProjectsItemComponent,
     RecipesScreenComponent,
     RecipeScreenComponent,
+    JobDetailsComponent,
   ],
   imports: [
     BrowserModule,

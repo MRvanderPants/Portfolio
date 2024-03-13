@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="title-wrapper">
+    <span class="title">This product was developed whilest employed as a <span class="highlight">{{job.role}}</span> at:</span>
+    <a class="item" [href]="'jobs/' + job.slug">
+      <span class="see-more">See more <i class="icon material-icons">chevron_right</i></span>
+    </a>
+  </div>
+  <div class="wrapper">
+    <span class="client" *ngFor="let client of job.clients">
+      {{client}}
+    </span>
+    <div>
+      <span class="date">{{job.date_start}}</span>
+      <span class="date"> - {{job.date_end ?? "Present"}}</span>
+    </div>
+  </div>
+</div>

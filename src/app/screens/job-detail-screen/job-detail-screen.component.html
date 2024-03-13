@@ -1,0 +1,60 @@
+<div class="back-button" (click)="goBack()">
+  <i class="icon material-icons">chevron_left</i>
+  <span class="label">go back</span>
+</div>
+<div *ngIf="job">
+  <app-content-block>
+    <div class="header">
+      <!-- <img class="logo" alt="project-logo" [src]="project?.logo" /> -->
+      <div class="title-wrapper">
+        <div class="top-content">
+          <div class="left">
+            <h1 class="title">
+              {{job.role}}
+            </h1>
+            <div class="clients">
+              <span class="client" *ngFor="let client of job.clients">@{{client}}</span>
+            </div>
+          </div>
+          <div class="right">
+            <span class="date">{{job.date_start}}</span>
+            <span class="date"> - {{job.date_end ?? "Present"}}</span>
+          </div>
+        </div>
+        <div class="meta-info">
+          <a *ngIf="job.url" [href]="job.url" target="_blank">
+            <div class="meta-item" title="Visit the live project">
+              <i class="icon material-icons">ios_share</i>
+              <span class="label">Visit</span>
+            </div>
+          </a>
+          <div class="meta-item" *ngFor="let skill of job.skills">
+            <span class="label">{{skill}}</span>
+          </div>
+        </div>
+        <p class="sub-title">{{job.description}}</p>
+      </div>
+    </div>
+  </app-content-block>
+  <app-content-block>
+    <h4 class="more-title">See also</h4>
+    <p>TODO - related projects</p>
+    <!-- <app-timeline>
+      <app-timeline-projects-item
+        *ngFor="let proj of otherProjects()"
+        [project]="proj"
+        [current]="project!">
+      </app-timeline-projects-item>
+    </app-timeline> -->
+  </app-content-block>
+  <app-content-block blockTitle="On a timeline" [rounded]="true" theme="blue">
+    <app-timeline [jobs]="allJobs()">
+      <app-timeline-resume-item
+        *ngFor="let job of allJobs(); let i = index"
+        [job]="job">
+      </app-timeline-resume-item>
+    </app-timeline>
+  </app-content-block>
+</div>
+<app-footer theme="blue"></app-footer>
+<app-back-to-top></app-back-to-top>

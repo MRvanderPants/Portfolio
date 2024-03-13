@@ -1,0 +1,190 @@
+$picture-overlap: 4rem;
+
+.back-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  transition: all .2s;
+  z-index: var(--z-back-button);
+
+  &:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::after {
+    background: url('../../../assets/gfx/shape_white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -15rem;
+    content: '';
+    height: 20rem;
+    left: -7.5rem;
+    opacity: 0.8;
+    position: absolute;
+    width: 20rem;
+    z-index: var(--z-down);
+  }
+
+  .icon {
+    margin-right: 0.25rem;
+    margin-top: 0.125rem;
+  }
+}
+
+.header {
+  margin-bottom: 2rem;
+  margin-left: -0.5rem;
+
+  .logo {
+    border-radius: 0.5rem;
+    height: 100%;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  a {
+    color: #000000;
+  }
+
+  .title-wrapper {
+    margin: 0 0 0 1rem;
+
+    .top-content {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        .title {
+          color: var(--col-blue);
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.5rem;
+          font-weight: 900;
+          padding-bottom: 0.5rem;
+          position: relative;
+        }
+
+        .clients {
+          display: flex;
+          flex-direction: column;
+          padding: 0 0 2rem 1rem;
+
+          .client {
+            color: var(--col-blue-darker);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            padding-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .meta-info {
+      display: flex;
+      font-size: 0.8rem;
+      opacity: 0.5;
+
+      .meta-item {
+        align-items: center;
+        background-color: var(--col-grey);
+        border-radius: 0.25rem;
+        display: flex;
+        margin-right: 0.5rem;
+        padding: 0.125rem 0.5rem 0.125rem 0.25rem;
+
+        .icon {
+          font-size: 1rem;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+
+    .sub-title {
+      color: var(--col-grey-darker);
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.wrapper {
+  .image {
+    display: none;
+  }
+
+  .content {
+    padding: 0 0.5rem 2rem 0.5rem;
+
+    .description {
+      color: var(--col-grey-medium);
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.more-title {
+  color: var(--col-blue-darker);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 640px) {
+  .header {
+    // background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 1.5rem;
+
+    .logo {
+      height: 8rem;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+      width: 8rem;
+    }
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+      padding: 1rem 7rem 2rem 1rem;
+      width: 40%;
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .sub-title {
+        font-size: 1rem;
+      }
+    }
+
+    .image {
+      border-radius: 0.5rem;
+      display: block;
+      height: fit-content;
+      margin-top: 1rem;
+      width: 60%;
+    }
+  }
+
+  .back-button {
+    &::after {
+      display: none;
+    }
+  }
+}

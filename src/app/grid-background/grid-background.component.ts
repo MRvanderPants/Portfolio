@@ -67,7 +67,7 @@ export class GridBackgroundComponent implements OnChanges {
       this.scrollToElement(item.url ?? '#footer')
       return;
     }
-    this.router.navigate([`/details`, {id: item.id}]);
+    this.router.navigate([`/details`, item.slug]);
   }
 
   private scrollToElement(url: string) {
@@ -99,6 +99,7 @@ export class GridBackgroundComponent implements OnChanges {
       logo: '../../assets/gfx/empty-logo.png',
       screenshots: ['../../assets/gfx/empty_screenshot.png'],
       isC2a: true,
+      slug: '/', // TODO add page here
     };
     return [c2aProject, ...newProjects];
   }

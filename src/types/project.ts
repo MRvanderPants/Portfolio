@@ -11,6 +11,7 @@ export interface Project {
   teamSize: string;
   content: string[];
   logo: string;
+  slug: string;
   screenshots?: string[];
   screens?: string[];
   technologies?: string[];
