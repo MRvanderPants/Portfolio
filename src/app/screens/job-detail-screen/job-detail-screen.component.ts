@@ -51,8 +51,6 @@ export class JobDetailScreenComponent implements OnInit {
   private fetchJob(id: string) {
     this.httpClient.get(`${environment.apiUrl}/spaces/${environment.apiSpaceId}/environments/master/entries/?access_token=${environment.apiKey}&content_type=${'job'}`).subscribe((response) => {
       const {items} = response as APIEntryResponse;
-      console.log('@@@', items);
-
       items.forEach(({sys, fields}) => {
         const job = responseToJob(sys.id, fields);
         if (job.slug === id) {
