@@ -48,7 +48,7 @@
 </app-content-block>
 <app-content-block theme="blue" [rounded]="true">
   <h4 class="more-title">See also</h4>
-  <app-timeline>
+  <app-timeline id="timeline">
     <app-timeline-projects-item
       *ngFor="let proj of otherProjects()"
       [project]="proj"

@@ -1,7 +1,7 @@
 .timeline {
   padding-bottom: 12rem;
   
-  .wrapper {
+  .timeline-wrapper {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -53,7 +53,7 @@
   .timeline {
     padding-bottom: 6rem;
 
-    .wrapper {
+    .timeline-wrapper {
       flex-direction: column;
       overflow: visible;
       padding: 0;

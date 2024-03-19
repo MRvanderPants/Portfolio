@@ -1,8 +1,8 @@
 <section class="wrapper" [class.hidden]="!headerHidden">
-  <div class="logo-wrapper">
+  <a class="logo-wrapper" [routerLink]="'/'">
     <img class="logo" src="assets/gfx/logo.png" alt="logo" />
     <h1 class="title">Sjoerd van den Broek</h1>
-  </div>
+  </a>
   <a class="item" [class.active]="targetId == 'top'" (click)="updateId('#top')">
     <i class="icon material-icons">work</i>
     <span class="label">My work</span>

@@ -18,7 +18,7 @@
           </div>
           <div class="right">
             <span class="date">{{job.date_start}}</span>
-            <span class="date"> - {{job.date_end ?? "Present"}}</span>
+            <span class="date"> - {{job.date_end ? job.date_end : "Present"}}</span>
           </div>
         </div>
         <div class="meta-info">
@@ -37,21 +37,20 @@
     </div>
   </app-content-block>
   <app-content-block>
-    <h4 class="more-title">See also</h4>
-    <p>TODO - related projects</p>
-    <!-- <app-timeline>
+    <h4 class="more-title">Related projects</h4>
+    <app-timeline id="project-timeline">
       <app-timeline-projects-item
-        *ngFor="let proj of otherProjects()"
-        [project]="proj"
-        [current]="project!">
+        *ngFor="let proj of projects"
+        [project]="proj">
       </app-timeline-projects-item>
-    </app-timeline> -->
+    </app-timeline>
   </app-content-block>
   <app-content-block blockTitle="On a timeline" [rounded]="true" theme="blue">
-    <app-timeline [jobs]="allJobs()">
+    <app-timeline id="job-timeline" [jobs]="allJobs()" [scrollToHighlit]="true">
       <app-timeline-resume-item
-        *ngFor="let job of allJobs(); let i = index"
-        [job]="job">
+        *ngFor="let j of allJobs(); let i = index"
+        [job]="j"
+        [highlit]="j.id == job.id">
       </app-timeline-resume-item>
     </app-timeline>
   </app-content-block>

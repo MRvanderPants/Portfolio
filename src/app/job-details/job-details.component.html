@@ -11,7 +11,7 @@
     </span>
     <div>
       <span class="date">{{job.date_start}}</span>
-      <span class="date"> - {{job.date_end ?? "Present"}}</span>
+      <span class="date"> - {{job.date_end ? job.date_end : "Present"}}</span>
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { Job } from 'src/types/job';
 })
 export class TimelineResumeItemComponent {
   @Input() public job!: Job;
+  @Input() public highlit: boolean = false;
 
   public getYearForJob(job: Job): string {
     return job.date_end ? job.date_end : new Date().getFullYear().toString();

@@ -1,8 +1,8 @@
 <section class="timeline">
-  <div class="wrapper">
+  <div class="timeline-wrapper" [id]="id">
     <ng-content></ng-content>
   </div>
-  <div class="timeline-nav" *ngIf="hasTimeline">
+  <div class="timeline-nav" *ngIf="hasTimeline && slides.length > 0">
     <div *ngFor="let slide of slides; let i = index" class="slide" (click)="activateSlide(i)">
       <div class="fill" [class.active]="activeSlide == i"></div>
     </div>

@@ -26,7 +26,7 @@
   </app-paragraph>
 </app-content-block>
 <app-content-block blockTitle="Where I've worked" id="resume" [rounded]="true">
-  <app-timeline [jobs]="jobs">
+  <app-timeline [jobs]="jobs" id="job-timeline">
     <app-timeline-resume-item
       *ngFor="let job of jobs; let i = index"
       [job]="job">

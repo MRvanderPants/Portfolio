@@ -17,7 +17,11 @@ export class MobileNavComponent implements OnInit {
     this.updateId();
     window.addEventListener('scroll', () => {
       this.updateId();
-      this.headerHidden = document.documentElement.scrollTop > 1200;
+      if (['', '/'].includes(window.location.pathname)) {
+        this.headerHidden = document.documentElement.scrollTop > 1200;
+      } else {
+        this.headerHidden = false;
+      }
     })
   }
 
