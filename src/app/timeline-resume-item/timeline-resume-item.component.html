@@ -1,6 +1,6 @@
 <div class="item" [class.active]="job.date_end == '???' || highlit">
   <div class="item__wrapper">
-    <a [href]="'jobs/' + job.slug" target="_blank" class="title">
+    <a [href]="'jobs/' + job.slug" class="title">
       <span class="sub-title" *ngFor="let client of job.clients">
         @{{client}}
       </span>

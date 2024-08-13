@@ -33,6 +33,9 @@ import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.
 import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobDetailScreenComponent } from './screens/job-detail-screen/job-detail-screen.component';
+import { JumpInBoxComponent } from './jump-in-box/jump-in-box.component';
+import { BackgroundFillBoxComponent } from './background-fill-box/background-fill-box.component';
+import { TechListComponent } from './tech-list/tech-list.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,9 @@ import { JobDetailScreenComponent } from './screens/job-detail-screen/job-detail
     RecipesScreenComponent,
     RecipeScreenComponent,
     JobDetailsComponent,
+    JumpInBoxComponent,
+    BackgroundFillBoxComponent,
+    TechListComponent,
   ],
   imports: [
     BrowserModule,

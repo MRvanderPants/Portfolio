@@ -4,19 +4,15 @@
     <h1 class="title">Sjoerd van den Broek</h1>
   </a>
   <a class="item" [class.active]="targetId == 'top'" (click)="updateId('#top')">
-    <i class="icon material-icons">work</i>
+    <i class="icon material-icons">folder_open</i>
     <span class="label">My work</span>
   </a>
   <a class="item" [class.active]="targetId == 'tech'" (click)="updateId('#tech')">
-    <i class="icon material-icons">build</i>
+    <i class="icon material-icons">architecture</i>
     <span class="label">What I do</span>
   </a>
-  <a class="item" [class.active]="targetId == 'personalProjects'" (click)="updateId('#personalProjects')">
-    <i class="icon material-icons">folder_open</i>
-    <span class="label">Other work</span>
-  </a>
   <a class="item" [class.active]="targetId == 'resume'" (click)="updateId('#resume')">
-    <i class="icon material-icons">description</i>
+    <i class="icon material-icons">work</i>
     <span class="label">Resume</span>
   </a>
   <a class="item" [class.active]="targetId == 'footer'" (click)="updateId('#footer')">

@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ContentBlockComponent {
   @Input() public blockTitle: string = '';
-  @Input() public theme: 'default' | 'blue' = 'default';
+  @Input() public theme: 'default' | 'blue' | 'dark' = 'default';
   @Input() public rounded: boolean = false;
   @Input() public extraHigh: boolean = false;
 }

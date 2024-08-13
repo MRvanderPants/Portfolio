@@ -1,0 +1,23 @@
+.jump-block {
+  position: relative;
+  transition: all 0.5s;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}
+
+.outside {
+
+  &.left {
+    left: -100vw;
+  }
+
+  &.right {
+    right: -200vw;
+  }
+}

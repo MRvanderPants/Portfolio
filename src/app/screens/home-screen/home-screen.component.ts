@@ -12,7 +12,6 @@ import { IDURL } from 'src/types/api';
 export class HomeScreenComponent implements OnInit {
   @ViewChild('tech', {read: ElementRef})techWrapper?: ElementRef;
   public showButton = true;
-  public yearsOfExp = 0;
   public jobTags: string[] = [];
   public jobs: Job[] = [];
   public projects: Project[] = [];
@@ -20,7 +19,6 @@ export class HomeScreenComponent implements OnInit {
   constructor (private readonly httpClient: HttpClient) {}
 
   public ngOnInit() {
-    this.yearsOfExp = this.yearsOfExperience();
     window.addEventListener('scroll', _ => {
       this.showButton = document.documentElement.scrollTop < 500;
     });
@@ -32,11 +30,6 @@ export class HomeScreenComponent implements OnInit {
   public moveToDescription() {
     const top = this.techWrapper?.nativeElement.offsetTop ?? 0;
     window.scroll({top, behavior: 'smooth'});
-  }
-
-  public yearsOfExperience() {
-    const year = new Date().getFullYear();
-    return year - 2013;
   }
 
   private fetchProjects() {

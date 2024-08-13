@@ -65,14 +65,13 @@
   }
 
   .description {
+    color: var(--col-grey-lighter);
     margin: auto;
-    padding: 2rem 0 6rem 0;
+    padding: 6rem 0;
     width: 80%;
   }
 
-  .tech-list {
-    display: block;
-    margin: auto;
-    width: 80%;
+  .negative-container {
+    margin: 0 -10vw;
   }
 }

@@ -29,7 +29,7 @@ export class TimelineComponent implements OnInit, OnChanges {
         for (let i = 0; i < children.length; i++) {
           if (children[i].classList.contains('active')) {
             const targetIndex = Math.ceil(i / 3);
-            const slideIndex = Math.ceil(targetIndex / 3) - 1;
+            const slideIndex = Math.ceil(targetIndex / 3);
             this.activateSlide(slideIndex);
             return;
           }

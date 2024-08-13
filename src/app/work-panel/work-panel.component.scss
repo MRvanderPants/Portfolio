@@ -3,33 +3,34 @@
   
   .sub {
     align-items: center;
-    background: url('../../assets/gfx/shape_white.svg');
+    background: url('../../assets/gfx/shape_deep.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0.5rem;
+    padding: 2rem 0.5rem 2rem 2rem;
     position: relative;
 
     &:after {
-      background: url('../../assets/gfx/shape_white.svg');
+      background: url('../../assets/gfx/shape_deep.svg');
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: left;
       content: '';
       height: calc(100% + 4rem);
       opacity: 0.33;
       left: -2rem;
       position: absolute;
       top: -2rem;
-      transform: rotateZ(180deg);
+      // transform: rotateZ(180deg);
       width: calc(100% + 4rem);
       z-index: var(--z-down);
-    }
+    }    
 
     .img {
       aspect-ratio: 1/1;
+      position: relative;
       width: 40%;
     }
 
@@ -44,23 +45,70 @@
     }
 
     .description {
-      color: var(--col-grey-medium);
+      color: var(--col-grey-60);
       line-height: 1.6rem;
+      margin-bottom: 0.5rem;
+
+      .highlight {
+        color: var(--col-green-dark);
+      }
+    }
+
+    .link {
+      align-items: center;
+      color: var(--col-green-dark);
+      cursor: pointer;
+      display: flex;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      .material-icons {
+        margin-left: 0.25rem;
+      }
     }
   }
 }
 
 @media screen and (min-width: 640px) {
   .work {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
+    padding-top: 6rem;
 
     .sub {
-      width: 33%;
+      align-items: center;
+      flex-direction: row;
+      margin-bottom: 12rem;
+      text-align: left;
+      transition: all 0.5s;
+      position: relative;
+      left: 0;
+
+      .img {
+        margin-right: 8rem;
+        width: 12rem;
+      }
+
+      .sub-title {
+        font-size: 2rem;
+        text-align: left;
+      }
 
       .description {
-        text-align: center;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        text-align: left;
       }
+
+      &.outside {
+        left: -100vw;
+      }
+    }
+
+    app-jump-in-box:last-of-type .sub {
+      margin-bottom: 0;
     }
   }
 }

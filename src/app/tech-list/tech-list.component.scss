@@ -1,0 +1,22 @@
+.tag-list {
+  columns: 4;
+  display: grid;
+  grid-template-columns: auto auto auto auto  auto auto;
+  gap: 1rem;
+  padding: 4rem 0;
+
+  .tag {
+    background-color: var(--col-blue-desaturated-dark);
+    border-radius: 0.5rem;
+    color: var(--col-grey);
+    padding: 3rem 0;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.2s;
+    width: 100%;
+
+    &.outside {
+      opacity: 0;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {Location} from '@angular/common';
 import { APIEntryResponse, Project, responseToJob } from 'src/types';
 import { HttpClient } from '@angular/common/http';
@@ -16,6 +16,7 @@ export class DetailScreenComponent implements OnInit {
   public projects: Project[] = [];
 
   constructor(
+    private readonly router: Router,
     private readonly route: ActivatedRoute,
     private readonly location: Location,
     private readonly httpClient: HttpClient,
@@ -30,7 +31,7 @@ export class DetailScreenComponent implements OnInit {
   }
 
   public goBack() {
-    this.location.back();
+    this.router.navigate(['/']);
   }
 
   public otherProjects() {

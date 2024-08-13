@@ -29,6 +29,15 @@
     }
   }
 
+  &.dark {
+    background-color: transparent;
+    position: relative;
+
+    .cover {
+      background-color: transparent !important;
+    }
+  }
+
   .cover {
     background-color: var(--col-grey-lightest);
     border-radius: 100% 100% 0 0;
@@ -64,7 +73,7 @@
       width: 80vw;
 
       .title {
-        font-size: 1.5rem;
+        font-size: 4rem;
         padding-bottom: 1rem;
         padding-top: 2rem;
       }
