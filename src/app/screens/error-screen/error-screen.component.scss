@@ -1,0 +1,92 @@
+@keyframes bop {
+  0% {top: -7rem;}
+  50% {top: -9rem;}
+  100% {top: -7rem;}
+}
+
+.background {
+  background-color: var(--col-blue-deepest);
+  padding: 2rem 0;
+  position: relative;
+
+  &::after {
+    background-image: url('../../../assets/gfx/background-logo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+  }
+}
+
+.sub-title {
+  color: var(--col-grey-lighter);
+  padding-bottom: 2rem;
+}
+
+.button-container {
+  .button {
+    align-items: center;
+    background-color: var(--col-blue);
+    border-radius: 0.25rem;
+    border: none;
+    color: var(--col-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 6rem;
+
+    .label {
+      margin-right: 0.5rem;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: var(--col-blue-darker);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &.report {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .button-container {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+
+    .button {
+      &.report {
+        background-color: var(--col-danger);
+        cursor: pointer;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all 0.2s;
+  
+        &:hover {
+          background-color: var(--col-danger);
+        }
+  
+        &.right {
+          left: 200px;
+        }
+      }
+    }
+
+    .sub-title {
+      padding-top: 0.5rem;
+    }
+  }
+}

@@ -15,7 +15,7 @@
     position: relative;
 
     &::after {
-      background: url('../../assets/gfx/shape_blue.svg');
+      background: url('../../../assets/gfx/shape_blue.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -29,7 +29,7 @@
     }
 
     &::before {
-      background: url('../../assets/gfx/shape_blue.svg');
+      background: url('../../../assets/gfx/shape_blue.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

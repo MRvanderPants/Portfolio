@@ -3,39 +3,40 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { PrefixIconPipe } from './pipes/prefix-icon.pipe';
-import { ContentBlockComponent } from './content-block/content-block.component';
-import { LanguagesComponent } from './languages/languages.component';
-import { BackToTopComponent } from './back-to-top/back-to-top.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PrefixIconPipe } from './components/pipes/prefix-icon.pipe';
+import { ContentBlockComponent } from './components/content-block/content-block.component';
+import { LanguagesComponent } from './components/languages/languages.component';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { DetailScreenComponent } from './screens/detail-screen/detail-screen.component';
-import { ProjectGridComponent } from './project-grid/project-grid.component';
-import { PictureCarouselComponent } from './picture-carousel/picture-carousel.component';
-import { GridBackgroundComponent } from './grid-background/grid-background.component';
-import { ResumeItemComponent } from './resume-item/resume-item.component';
-import { WorkPanelComponent } from './work-panel/work-panel.component';
-import { ParagraphComponent } from './paragraph/paragraph.component';
-import { TagListComponent } from './tag-list/tag-list.component';
-import { SideProjectListComponent } from './side-project-list/side-project-list.component';
-import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ProjectGridComponent } from './components/project-grid/project-grid.component';
+import { PictureCarouselComponent } from './components/picture-carousel/picture-carousel.component';
+import { GridBackgroundComponent } from './components/grid-background/grid-background.component';
+import { ResumeItemComponent } from './components/resume-item/resume-item.component';
+import { WorkPanelComponent } from './components/work-panel/work-panel.component';
+import { ParagraphComponent } from './components/paragraph/paragraph.component';
+import { TagListComponent } from './components/tag-list/tag-list.component';
+import { SideProjectListComponent } from './components/side-project-list/side-project-list.component';
+import { MobileNavComponent } from './components/mobile-nav/mobile-nav.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { DataService } from 'src/services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FadeInPipe } from './pipes/fade-in.pipe';
-import { TimelineComponent } from './timeline/timeline.component';
+import { FadeInPipe } from './components/pipes/fade-in.pipe';
+import { TimelineComponent } from './components/timeline/timeline.component';
 import { IntersectionObserverModule } from 'ngx-intersection-observer';
-import { TimelineResumeItemComponent } from './timeline-resume-item/timeline-resume-item.component';
-import { TimelineProjectsItemComponent } from './timeline-projects-item/timeline-projects-item.component';
+import { TimelineResumeItemComponent } from './components/timeline-resume-item/timeline-resume-item.component';
+import { TimelineProjectsItemComponent } from './components/timeline-projects-item/timeline-projects-item.component';
 import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.component';
 import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
-import { JobDetailsComponent } from './job-details/job-details.component';
+import { JobDetailsComponent } from './components/job-details/job-details.component';
 import { JobDetailScreenComponent } from './screens/job-detail-screen/job-detail-screen.component';
-import { JumpInBoxComponent } from './jump-in-box/jump-in-box.component';
-import { BackgroundFillBoxComponent } from './background-fill-box/background-fill-box.component';
-import { TechListComponent } from './tech-list/tech-list.component';
+import { JumpInBoxComponent } from './components/jump-in-box/jump-in-box.component';
+import { BackgroundFillBoxComponent } from './components/background-fill-box/background-fill-box.component';
+import { TechListComponent } from './components/tech-list/tech-list.component';
+import { ErrorScreenComponent } from './screens/error-screen/error-screen.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TechListComponent } from './tech-list/tech-list.component';
     FooterComponent,
     HomeScreenComponent,
     DetailScreenComponent,
+    ErrorScreenComponent,
     JobDetailScreenComponent,
     ProjectGridComponent,
     PictureCarouselComponent,

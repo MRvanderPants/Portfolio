@@ -2,7 +2,7 @@
   <div class="item__wrapper">
     <a [href]="'jobs/' + job.slug" class="title">
       <span class="sub-title" *ngFor="let client of job.clients">
-        @{{client}}
+        {{'@' + client}}
       </span>
     </a>
     <div class="content">
@@ -18,4 +18,3 @@
     <div class="dot"></div>
   </div>
 </div>
-

@@ -1,0 +1,24 @@
+<div class="background">
+  <app-content-block blockTitle="Oops!" id="error" theme="dark">
+    <p class="sub-title">This page does not exist. Please check the url for typos or click one of the buttons below to continue.</p>
+    <div class="button-container">
+      <a href="/">
+        <button class="button">
+          <span class="label">Home</span>
+          <i class="material-icons button__icon">
+            home
+          </i>
+        </button>
+      </a>
+      <button class="button report" id="report" (click)="handleClick()">
+        <span class="label">Report this issue</span>
+        <i class="material-icons button__icon">
+          bug_report
+        </i>
+      </button>
+      <p class="sub-title" *ngIf="showCounter">It took you {{counter}} tries to click that button.</p>
+    </div>
+  </app-content-block>
+</div>
+<app-footer></app-footer>
+<app-back-to-top></app-back-to-top>
