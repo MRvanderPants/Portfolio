@@ -83,10 +83,7 @@
         position: absolute;
         top: -0.5rem;
         width: 12rem;
-
-        animation-name: rotateRight;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
+        animation: rotateRight 8s linear infinite;
       }
 
       &:after {
@@ -100,10 +97,7 @@
         top: -0.5rem;
         transform: rotate(180deg);
         width: 12rem;
-
-        animation-name: rotateLeft;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
+        animation: rotateLeft 8s linear infinite;
       }
     }
 

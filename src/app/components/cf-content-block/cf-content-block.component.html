@@ -1,0 +1,3 @@
+<h4 class="title" *ngIf="contentBlock.fields.title">{{contentBlock.fields.title}}</h4>
+<div class="content">{{contentBlock.fields.content}}</div>
+<img *ngIf="contentBlock.fields.image" class="image" [src]="contentBlock.fields.image" alt="screenshot" />

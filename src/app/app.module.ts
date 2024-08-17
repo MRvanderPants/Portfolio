@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PrefixIconPipe } from './components/pipes/prefix-icon.pipe';
-import { ContentBlockComponent } from './components/content-block/content-block.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -37,13 +36,15 @@ import { JumpInBoxComponent } from './components/jump-in-box/jump-in-box.compone
 import { BackgroundFillBoxComponent } from './components/background-fill-box/background-fill-box.component';
 import { TechListComponent } from './components/tech-list/tech-list.component';
 import { ErrorScreenComponent } from './screens/error-screen/error-screen.component';
+import { CfContentBlockComponent } from './components/cf-content-block/cf-content-block.component';
+import { ContentBlockComponent } from './components/content-block/content-block.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PrefixIconPipe,
-    ContentBlockComponent,
     LanguagesComponent,
     BackToTopComponent,
     FooterComponent,
@@ -71,6 +72,9 @@ import { ErrorScreenComponent } from './screens/error-screen/error-screen.compon
     JumpInBoxComponent,
     BackgroundFillBoxComponent,
     TechListComponent,
+    ContentBlockComponent,
+    CfContentBlockComponent,
+    BackButtonComponent,
   ],
   imports: [
     BrowserModule,

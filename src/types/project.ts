@@ -1,5 +1,17 @@
 import { Job } from "./job";
 
+export interface ContentBlock {
+  sys: {
+    id: string;
+  };
+  fields: {
+    internalName: string;
+    content: string;
+    title?: string;
+    image?: string;
+  };
+};
+
 export interface Project {
   id: string;
   title: string;
@@ -9,7 +21,6 @@ export interface Project {
   duration: string;
   type: ProjectType;
   teamSize: string;
-  content: string[];
   logo: string;
   slug: string;
   screenshots?: string[];
@@ -18,6 +29,7 @@ export interface Project {
   url?: string;
   isC2a?: boolean;
   job?: Job;
+  contentBlocks?: ContentBlock[];
 }
 
 export type ProjectType = 'Enterprise software' | 'Android / iOS Application' | 'Web Application';

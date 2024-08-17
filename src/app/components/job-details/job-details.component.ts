@@ -7,5 +7,7 @@ import { Job } from 'src/types';
   styleUrls: ['./job-details.component.scss']
 })
 export class JobDetailsComponent {
+  @Input() public title: string = '';
+  @Input() public showCta: boolean = false;
   @Input() public job!: Job;
 }

@@ -95,7 +95,6 @@ export class GridBackgroundComponent implements OnChanges {
       teamSize: '',
       url: '#footer',
       description: 'Feel free to get in touch with me if you think I would be a good fit for your project or team.',
-      content: [],
       logo: '../../assets/gfx/empty-logo.png',
       screenshots: ['../../assets/gfx/empty_screenshot.png'],
       isC2a: true,

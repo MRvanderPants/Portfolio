@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {Location} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { APIEntryResponse, Job, Project, responseToJob } from 'src/types';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
@@ -17,9 +16,7 @@ export class JobDetailScreenComponent implements OnInit {
   public projects: Project[] = [];
 
   constructor(
-    private readonly router: Router,
     private readonly route: ActivatedRoute,
-    private readonly location: Location,
     private readonly httpClient: HttpClient,
   ) {}
 
@@ -31,10 +28,6 @@ export class JobDetailScreenComponent implements OnInit {
     this.fetchJob(id).then(() => {
       this.fetchProjects();
     });
-  }
-
-  public goBack() {
-    this.router.navigate(['/']);
   }
 
   public allJobs() {
@@ -100,7 +93,6 @@ export class JobDetailScreenComponent implements OnInit {
           duration: fields.duration,
           type: fields.type,
           teamSize: fields.teamSize,
-          content: fields.content.split('\n'),
           logo: getAssetUrlById(fields.icon.sys.id),
           screenshots: [getAssetUrlById(fields.screenshot.sys.id)],
           screens: fields.screens?.map((a: any) => getAssetUrlById(a.sys.id)) ?? null,

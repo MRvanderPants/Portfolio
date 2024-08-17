@@ -1,0 +1,49 @@
+.back-button {
+  align-items: center;
+  color: var(--col-grey-60);
+  cursor: pointer;
+  display: flex;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  transition: all .2s;
+  z-index: var(--z-back-button);
+
+  &:hover {
+    color: var(--col-grey);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::after {
+    background: url('../../../assets/gfx/shape_white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -15rem;
+    content: '';
+    height: 20rem;
+    left: -7.5rem;
+    opacity: 0.8;
+    position: absolute;
+    width: 20rem;
+    z-index: var(--z-down);
+  }
+
+  .icon {
+    margin-right: 0.25rem;
+    margin-top: 0.125rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .back-button {
+    &::after {
+      display: none;
+    }
+  }
+}

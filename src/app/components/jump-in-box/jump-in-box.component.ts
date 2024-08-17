@@ -11,6 +11,9 @@ export class JumpInBoxComponent implements OnInit {
 
   public ngOnInit() {
     window.addEventListener('scroll', _ => {
+      if (!this.className || this.className === '') {
+        return;
+      }
       const elements = document.querySelectorAll(`.${this.className}`);
       elements.forEach((el) => {
         const e = (el as HTMLElement).getBoundingClientRect().y;

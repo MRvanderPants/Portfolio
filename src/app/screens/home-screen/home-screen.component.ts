@@ -67,7 +67,6 @@ export class HomeScreenComponent implements OnInit {
           duration: fields.duration,
           type: fields.type,
           teamSize: fields.teamSize,
-          content: fields.content.split('\n'),
           logo: getAssetUrlById(fields.icon.sys.id),
           screenshots: [getAssetUrlById(fields.screenshot.sys.id)],
           screens: fields.screens?.map((a: any) => getAssetUrlById(a.sys.id)) ?? null,

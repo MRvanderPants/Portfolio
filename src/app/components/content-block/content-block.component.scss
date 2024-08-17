@@ -30,11 +30,11 @@
   }
 
   &.dark {
-    background-color: transparent;
+    background-color: var(--col-blue-desaturated-medium);
     position: relative;
 
     .cover {
-      background-color: transparent !important;
+      background-color: var(--col-blue-desaturated-medium) !important;
     }
   }
 

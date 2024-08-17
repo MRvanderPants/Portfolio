@@ -11,8 +11,9 @@
   }
 
   .tag {
-    background-color: var(--col-grey);
+    background-color: var(--col-grey-darker);
     border-radius: 0.25rem;
+    color: var(--col-white);
     display: flex;
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.125rem 0.5rem 0.125rem 0.25rem;
