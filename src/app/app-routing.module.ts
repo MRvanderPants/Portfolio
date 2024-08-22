@@ -6,10 +6,12 @@ import { RecipesScreenComponent } from './screens/recipes-screen/recipes-screen.
 import { RecipeScreenComponent } from './screens/recipe-screen/recipe-screen.component';
 import { JobDetailScreenComponent } from './screens/job-detail-screen/job-detail-screen.component';
 import { ErrorScreenComponent } from './screens/error-screen/error-screen.component';
+import { DisciplineScreenComponent } from './screens/discipline-screen/discipline-screen.component';
 
 const routes: Routes = [
   { path: 'details/:id', component: DetailScreenComponent },
   { path: 'jobs/:id', component: JobDetailScreenComponent },
+  { path: 'discipline/:id', component: DisciplineScreenComponent },
   { path: 'recipes', component: RecipesScreenComponent },
   { path: 'recipe/:id', component: RecipeScreenComponent },
   { path: '', component: HomeScreenComponent },

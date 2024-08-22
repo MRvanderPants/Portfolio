@@ -1,11 +1,14 @@
-<section class="content-block {{theme}}" [class.rounded]="rounded" [class.extraHigh]="extraHigh">
+<section class="content-block {{theme}}" [class.rounded]="rounded" [class.extraHigh]="extraHigh" [class.noBackground]="noBackground">
   <div class="cover" *ngIf="rounded"></div>
   <div class="content">
-    <app-jump-in-box [className]="blockTitle.split(' ')[0]">
+    <app-jump-in-box [className]="blockTitle.split(' ')[0]" *ngIf="!preventAnimation">
       <h3 *ngIf="blockTitle.length > 0" class="title">
         {{blockTitle}}
       </h3>
     </app-jump-in-box>
+    <h3 *ngIf="blockTitle.length > 0 && preventAnimation" class="title">
+      {{blockTitle}}
+    </h3>
     <ng-content></ng-content>
   </div>
   <div class="cover inverted" *ngIf="rounded"></div>

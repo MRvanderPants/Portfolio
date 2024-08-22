@@ -30,6 +30,7 @@ export interface Project {
   isC2a?: boolean;
   job?: Job;
   contentBlocks?: ContentBlock[];
+  displayInHeader: boolean;
 }
 
 export type ProjectType = 'Enterprise software' | 'Android / iOS Application' | 'Web Application';

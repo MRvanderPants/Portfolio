@@ -1,0 +1,14 @@
+<section class="carrousel">
+  <div class="inner">
+    <div class="row">
+      <div class="image-wrapper" *ngFor="let img of images.slice(0, images.length / 2)">
+        <img class="image" [src]="img" alt="screenshot" />
+      </div>
+    </div>
+    <div class="row second">
+      <div class="image-wrapper" *ngFor="let img of images.slice(images.length / 2, (images.length / 2) + (images.length / 2))">
+        <img class="image" [src]="img" alt="screenshot" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -39,6 +39,9 @@ import { ErrorScreenComponent } from './screens/error-screen/error-screen.compon
 import { CfContentBlockComponent } from './components/cf-content-block/cf-content-block.component';
 import { ContentBlockComponent } from './components/content-block/content-block.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { DisciplineScreenComponent } from './screens/discipline-screen/discipline-screen.component';
+import { DetailHeaderComponent } from './components/detail-header/detail-header.component';
+import { JobCarrouselComponent } from './components/job-carrousel/job-carrousel.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,9 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
     ContentBlockComponent,
     CfContentBlockComponent,
     BackButtonComponent,
+    DisciplineScreenComponent,
+    DetailHeaderComponent,
+    JobCarrouselComponent,
   ],
   imports: [
     BrowserModule,

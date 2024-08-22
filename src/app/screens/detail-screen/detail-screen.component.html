@@ -1,40 +1,8 @@
 <div class="background">
   <app-back-button></app-back-button>
-  <app-content-block>
-    <div class="header">
-      <div class="logo-wrapper">
-        <img class="logo" alt="project-logo" [src]="project?.logo" />
-      </div>
-      <div class="title-wrapper">
-        <h1 class="title">
-          {{project?.title}}
-        </h1>
-        <p class="sub-title">{{project?.description}}</p>
-        <div class="meta-info">
-          <div class="meta-item" title="Team size">
-            <i class="icon material-icons">person</i>
-            <span class="label">{{project?.teamSize}}</span>
-          </div>
-          <div class="meta-item" title="Project duration">
-            <i class="icon material-icons">timer</i>
-            <span class="label">{{project?.duration}}</span>
-          </div>
-          <a *ngIf="project?.url" [href]="project?.url" target="_blank">
-            <div class="meta-item" title="Visit the live project">
-              <i class="icon material-icons">ios_share</i>
-              <span class="label">Visit</span>
-            </div>
-          </a>
-          <div class="meta-item">
-            <i class="icon material-icons">code</i>
-            <span class="label" *ngFor="let tech of project?.technologies; let i = index;">
-              {{tech}}<span *ngIf="project && project.technologies && i < project.technologies.length - 1">,&nbsp;</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </app-content-block>
+  <div *ngIf="project">
+    <app-detail-header [project]="project"></app-detail-header>
+  </div>
   <app-content-block>
     <app-cf-content-block *ngFor="let block of project?.contentBlocks" [contentBlock]="block"></app-cf-content-block>
   </app-content-block>
@@ -42,8 +10,9 @@
     <app-picture-carousel [project]="project"></app-picture-carousel>
   </app-content-block> -->
   <app-job-details
+    *ngIf="project && project?.job"
     title="This product was developed whilst employed as a"
-    [job]="project!.job!"
+    [job]="project.job!"
     [showCta]="true"
     class="job-details">
   </app-job-details>

@@ -1,0 +1,94 @@
+@keyframes moveUp {
+  0% {
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(-50%);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(50%);
+  }
+}
+
+.carrousel {
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  width: 32vw;
+
+  &::after {
+    background: linear-gradient(180deg, var(--col-blue-deepest) 0%, #0f1a2500 100%);
+    content: '';
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+  }
+
+  &::before {
+    background: linear-gradient(180deg, #0f1a2500 0%, var(--col-blue-deepest) 100%);
+    content: '';
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 15;
+  }
+
+  .inner {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    max-height: 50vh;
+    right: 5vw;
+    position: absolute;
+    top: -15vh;
+
+    &::after {
+      background: url('../../../assets/gfx/shape_deep.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: '';
+      height: 20rem;
+      opacity: 0.2;
+      left: 0;
+      position: absolute;
+      top: 75%;
+      width: 20rem;
+      z-index: 0;
+    }
+
+    .row {
+      animation: moveDown 120s linear infinite;
+      // position: absolute;
+      // right: -5vw;
+      // top: 0;
+      transform: rotateX(0) rotateY(0deg) rotateZ(-10deg);
+      z-index: 10;
+
+      &.second {
+        animation: moveUp 120s linear infinite;
+      }
+
+      .image-wrapper {
+        .image {
+          border-radius: 0.5rem;
+          margin-bottom: 1rem;
+          width: 8rem;
+
+          -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000015;
+          -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000015;
+          box-shadow:         0 0.25rem 1rem 0.25rem #00000015;
+        }
+      }
+    }
+  }
+}

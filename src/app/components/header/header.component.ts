@@ -8,7 +8,7 @@ import { Project } from 'src/types';
 })
 export class HeaderComponent implements OnInit {
   @Input() public projects: Project[] = [];
-  @ViewChild('header') header: ElementRef | undefined; 
+  @ViewChild('header') header: ElementRef | undefined;
 
   public ngOnInit() {
     const body = document.querySelector('body');
@@ -18,9 +18,13 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  public getGridProjects () {
+    return this.projects.filter(a => a.displayInHeader);
+  }
+
   private handleScroll(body: HTMLBodyElement | null) {
     if (this.header && body && window.location.pathname === '/') {
-      const minY = 800;
+      const minY = this.header.nativeElement.clientHeight * 0.5;
       const maxH = this.header.nativeElement.clientHeight - 200;
       // 15 26 37
       const scrollDist = window.scrollY - minY;

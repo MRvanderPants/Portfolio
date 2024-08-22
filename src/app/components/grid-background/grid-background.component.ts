@@ -99,6 +99,7 @@ export class GridBackgroundComponent implements OnChanges {
       screenshots: ['../../assets/gfx/empty_screenshot.png'],
       isC2a: true,
       slug: '/', // TODO add page here
+      displayInHeader: true,
     };
     return [c2aProject, ...newProjects];
   }

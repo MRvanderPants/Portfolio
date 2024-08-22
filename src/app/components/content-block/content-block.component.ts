@@ -10,4 +10,6 @@ export class ContentBlockComponent {
   @Input() public theme: 'default' | 'blue' | 'dark' = 'default';
   @Input() public rounded: boolean = false;
   @Input() public extraHigh: boolean = false;
+  @Input() public noBackground: boolean = false;
+  @Input() public preventAnimation: boolean = false;
 }

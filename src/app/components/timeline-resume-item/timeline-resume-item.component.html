@@ -8,7 +8,7 @@
     <div class="content">
       <span class="role">{{job.role}}</span>
       <app-tag-list [tags]="job.skills"></app-tag-list>
-      <p class="description">{{job.description}}</p>
+      <p *ngIf="showDescriptions" class="description">{{job.description}}</p>
     </div>
   </div>
   <div class="pin">

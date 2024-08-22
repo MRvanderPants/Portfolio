@@ -1,7 +1,11 @@
 <div class="background">
   <app-back-button></app-back-button>
-  <app-job-details title="I worked as a" [job]="job" class="job-details"></app-job-details>
   <div *ngIf="job">
+    <div class="details-wrapper">
+      <h1 class="title">Working {{'@'}}{{job.slug}}</h1>
+      <!-- <app-job-details title="I worked as a" [job]="job" class="job-details"></app-job-details> -->
+      <app-job-carrousel [images]="projectImages"></app-job-carrousel>
+    </div>
     <app-content-block>
       <h4 class="more-title">Featured projects</h4>
       <app-timeline id="project-timeline">
@@ -11,12 +15,13 @@
         </app-timeline-projects-item>
       </app-timeline>
     </app-content-block>
-    <app-content-block blockTitle="On a timeline" [rounded]="true" theme="dark">
+    <app-content-block blockTitle="On a timeline" [rounded]="true" theme="dark" [preventAnimation]="true">
       <app-timeline id="job-timeline" [jobs]="allJobs()" [scrollToHighlit]="true">
         <app-timeline-resume-item
           *ngFor="let j of allJobs(); let i = index"
           [job]="j"
-          [highlit]="j.id == job.id">
+          [highlit]="j.id == job.id"
+          [showDescriptions]="false">
         </app-timeline-resume-item>
       </app-timeline>
     </app-content-block>

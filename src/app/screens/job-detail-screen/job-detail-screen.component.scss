@@ -2,9 +2,30 @@
   background-color: var(--col-blue-deepest);
 }
 
-.job-details {
-  display: block;
-  padding-top: 6rem;
+.details-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  width: 80vw;
+
+  .title {
+    color: var(--col-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.075rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .job-details {
+    display: block;
+    margin-left: 20vw;
+    padding: 4rem 0 2rem 0;
+    width: fit-content;
+  }
 }
 
 .header {
@@ -101,14 +122,24 @@
 }
 
 .more-title {
-  color: var(--col-blue-darker);
+  color: var(--col-blue);
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  padding-bottom: 0.5rem;
   padding: 1rem 0;
 }
 
 @media screen and (min-width: 640px) {
+  .details-wrapper {
+    .title {
+      font-size: 4rem;
+      padding-bottom: 1rem;
+      padding-top: 2rem;
+    }
+  }
+
   .header {
     // background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
     border-radius: 0.5rem;
@@ -130,10 +161,6 @@
       padding: 1rem 7rem 2rem 1rem;
       width: 40%;
 
-      .title {
-        font-size: 2rem;
-      }
-
       .sub-title {
         font-size: 1rem;
       }
@@ -146,5 +173,11 @@
       margin-top: 1rem;
       width: 60%;
     }
+  }
+
+  .more-title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
   }
 }

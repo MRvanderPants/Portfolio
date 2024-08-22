@@ -8,6 +8,10 @@
   &.extraHigh {
     padding: 8rem 1.5rem;
   }
+  
+  &.noBackground {
+    background-color: transparent !important;
+  }
 
   &.rounded {
     padding-bottom: 0;
