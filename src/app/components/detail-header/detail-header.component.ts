@@ -9,4 +9,5 @@ import { Project } from 'src/types';
 export class DetailHeaderComponent {
   @Input() public project?: Project;
   @Input() public showTags: boolean = true;
+  @Input() public neutralDescription: boolean = false;
 }

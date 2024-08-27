@@ -30,7 +30,7 @@ export class DetailScreenComponent implements OnInit {
   }
 
   private async fetchProjects(id: string) {
-    const projects = await this.dataService.getProjects();
-    this.projects = projects;
+    this.projects = await this.dataService.getProjects();
+    this.project = this.projects.find(project => project.slug === id)!;
   }
 }

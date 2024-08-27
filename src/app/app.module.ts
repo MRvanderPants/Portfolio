@@ -42,6 +42,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { DisciplineScreenComponent } from './screens/discipline-screen/discipline-screen.component';
 import { DetailHeaderComponent } from './components/detail-header/detail-header.component';
 import { JobCarrouselComponent } from './components/job-carrousel/job-carrousel.component';
+import { ContentfulService } from 'src/services/contentful.service';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { JobCarrouselComponent } from './components/job-carrousel/job-carrousel.
     IntersectionObserverModule.forRoot()
   ],
   providers: [
-    DataService
+    DataService,
+    ContentfulService,
   ],
   bootstrap: [AppComponent]
 })

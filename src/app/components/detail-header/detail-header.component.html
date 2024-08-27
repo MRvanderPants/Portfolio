@@ -7,7 +7,7 @@
       <h1 class="title">
         {{project?.title}}
       </h1>
-      <p class="sub-title">{{project?.description}}</p>
+      <p class="sub-title" [class.description]="neutralDescription">{{project?.description}}</p>
       <div class="meta-info" *ngIf="showTags">
         <div class="meta-item" title="Team size">
           <i class="icon material-icons">person</i>

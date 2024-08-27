@@ -6,9 +6,21 @@ export interface APIEntry {
   sys: {
     id: string;
     type: string;
+    contentType: {
+      sys: {
+        id: string;
+        linkType: string;
+        type: string;
+      }
+    };
     createdAt: string;
   },
 }
+
+export type APIIncludes = {
+  Asset: APIEntry[],
+  Entry: APIEntry[]
+};
 
 export interface APIEntryResponse {
   items: APIEntry[];
@@ -18,13 +30,13 @@ export interface APIEntryResponse {
     type: string;
   }
   total: number;
-  includes?: {
-    Asset: any[],
-    Entry: any[]
-  }
+  includes: APIIncludes;
 }
 
-export type IDURL = {
-  id: string;
-  url: string;
-}
+export type APIEntryLink = {
+  sys: {
+    id: string;
+    linkType: 'Entry' | 'Asset';
+    type: string;
+  };
+};

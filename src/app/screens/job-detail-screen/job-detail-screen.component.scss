@@ -10,96 +10,31 @@
   padding: 2rem 1.5rem;
   width: 80vw;
 
-  .title {
-    color: var(--col-blue);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    letter-spacing: 0.075rem;
-    padding-bottom: 0.5rem;
-  }
+  .header {
 
-  .job-details {
-    display: block;
-    margin-left: 20vw;
-    padding: 4rem 0 2rem 0;
-    width: fit-content;
-  }
-}
-
-.header {
-  margin-bottom: 2rem;
-  margin-left: -0.5rem;
-
-  .logo {
-    border-radius: 0.5rem;
-    height: 100%;
-    margin-bottom: 2rem;
-    width: 100%;
-  }
-
-  a {
-    color: #000000;
-  }
-
-  .title-wrapper {
-    margin: 0 0 0 1rem;
-
-    .top-content {
-      display: flex;
-      justify-content: space-between;
-
-      .left {
-        .title {
-          color: var(--col-blue);
-          font-family: 'Montserrat', sans-serif;
-          font-size: 1.5rem;
-          font-weight: 900;
-          padding-bottom: 0.5rem;
-          position: relative;
-        }
-
-        .clients {
-          display: flex;
-          flex-direction: column;
-          padding: 0 0 2rem 1rem;
-
-          .client {
-            color: var(--col-blue-darker);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 900;
-            padding-bottom: 0.5rem;
-          }
-        }
-      }
+    .title {
+      color: var(--col-blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      letter-spacing: 0.075rem;
+      padding-bottom: 0.5rem;
     }
 
-    .meta-info {
-      display: flex;
-      font-size: 0.8rem;
-      opacity: 0.5;
-
-      .meta-item {
-        align-items: center;
-        background-color: var(--col-grey);
-        border-radius: 0.25rem;
-        display: flex;
-        margin-right: 0.5rem;
-        padding: 0.125rem 0.5rem 0.125rem 0.25rem;
-
-        .icon {
-          font-size: 1rem;
-          margin-right: 0.25rem;
-        }
-      }
+    .description {
+      color: var(--col-grey);
     }
 
-    .sub-title {
-      color: var(--col-grey-darker);
-      font-size: 1.1rem;
-      margin: 1rem 0;
+    .button {
+      margin-top: 2rem;
+    }
+
+    .job-details {
+      display: block;
+      margin-left: 20vw;
+      padding: 4rem 0 2rem 0;
+      width: fit-content;
     }
   }
 }
@@ -133,24 +68,16 @@
 
 @media screen and (min-width: 640px) {
   .details-wrapper {
-    .title {
-      font-size: 4rem;
-      padding-bottom: 1rem;
-      padding-top: 2rem;
-    }
-  }
+    .header {
+      .title {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+      }
 
-  .header {
-    // background: linear-gradient(270deg, #f6f6f6 0%, #eaeaf7 100%);
-    border-radius: 0.5rem;
-    display: flex;
-    padding: 1.5rem;
-
-    .logo {
-      height: 8rem;
-      margin-right: 1.5rem;
-      margin-bottom: 0;
-      width: 8rem;
+      .description {
+        font-size: 1.5rem;
+      }
     }
   }
   .wrapper {

@@ -2,31 +2,14 @@
   background-color: var(--col-blue-deepest);
 }
 
-.title {
-  color: var(--col-blue-darker);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  padding-bottom: 2rem;
-  position: relative;
-}
-
 .sub-title {
-  color: var(--col-blue-darker);
+  color: var(--col-grey);
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 0.05rem;
   padding-bottom: 2rem;
   position: relative;
-}
-
-.description {
-  color: var(--col-grey);
-  display: block;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin: 0 0 4rem 2rem;
 }
 
 li {

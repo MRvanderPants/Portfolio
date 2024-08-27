@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project } from 'src/types';
+import { DataService } from 'src/services/data.service';
+import { Discipline, Project } from 'src/types';
 
 @Component({
   selector: 'app-discipline-screen',
@@ -9,23 +10,15 @@ import { Project } from 'src/types';
 })
 export class DisciplineScreenComponent implements OnInit {
 
-  public title = 'Web development';
+  public disciplineAsProject?: Project;
 
-  public disciplineAsProject: Project = {
-    id: '-1',
-    title: 'Web development',
-    image: '',
-    languages: [],
-    description: 'I have been working in web development for about 6 years now and it is one of my favorite fields to work in. It\'s very dynamic, ever evolving and there are always new things to learn. Opposed to software development, web development is more about making a splash and offering users a more consise experience.',
-    duration: '',
-    type: 'Web Application',
-    teamSize: '',
-    logo: '',
-    slug: '',
-    displayInHeader: false,
-  };
+  public disciplines: Discipline[] = [];
+  public discipline: Discipline | null = null;
 
-  constructor (private readonly router: Router) {}
+  constructor (
+    private readonly router: Router,
+    private readonly dataService: DataService,
+  ) {}
 
   public ngOnInit(): void {
     const id = this.router.url.split('/')[2];
@@ -35,6 +28,26 @@ export class DisciplineScreenComponent implements OnInit {
       this.router.navigate(['/error']);
     }
 
-    // TODO fetch data from CF
+    this.fetchDisciplines(id);
+  }
+
+  private async fetchDisciplines(id: string) {
+    this.disciplines = await this.dataService.getDisciplines();
+    this.discipline = this.disciplines.find(discipline => discipline.slug === id)!;
+    console.log('@@@', this.discipline);
+
+    this.disciplineAsProject = {
+      id: '-1',
+      title: this.discipline.title,
+      image: '',
+      languages: [],
+      description: this.discipline.description,
+      duration: '',
+      type: 'Web Application',
+      teamSize: '',
+      logo: this.discipline.image,
+      slug: '',
+      displayInHeader: false,
+    };
   }
 }

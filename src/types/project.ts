@@ -1,16 +1,5 @@
-import { Job } from "./job";
-
-export interface ContentBlock {
-  sys: {
-    id: string;
-  };
-  fields: {
-    internalName: string;
-    content: string;
-    title?: string;
-    image?: string;
-  };
-};
+import { ContentBlock } from './contentBlock';
+import { Job } from './job';
 
 export interface Project {
   id: string;

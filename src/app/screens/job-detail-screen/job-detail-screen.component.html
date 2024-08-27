@@ -2,10 +2,20 @@
   <app-back-button></app-back-button>
   <div *ngIf="job">
     <div class="details-wrapper">
-      <h1 class="title">Working {{'@'}}{{job.slug}}</h1>
+      <div class="header">
+        <h1 class="title">{{'@' + job.slug}}</h1>
+        <p class="description">{{job.description}}</p>
+        <a [href]="job.url" target="_blank" class="button">
+          Check out&nbsp;<span class="capitalize">{{job.slug}}</span>
+          <i class="icon material-icons">exit_to_app</i>
+        </a>
+      </div>
       <!-- <app-job-details title="I worked as a" [job]="job" class="job-details"></app-job-details> -->
       <app-job-carrousel [images]="projectImages"></app-job-carrousel>
     </div>
+    <app-content-block>
+      <app-cf-content-block *ngFor="let block of job?.contentBlocks" [contentBlock]="block"></app-cf-content-block>
+    </app-content-block>
     <app-content-block>
       <h4 class="more-title">Featured projects</h4>
       <app-timeline id="project-timeline">

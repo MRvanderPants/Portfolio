@@ -1,3 +1,5 @@
+import { ContentBlock } from './contentBlock';
+
 export type Job = {
   id: string;
   slug: string;
@@ -8,18 +10,5 @@ export type Job = {
   clients: string[];
   description: string;
   url?: string;
-}
-
-export function responseToJob(id: string, fields: any): Job {
-  return {
-    id,
-    slug: fields.slug,
-    role: fields.role,
-    skills: fields.skills,
-    date_start: fields.dateStart,
-    date_end: fields.dateEnd,
-    clients: fields.clients,
-    description: fields.description,
-    url: fields.url ?? null,
-  };
+  contentBlocks?: ContentBlock[];
 }

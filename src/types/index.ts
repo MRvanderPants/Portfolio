@@ -1,6 +1,7 @@
-import { Job, responseToJob } from './job';
-import { Project, ContentBlock } from './project';
+import { Job } from './job';
+import { Project } from './project';
 import { APIEntryResponse } from './api';
-import { Discipline } from './discipline';
+import { Discipline, DisciplineType } from './discipline';
+import { ContentBlock } from './contentBlock';
 
-export {Job, responseToJob, Project, ContentBlock, APIEntryResponse, Discipline};
+export {Job, Project, ContentBlock, APIEntryResponse, Discipline, DisciplineType};
