@@ -14,7 +14,13 @@
       <app-job-carrousel [images]="projectImages"></app-job-carrousel>
     </div>
     <app-content-block>
-      <app-cf-content-block *ngFor="let block of job?.contentBlocks" [contentBlock]="block"></app-cf-content-block>
+      <app-cf-content-block
+        *ngFor="let block of job?.contentBlocks;
+        let i = index;"
+        [contentBlock]="block"
+        [hasWave]="true"
+        [hasTag]="i === 0">
+      </app-cf-content-block>
     </app-content-block>
     <app-content-block>
       <h4 class="more-title">Featured projects</h4>

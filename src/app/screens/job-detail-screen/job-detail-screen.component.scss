@@ -4,10 +4,11 @@
 
 .details-wrapper {
   align-items: center;
+  background: linear-gradient(180deg, var(--col-blue-deepest) 0%, var(--col-blue-desaturated-medium) 50%, var(--col-blue-deepest) 100%);
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 10vw;
   width: 80vw;
 
   .header {

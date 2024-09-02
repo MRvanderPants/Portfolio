@@ -1,0 +1,39 @@
+.wave {
+  --size: 100px;
+  --b: 6px;
+  --m: 0.5;
+  --p: calc(var(--m)*var(--size));
+  --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+  
+  --_g: #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
+  -webkit-mask:
+    radial-gradient(var(--R) at top 50% right calc(-1*var(--p)),var(--_g)) 
+      calc(50% - var(--size)/2 - var(--b)/2) calc(50% - 2*var(--size)) / calc(var(--size) + var(--b)) calc(4*var(--size)) repeat-y,
+    radial-gradient(var(--R) at top 50% left  calc(-1*var(--p)),var(--_g)) 
+     calc(50% + var(--size)/2 + var(--b)/2) 50%/calc(var(--size) + var(--b)) calc(4*var(--size)) repeat-y;
+  mask:
+    radial-gradient(var(--R) at top 50% right calc(-1*var(--p)),var(--_g)) 
+      calc(50% - var(--size)/2 - var(--b)/2) calc(50% - 2*var(--size)) / calc(var(--size) + var(--b)) calc(4*var(--size)) repeat-y,
+    radial-gradient(var(--R) at top 50% left  calc(-1*var(--p)),var(--_g)) 
+     calc(50% + var(--size)/2 + var(--b)/2) 50%/calc(var(--size) + var(--b)) calc(4*var(--size)) repeat-y;
+
+  background-color: var(--col-blue-desaturated-medium);
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+  width: calc(var(--size) * 2);
+  z-index: -1;
+  transform: scale(-1);
+}
+
+.icon {
+  content: '';
+  color: var(--col-blue-desaturated-medium);
+  font-size: 8rem;
+  position: absolute;
+  opacity: 0.5;
+  left: -5rem;
+  top: -5rem;
+  transform: scale(-1);
+  z-index: -1;
+}

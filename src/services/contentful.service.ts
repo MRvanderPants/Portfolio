@@ -6,11 +6,13 @@ import { APIEntry, APIEntryLink, APIIncludes } from 'src/types/api';
 export class ContentfulService {
 
   public getApiEntriesFromIncludes(links: APIEntryLink[], includes: APIIncludes): APIEntry[] {
-    return links.map(({sys}) => includes[sys.linkType].find(include => include.sys.id === sys.id)!);
+    return links
+      .map((link) => this.parseInnerIncludes(link, includes))
+      .filter(entry => entry != null) as APIEntry[];
   }
 
   public getApiEntryFromIncludes(link: APIEntryLink, includes: APIIncludes): APIEntry {
-    return includes[link.sys.linkType].find(include => include.sys.id === link.sys.id)!;
+    return this.parseInnerIncludes(link, includes)!;
   }
 
   public apiEntryLinkToProject(apiEntry: APIEntryLink, includes: APIIncludes): Project {
@@ -63,10 +65,13 @@ export class ContentfulService {
   }
 
   private generateProject(fields: any, sys: APIEntry['sys'], includes: APIIncludes): Project {
+    const image = typeof fields.image === 'string'
+      ? fields.image
+      : this.getAssetUrl(includes.Asset, fields.image.sys.id);
     return {
       id: sys.id,
       title: fields.title,
-      image: this.getAssetUrl(includes.Asset, fields.image.sys.id),
+      image: image,
       languages: fields.languages,
       description: fields.description,
       duration: fields.duration,
@@ -100,5 +105,20 @@ export class ContentfulService {
       cases,
       jobs,
     };
+  }
+
+
+  private parseInnerIncludes(link: APIEntryLink, includes: APIIncludes): APIEntry | null {
+    const entry = includes[link.sys.linkType].find(include => include.sys.id === link.sys.id);
+    if (!entry) {
+      return null;
+    }
+
+    const image = entry.fields.image;
+    if (image && !image.fields && typeof image !== 'string') {
+      const data: APIEntryLink = image;
+      entry.fields.image = includes[data.sys.linkType].find(include => include.sys.id === data.sys.id)!.fields.file.url;
+    }
+    return entry;
   }
 }

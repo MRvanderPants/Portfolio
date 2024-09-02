@@ -43,6 +43,7 @@ import { DisciplineScreenComponent } from './screens/discipline-screen/disciplin
 import { DetailHeaderComponent } from './components/detail-header/detail-header.component';
 import { JobCarrouselComponent } from './components/job-carrousel/job-carrousel.component';
 import { ContentfulService } from 'src/services/contentful.service';
+import { WaveComponent } from './components/wave/wave.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { ContentfulService } from 'src/services/contentful.service';
     DisciplineScreenComponent,
     DetailHeaderComponent,
     JobCarrouselComponent,
+    WaveComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
 @keyframes moveUp {
   0% {
-    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(0);
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(25%);
   }
   100% {
-    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(-50%);
+    transform: rotateX(0) rotateY(0deg) rotateZ(-10deg) translateY(-25%);
   }
 }
 
@@ -67,15 +67,12 @@
     }
 
     .row {
-      animation: moveDown 120s linear infinite;
-      // position: absolute;
-      // right: -5vw;
-      // top: 0;
+      animation: moveDown 240s linear infinite;
       transform: rotateX(0) rotateY(0deg) rotateZ(-10deg);
       z-index: 10;
 
       &.second {
-        animation: moveUp 120s linear infinite;
+        animation: moveUp 240s linear infinite;
       }
 
       .image-wrapper {

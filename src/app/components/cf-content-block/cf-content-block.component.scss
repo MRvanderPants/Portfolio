@@ -1,21 +1,25 @@
-.title {
-  color: var(--col-blue);
-  font-size: 1.75rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-}
+.content-block {
+  position: relative;
 
-.content {
-  color: var(--col-grey);
-  display: block;
-  font-size: 1.25rem;
-  line-height: 2rem;
-}
+  .title {
+    color: var(--col-blue);
+    font-size: 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
 
-.image {
-  border-radius: 1rem;
-  margin: 6rem 10vw 8rem 10vw;
-  width: 60vw;
+  .content {
+    color: var(--col-grey);
+    display: block;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .image {
+    border-radius: 1rem;
+    margin: 6rem 10vw 8rem 10vw;
+    width: 60vw;
+  }
 }

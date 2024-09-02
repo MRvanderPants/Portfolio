@@ -7,5 +7,7 @@ import { ContentBlock } from 'src/types';
   styleUrls: ['./cf-content-block.component.scss']
 })
 export class CfContentBlockComponent {
+  @Input() public hasWave: boolean = false;
+  @Input() public hasTag: boolean = false;
   @Input() public contentBlock!: ContentBlock;
 }
