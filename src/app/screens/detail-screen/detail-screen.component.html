@@ -1,4 +1,4 @@
-<div class="background">
+<app-background-wrapper>
   <app-back-button></app-back-button>
   <div *ngIf="project">
     <app-detail-header [project]="project"></app-detail-header>
@@ -6,9 +6,6 @@
   <app-content-block>
     <app-cf-content-block *ngFor="let block of project?.contentBlocks" [contentBlock]="block"></app-cf-content-block>
   </app-content-block>
-  <!-- <app-content-block theme="blue" [rounded]="true" *ngIf="project?.screens">
-    <app-picture-carousel [project]="project"></app-picture-carousel>
-  </app-content-block> -->
   <app-job-details
     *ngIf="project && project?.job"
     title="This product was developed whilst employed as a"
@@ -26,6 +23,6 @@
       </app-timeline-projects-item>
     </app-timeline>
   </app-content-block>
-</div>
+</app-background-wrapper>
 <app-footer theme="blue"></app-footer>
 <app-back-to-top></app-back-to-top>

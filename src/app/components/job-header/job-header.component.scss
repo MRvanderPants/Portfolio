@@ -1,0 +1,59 @@
+.details-wrapper {
+  align-items: center;
+  background: linear-gradient(180deg, var(--col-blue-deepest) 0%, var(--col-blue-desaturated-medium) 50%, var(--col-blue-deepest) 100%);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 2rem 10vw;
+  width: 80vw;
+
+  .header {
+
+    .title {
+      color: var(--col-blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      letter-spacing: 0.075rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .description {
+      color: var(--col-grey);
+    }
+
+    .button {
+      margin-top: 2rem;
+    }
+
+    .job-details {
+      display: block;
+      margin-left: 20vw;
+      padding: 4rem 0 2rem 0;
+      width: fit-content;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .details-wrapper {
+    .header {
+      .title {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+      }
+
+      .description {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .more-title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+}

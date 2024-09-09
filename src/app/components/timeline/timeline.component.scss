@@ -1,6 +1,9 @@
 .timeline {
-  padding-bottom: 12rem;
-  
+
+  &.padded{
+    padding-bottom: 6rem;
+  }
+
   .timeline-wrapper {
     display: flex;
     overflow-x: auto;

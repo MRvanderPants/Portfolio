@@ -1,0 +1,29 @@
+.title {
+  color: var(--col-green-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  margin: 2rem 0 1rem 2rem;
+}
+
+.matrix {
+  border-collapse: collapse;
+  margin-bottom: 4rem;
+  width: 100%;
+
+  .technology .cell {
+    border-bottom: 1px solid var(--col-grey-darker);
+    color: var(--col-grey);
+    padding: 1.5rem 2rem;
+
+    &.title {
+      width: 8rem;
+    }
+
+    &.year {
+      white-space: nowrap;
+      width: 1rem;
+    }
+  }
+}

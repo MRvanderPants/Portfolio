@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Discipline, Job, Project } from 'src/types';
 import { APIEntry, APIEntryLink, APIIncludes } from 'src/types/api';
+import { Technology } from 'src/types/technology';
 
 @Injectable()
 export class ContentfulService {
@@ -45,6 +46,16 @@ export class ContentfulService {
     return this.generateDiscipline(fields, sys, includes);
   }
 
+  public apiEntryLinkToTechnology(apiEntry: APIEntryLink, includes: APIIncludes): Technology {
+    const {fields, sys} = this.getApiEntryFromIncludes(apiEntry, includes);
+    return this.generateTechnology(fields, sys);
+  }
+
+  public apiEntryToTechnology(apiEntry: APIEntry): Technology {
+    const {fields, sys} = apiEntry;
+    return this.generateTechnology(fields, sys);
+  }
+
   public getAssetUrl(assets: APIEntry[] | undefined, id: string): string {
     return assets?.find(a => a.sys.id === id)?.fields.file.url ?? '';
   }
@@ -75,7 +86,6 @@ export class ContentfulService {
       languages: fields.languages,
       description: fields.description,
       duration: fields.duration,
-      type: fields.type,
       teamSize: fields.teamSize,
       logo: this.getAssetUrl(includes.Asset, fields.icon.sys.id),
       screenshots: [this.getAssetUrl(includes.Asset, fields.screenshot.sys.id)],
@@ -95,6 +105,8 @@ export class ContentfulService {
     const cases = casesLinks.map(entry => this.apiEntryLinkToProject(entry, includes));
     const jobLinks: APIEntryLink[] = fields.jobs || [];
     const jobs = jobLinks.map(entry => this.apiEntryLinkToJob(entry, includes));
+    const techLinks: APIEntryLink[] = fields.technologies || [];
+    const technologies = techLinks.map(entry => this.apiEntryLinkToTechnology(entry, includes));
     return {
       id: sys.id,
       slug: fields.slug,
@@ -104,6 +116,19 @@ export class ContentfulService {
       image: this.getAssetUrl(includes.Asset, fields.image.sys.id),
       cases,
       jobs,
+      technologies,
+    };
+  }
+
+  private generateTechnology(fields: any, sys: APIEntry['sys']): Technology {
+    return {
+      id: sys.id,
+      title: fields.title,
+      description: fields.description,
+      fromDate: fields.fromDate,
+      abbreviation: fields.abbreviation,
+      knowledgeRating: fields.knowledgeRating,
+      category: fields.category,
     };
   }
 
@@ -119,6 +144,13 @@ export class ContentfulService {
       const data: APIEntryLink = image;
       entry.fields.image = includes[data.sys.linkType].find(include => include.sys.id === data.sys.id)!.fields.file.url;
     }
+
+    const project = entry.fields.case;
+    if (project && !project.fields && typeof project !== 'string') {
+      const data: APIEntryLink = project;
+      entry.fields.case = this.apiEntryLinkToProject(data, includes);
+    }
+
     return entry;
   }
 }

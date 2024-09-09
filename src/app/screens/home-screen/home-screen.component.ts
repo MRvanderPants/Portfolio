@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DataService } from 'src/services/data.service';
-import { Job, Project } from 'src/types';
+import { Discipline, Job, Project } from 'src/types';
 
 @Component({
   selector: 'app-home-screen',
@@ -9,21 +9,20 @@ import { Job, Project } from 'src/types';
 })
 export class HomeScreenComponent implements OnInit {
   @ViewChild('tech', {read: ElementRef})techWrapper?: ElementRef;
-  public showButton = true;
   public jobTags: string[] = [];
   public jobs: Job[] = [];
   public projects: Project[] = [];
+  public disciplines: Discipline[] = [];
   public gridProjects: Project[] = [];
 
   constructor (private readonly dataService: DataService) {}
 
   public ngOnInit() {
-    window.addEventListener('scroll', _ => {
-      this.showButton = document.documentElement.scrollTop < 500;
-    });
-  
-    this.fetchJobs();
-    this.fetchProjects();
+    Promise.all([
+      this.fetchJobs(),
+      this.fetchProjects(),
+      this.fetchDisciplines(),
+    ]);
   }
 
   public moveToDescription() {
@@ -43,5 +42,9 @@ export class HomeScreenComponent implements OnInit {
         return job.skills
       }).sort())
     ];
+  }
+
+  private async fetchDisciplines() {
+    this.disciplines = await this.dataService.getDisciplines();
   }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Discipline } from 'src/types';
 
 @Component({
   selector: 'app-work-panel',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./work-panel.component.scss']
 })
 export class WorkPanelComponent {
+  @Input() public disciplines: Discipline[] = [];
+
   public yearsOfExperience() {
     const year = new Date().getFullYear();
     return year - 2013;

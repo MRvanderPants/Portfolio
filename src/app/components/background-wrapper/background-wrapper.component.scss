@@ -1,0 +1,21 @@
+.background {
+  background-color: var(--col-blue-deepest);
+
+  &.logo {
+    padding: 2rem 0;
+    position: relative;
+
+    &::after {
+      background-image: url('../../../assets/gfx/background-logo.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.05;
+    }
+  }
+}

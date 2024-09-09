@@ -1,18 +1,10 @@
-<div class="background">
+<app-background-wrapper>
   <app-back-button></app-back-button>
   <div *ngIf="job">
-    <div class="details-wrapper">
-      <div class="header">
-        <h1 class="title">{{'@' + job.slug}}</h1>
-        <p class="description">{{job.description}}</p>
-        <a [href]="job.url" target="_blank" class="button">
-          Check out&nbsp;<span class="capitalize">{{job.slug}}</span>
-          <i class="icon material-icons">exit_to_app</i>
-        </a>
-      </div>
-      <!-- <app-job-details title="I worked as a" [job]="job" class="job-details"></app-job-details> -->
-      <app-job-carrousel [images]="projectImages"></app-job-carrousel>
-    </div>
+    <app-job-header
+      [job]="job"
+      [projectImages]="projectImages">
+    </app-job-header>
     <app-content-block>
       <app-cf-content-block
         *ngFor="let block of job?.contentBlocks;
@@ -22,9 +14,8 @@
         [hasTag]="i === 0">
       </app-cf-content-block>
     </app-content-block>
-    <app-content-block>
-      <h4 class="more-title">Featured projects</h4>
-      <app-timeline id="project-timeline">
+    <app-content-block blockTitle="Featured projects" [preventAnimation]="true">
+      <app-timeline id="project-timeline" class="project-timeline">
         <app-timeline-projects-item
           *ngFor="let proj of projects"
           [project]="proj">
@@ -42,6 +33,6 @@
       </app-timeline>
     </app-content-block>
   </div>
-</div>
+</app-background-wrapper>
 <app-footer theme="blue"></app-footer>
 <app-back-to-top></app-back-to-top>

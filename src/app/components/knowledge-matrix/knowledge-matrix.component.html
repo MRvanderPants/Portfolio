@@ -1,0 +1,16 @@
+<div *ngIf="technologies.length > 0">
+  <h4 class="title">{{title}}</h4>
+  <table class="matrix">
+    <tr *ngFor="let tech of technologies" class="technology">
+      <td class="cell title">
+        {{tech.title}}
+      </td>
+      <td class="cell year">
+        {{yearsOfExperience(tech)}} years
+      </td>
+      <td class="cell rating">
+        <i class="icon material-icons" *ngFor="let rating of ratingToArray(tech)">star</i>
+      </td>
+    </tr>
+  </table>
+</div>

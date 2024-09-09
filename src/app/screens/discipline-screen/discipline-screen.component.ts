@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/services/data.service';
 import { Discipline, Project } from 'src/types';
+import { TechnologyCategory } from 'src/types/technology';
 
 @Component({
   selector: 'app-discipline-screen',
@@ -23,7 +24,6 @@ export class DisciplineScreenComponent implements OnInit {
   public ngOnInit(): void {
     const id = this.router.url.split('/')[2];
     const ids = ['webdev', 'softwaredev', 'gamedev'];
-    console.log(id);
     if (!ids.includes(id)) {
       this.router.navigate(['/error']);
     }
@@ -34,7 +34,6 @@ export class DisciplineScreenComponent implements OnInit {
   private async fetchDisciplines(id: string) {
     this.disciplines = await this.dataService.getDisciplines();
     this.discipline = this.disciplines.find(discipline => discipline.slug === id)!;
-    console.log('@@@', this.discipline);
 
     this.disciplineAsProject = {
       id: '-1',
@@ -43,7 +42,6 @@ export class DisciplineScreenComponent implements OnInit {
       languages: [],
       description: this.discipline.description,
       duration: '',
-      type: 'Web Application',
       teamSize: '',
       logo: this.discipline.image,
       slug: '',

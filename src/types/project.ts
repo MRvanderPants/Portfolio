@@ -8,7 +8,6 @@ export interface Project {
   languages: string[];
   description: string;
   duration: string;
-  type: ProjectType;
   teamSize: string;
   logo: string;
   slug: string;
@@ -21,5 +20,3 @@ export interface Project {
   contentBlocks?: ContentBlock[];
   displayInHeader: boolean;
 }
-
-export type ProjectType = 'Enterprise software' | 'Android / iOS Application' | 'Web Application';

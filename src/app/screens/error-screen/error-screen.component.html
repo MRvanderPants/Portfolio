@@ -1,5 +1,5 @@
-<div class="background">
-  <app-content-block blockTitle="Oops!" id="error" theme="dark">
+<app-background-wrapper [showLogo]="true">
+  <app-content-block blockTitle="Oops!" id="error">
     <p class="sub-title">This page does not exist. Please check the url for typos or click one of the buttons below to continue.</p>
     <div class="button-container">
       <a href="/">
@@ -19,6 +19,6 @@
       <p class="sub-title" *ngIf="showCounter">It took you {{counter}} tries to click that button.</p>
     </div>
   </app-content-block>
-</div>
+</app-background-wrapper>
 <app-footer></app-footer>
 <app-back-to-top></app-back-to-top>

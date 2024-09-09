@@ -87,7 +87,6 @@ export class GridBackgroundComponent implements OnChanges {
     });
     const c2aProject: Project = {
       id: '-1',
-      type: 'Web Application',
       title: 'This could be your project',
       image: '../../assets/gfx/empty_screenshot.png',
       languages: [],

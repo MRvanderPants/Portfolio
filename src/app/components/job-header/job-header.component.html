@@ -1,0 +1,11 @@
+<div class="details-wrapper">
+  <div class="header">
+    <h1 class="title">{{'@' + job.slug}}</h1>
+    <p class="description">{{job.description}}</p>
+    <a [href]="job.url" target="_blank" class="button">
+      Check out&nbsp;<span class="capitalize">{{job.slug}}</span>
+      <i class="icon material-icons">exit_to_app</i>
+    </a>
+  </div>
+  <app-job-carrousel [images]="projectImages"></app-job-carrousel>
+</div>

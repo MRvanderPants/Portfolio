@@ -1,9 +1,7 @@
 <app-header [projects]="gridProjects"></app-header>
-<div class="move-down" (click)="moveToDescription()" [class.hidden]="!showButton">
-  <i class="icon material-icons">expand_more</i>
-</div>
+<app-move-down (click)="moveToDescription()"></app-move-down>
 <app-content-block blockTitle="This is what I do..." id="tech" #tech theme="dark" [noBackground]="true">
-  <app-work-panel></app-work-panel>
+  <app-work-panel [disciplines]="disciplines"></app-work-panel>
 </app-content-block>
 <app-jump-in-box className="jobs-timeline" direction="right" id="resume">
   <app-content-block blockTitle="Where I've worked before">

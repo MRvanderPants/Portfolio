@@ -1,4 +1,4 @@
-<div class="background">
+<app-background-wrapper>
   <app-back-button></app-back-button>
   <app-detail-header
     *ngIf="disciplineAsProject"
@@ -6,14 +6,35 @@
     [showTags]="false"
     [neutralDescription]="true">
   </app-detail-header>
-  <app-content-block>
-    <h1 class="sub-title">
-      Here are some of my favorite web projects:
-    </h1>
-    <li>List of projects to showcase this skill (villa pardoes, partou</li>
-    <li>List of technologies I work with</li>
-    <li>List of jobs where I worked as a webdev</li>
+  <app-content-block
+    *ngIf="discipline && discipline?.cases && discipline.cases!.length > 0"
+    blockTitle="Featured projects"
+    [preventAnimation]="true">
+    <app-timeline [hasTimeline]="false" id="cases-timeline">
+      <app-timeline-projects-item
+        *ngFor="let proj of discipline?.cases"
+        [project]="proj">
+      </app-timeline-projects-item>
+    </app-timeline>
   </app-content-block>
-</div>
+  <app-content-block
+    [preventAnimation]="true"
+    blockTitle="My skills"
+    *ngIf="discipline && discipline.technologies">
+    <app-knowledge-matrix-wrapper [technologies]="discipline.technologies"></app-knowledge-matrix-wrapper>
+  </app-content-block>
+  <app-content-block
+    blockTitle="My employment in this field"
+    [rounded]="true" theme="dark"
+    [preventAnimation]="true"
+    *ngIf="discipline && discipline.jobs && discipline.jobs.length > 0">
+    <app-timeline id="job-timeline" [jobs]="discipline.jobs" [scrollToHighlit]="true">
+      <app-timeline-resume-item
+        *ngFor="let j of discipline.jobs; let i = index"
+        [job]="j">
+      </app-timeline-resume-item>
+    </app-timeline>
+  </app-content-block>
+</app-background-wrapper>
 <app-footer theme="blue"></app-footer>
 <app-back-to-top></app-back-to-top>

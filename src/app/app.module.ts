@@ -44,6 +44,11 @@ import { DetailHeaderComponent } from './components/detail-header/detail-header.
 import { JobCarrouselComponent } from './components/job-carrousel/job-carrousel.component';
 import { ContentfulService } from 'src/services/contentful.service';
 import { WaveComponent } from './components/wave/wave.component';
+import { KnowledgeMatrixComponent } from './components/knowledge-matrix/knowledge-matrix.component';
+import { KnowledgeMatrixWrapperComponent } from './components/knowledge-matrix-wrapper/knowledge-matrix-wrapper.component';
+import { BackgroundWrapperComponent } from './components/background-wrapper/background-wrapper.component';
+import { JobHeaderComponent } from './components/job-header/job-header.component';
+import { MoveDownComponent } from './components/move-down/move-down.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +89,11 @@ import { WaveComponent } from './components/wave/wave.component';
     DetailHeaderComponent,
     JobCarrouselComponent,
     WaveComponent,
+    KnowledgeMatrixComponent,
+    KnowledgeMatrixWrapperComponent,
+    BackgroundWrapperComponent,
+    JobHeaderComponent,
+    MoveDownComponent,
   ],
   imports: [
     BrowserModule,

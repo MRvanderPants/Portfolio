@@ -1,3 +1,6 @@
+import { Job } from "./job";
+import { Project } from "./project";
+
 export interface ContentBlock {
   sys: {
     id: string;
@@ -8,5 +11,7 @@ export interface ContentBlock {
     content: string;
     title?: string;
     image?: string;
+    case?: Project;
+    job?: Job;
   };
 };
