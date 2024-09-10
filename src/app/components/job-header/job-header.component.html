@@ -7,5 +7,5 @@
       <i class="icon material-icons">exit_to_app</i>
     </a>
   </div>
-  <app-job-carrousel [images]="projectImages"></app-job-carrousel>
+  <app-job-carrousel *ngIf="projectImages.length > 2" [images]="projectImages"></app-job-carrousel>
 </div>

@@ -144,6 +144,12 @@ export class ContentfulService {
       const data: APIEntryLink = image;
       entry.fields.image = includes[data.sys.linkType].find(include => include.sys.id === data.sys.id)!.fields.file.url;
     }
+    
+    const images = entry.fields.images;
+    if (images) {
+      entry.fields.images = images.map((e: APIEntryLink) => 
+        includes[e.sys.linkType].find(include => include.sys.id === e.sys.id)!.fields.file.url);
+    }
 
     const project = entry.fields.case;
     if (project && !project.fields && typeof project !== 'string') {

@@ -1,6 +1,10 @@
 .content-block {
   position: relative;
 
+  &.noImage {
+    padding-bottom: 2rem;
+  }
+
   .title {
     color: var(--col-blue);
     font-size: 1.75rem;
@@ -20,6 +24,19 @@
   .image {
     border-radius: 1rem;
     margin: 6rem 10vw 8rem 10vw;
-    width: 60vw;
+    max-height: 75vh;
+    max-width: 60vw;
+  }
+
+  .image-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    margin: 6rem 10vw 8rem 10vw;
+
+    .image {
+      margin: 0;
+      width: 33%;
+    }
   }
 }

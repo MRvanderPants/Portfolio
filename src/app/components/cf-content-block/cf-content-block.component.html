@@ -1,6 +1,9 @@
-<div class="content-block">
+<div class="content-block" [class.noImage]="!contentBlock.fields.image">
   <app-wave *ngIf="hasWave" [hasTag]="hasTag"></app-wave>
   <h4 class="title" *ngIf="contentBlock.fields.title">{{contentBlock.fields.title}}</h4>
   <div class="content">{{contentBlock.fields.content}}</div>
   <img *ngIf="contentBlock.fields.image" class="image" [src]="contentBlock.fields.image" alt="screenshot" />
+  <div class="image-wrapper" *ngIf="contentBlock.fields.images">
+    <img *ngFor="let img of contentBlock.fields.images" class="image" [src]="img" alt="screenshot" />
+  </div>
 </div>

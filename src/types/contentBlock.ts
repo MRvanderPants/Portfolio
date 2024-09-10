@@ -11,6 +11,7 @@ export interface ContentBlock {
     content: string;
     title?: string;
     image?: string;
+    images?: string[];
     case?: Project;
     job?: Job;
   };
