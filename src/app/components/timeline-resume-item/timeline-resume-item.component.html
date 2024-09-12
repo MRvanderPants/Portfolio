@@ -1,10 +1,15 @@
 <div class="item" [class.active]="job.date_end == '???' || highlit">
   <div class="item__wrapper">
-    <a [href]="'jobs/' + job.slug" class="title">
+    <a [href]="'jobs/' + job.slug" class="title" *ngIf="!job.noDetails">
       <span class="sub-title" *ngFor="let client of job.clients">
         {{'@' + client}}
       </span>
     </a>
+    <div class="title no-url" *ngIf="job.noDetails">
+      <span class="sub-title" *ngFor="let client of job.clients">
+        {{'@' + client}}
+      </span>
+    </div>
     <div class="content">
       <span class="role">{{job.role}}</span>
       <app-tag-list [tags]="job.skills"></app-tag-list>

@@ -64,6 +64,8 @@ export class ContentfulService {
     return {
       id: sys.id,
       slug: fields.slug,
+      title: fields.title,
+      noDetails: fields.noDetails,
       role: fields.role,
       skills: fields.skills,
       date_start: fields.dateStart,
