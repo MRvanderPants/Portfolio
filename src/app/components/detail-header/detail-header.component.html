@@ -1,8 +1,6 @@
 <app-content-block>
   <div class="header">
-    <div class="logo-wrapper">
-      <img class="logo" alt="project-logo" [src]="project?.logo" />
-    </div>
+    <app-animated-logo [logo]="project?.logo || ''"></app-animated-logo>
     <div class="title-wrapper">
       <h1 class="title">
         {{project?.title}}

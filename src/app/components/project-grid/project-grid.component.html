@@ -6,7 +6,7 @@
     <div class="project"
       [ngStyle]="{'background-image': 'url(' + project.image + ')'}"
       *ngFor="let project of projects"
-      (click)="goToPage(project.id)">
+      (click)="goToPage(project.slug)">
       <!-- <img class="image" [src]="project.image" alt="project-image" /> -->
       <img class="project-logo" [src]="project.logo" alt="logo" />
       <div class="title-bar">

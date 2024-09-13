@@ -49,6 +49,11 @@ import { KnowledgeMatrixWrapperComponent } from './components/knowledge-matrix-w
 import { BackgroundWrapperComponent } from './components/background-wrapper/background-wrapper.component';
 import { JobHeaderComponent } from './components/job-header/job-header.component';
 import { MoveDownComponent } from './components/move-down/move-down.component';
+import { AnimatedLogoComponent } from './components/animated-logo/animated-logo.component';
+import { FooterLintComponent } from './components/footer-lint/footer-lint.component';
+import { FooterColofonComponent } from './components/footer-colofon/footer-colofon.component';
+import { HeaderContentComponent } from './components/header-content/header-content.component';
+import { GridBackgroundItemComponent } from './components/grid-background-item/grid-background-item.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +99,11 @@ import { MoveDownComponent } from './components/move-down/move-down.component';
     BackgroundWrapperComponent,
     JobHeaderComponent,
     MoveDownComponent,
+    AnimatedLogoComponent,
+    FooterLintComponent,
+    FooterColofonComponent,
+    HeaderContentComponent,
+    GridBackgroundItemComponent,
   ],
   imports: [
     BrowserModule,

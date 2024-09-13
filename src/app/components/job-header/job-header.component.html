@@ -2,10 +2,10 @@
   <div class="header">
     <h1 class="title">{{'@' + job.title}}</h1>
     <p class="description">{{job.description}}</p>
-    <a [href]="job.url" target="_blank" class="button">
+    <a *ngIf="job.url" [href]="job.url" target="_blank" class="button">
       Check out&nbsp;<span class="capitalize">{{job.title}}</span>
       <i class="icon material-icons">exit_to_app</i>
     </a>
   </div>
-  <app-job-carrousel *ngIf="projectImages.length > 2" [images]="projectImages"></app-job-carrousel>
+  <app-job-carrousel class="carrousel" *ngIf="projectImages.length > 2" [images]="projectImages"></app-job-carrousel>
 </div>

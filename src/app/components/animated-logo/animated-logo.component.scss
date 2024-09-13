@@ -1,0 +1,93 @@
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-wrapper {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  position: relative;
+  width: 8rem;
+
+  .logo {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:before {
+    background: url('../../../assets/gfx/shape_deep.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    // transform: rotateZ(180deg);
+    width: 100%;
+    z-index: var(--z-down);
+    animation: rotateRight 8s linear infinite;
+  }
+
+  &:after {
+    background: url('../../../assets/gfx/shape_deep.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    height: calc(100% + 4rem);
+    opacity: 0.33;
+    left: -2rem;
+    position: absolute;
+    top: -2rem;
+    // transform: rotateZ(180deg);
+    width: calc(100% + 4rem);
+    z-index: var(--z-down);
+    animation: rotateLeft 8s linear infinite;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .logo-wrapper {
+    margin-right: 4rem;
+    margin-bottom: 0;
+
+    .logo {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
+}

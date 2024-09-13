@@ -23,9 +23,8 @@
 
   .image {
     border-radius: 1rem;
-    margin: 6rem 10vw 8rem 10vw;
-    max-height: 75vh;
-    max-width: 60vw;
+    margin: 2rem 0;
+    width: 100%;
   }
 
   .image-wrapper {
@@ -37,6 +36,16 @@
     .image {
       margin: 0;
       width: 33%;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .content-block {
+    .image {
+      margin: 6rem 10vw 8rem 10vw;
+      max-height: 75vh;
+      max-width: 60vw;
     }
   }
 }

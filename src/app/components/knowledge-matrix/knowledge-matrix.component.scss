@@ -4,26 +4,53 @@
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  margin: 2rem 0 1rem 2rem;
+  margin: 2rem 0 1rem 0.5rem;
 }
 
 .matrix {
   border-collapse: collapse;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   width: 100%;
 
   .technology .cell {
     border-bottom: 1px solid var(--col-grey-darker);
     color: var(--col-grey);
-    padding: 1.5rem 2rem;
+    padding: 0.5rem;
 
     &.title {
       width: 8rem;
     }
 
     &.year {
-      white-space: nowrap;
-      width: 1rem;
+      display: none;
+    }
+
+    &.rating .icon {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .title {
+    margin: 2rem 0 1rem 2rem;
+  }
+
+  .matrix {
+    margin-bottom: 4rem;
+
+    .technology .cell {
+      padding: 1.5rem 2rem;
+
+      &.year {
+        display: table-cell;
+        white-space: nowrap;
+        width: 1rem;
+      }
+
+      &.rating .icon {
+        font-size: 1.5rem;
+      }
     }
   }
 }

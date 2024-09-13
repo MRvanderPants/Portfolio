@@ -1,6 +1,5 @@
 .card {
   margin: auto;
-  padding-bottom: 4rem;
   position: relative;
   width: fit-content;
 
@@ -27,6 +26,7 @@
 
     .title {
       color: var(--col-grey-60);
+      padding: 0 1rem;
 
       .highlight {
         color: var(--col-green-darker);
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 
     .client {
       color: var(--col-blue-darker);
@@ -51,15 +51,16 @@
     }
 
     .meta-links {
-      align-items: center;
+      // align-items: center;
       display: flex;
+      flex-direction: column;
 
       .date {
         color: var(--col-grey-60);
       }
 
       .see-more-link {
-        margin-left: 2rem;
+        margin-left: 0;
 
         .see-more {
           align-items: center;
@@ -74,6 +75,28 @@
           &:hover {
             color: var(--col-green-darker);
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    padding-bottom: 4rem;
+
+    .title {
+      padding: 0;
+    }
+
+    .wrapper {
+      padding: 1rem;
+      
+      .meta-links {
+        flex-direction: row;
+  
+        .see-more-link {
+          margin-left: 2rem;
         }
       }
     }

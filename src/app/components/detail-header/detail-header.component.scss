@@ -1,87 +1,9 @@
-@keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  75% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(270deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: -4rem;
-
-  .logo-wrapper {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    position: relative;
-    width: 8rem;
-
-    .logo {
-      border-radius: 1rem;
-      height: 100%;
-      width: 100%;
-    }
-
-    &:before {
-      background: url('../../../assets/gfx/shape_deep.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      // transform: rotateZ(180deg);
-      width: 100%;
-      z-index: var(--z-down);
-      animation: rotateRight 8s linear infinite;
-    }
-
-    &:after {
-      background: url('../../../assets/gfx/shape_deep.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: '';
-      height: calc(100% + 4rem);
-      opacity: 0.33;
-      left: -2rem;
-      position: absolute;
-      top: -2rem;
-      // transform: rotateZ(180deg);
-      width: calc(100% + 4rem);
-      z-index: var(--z-down);
-      animation: rotateLeft 8s linear infinite;
-    }
-  }
 
   a {
     color: var(--col-grey);
@@ -93,6 +15,8 @@
 
   .title-wrapper {
     margin: 0 0 0 1rem;
+    padding: 0 2rem;
+    width: calc(100vw - 2rem);
 
     .title {
       color: var(--col-blue-darker);
@@ -119,6 +43,7 @@
     .meta-info {
       color: var(--col-grey);
       display: flex;
+      flex-direction: column;
       font-size: 0.9rem;
       letter-spacing: 0.033rem;
       margin: auto;
@@ -145,17 +70,8 @@
     align-items: center;
     border-radius: 0.5rem;
     display: flex;
+    flex-direction: row;
     padding: 1.5rem;
-
-    .logo-wrapper {
-      margin-right: 4rem;
-      margin-bottom: 0;
-
-      .logo {
-        height: 8rem;
-        width: 8rem;
-      }
-    }
 
     .title-wrapper {
       .title {
@@ -165,6 +81,10 @@
       .sub-title {
         margin-top: 0;
         padding-top: 0;
+      }
+
+      .meta-info {
+        flex-direction: row;
       }
     }
   }

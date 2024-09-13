@@ -34,11 +34,6 @@ export class GridBackgroundComponent implements OnChanges {
       this.itemWidth = this.calculateWidth();
       wrapperHeight = background.clientHeight;
     });
-
-    // background.addEventListener('mousemove', (event: any) => {
-    //   const percentage = (event.y / wrapperHeight) * 100;
-    //   this.containerMargin = percentage;
-    // });
   }
 
   public calculateWidth(): number {
@@ -48,32 +43,6 @@ export class GridBackgroundComponent implements OnChanges {
 
   public calculateHeight(): number {
     return (this.calculateWidth() * 16) / 8.1;
-  }
-
-  public calculateMarginTop(index: number): number {
-    return index % 2 === 0 ? -(this.itemHeight / 2) : 0;
-  }
-
-  public calculateSideLeft(index: number): string {
-    const width = this.calculateWidth();
-    if (!this.displayCardRight(index)) {
-      return `${width + 16}px`
-    }
-    return `-${width + 16}px`;
-  }
-
-  public goToPage(item: Project) {
-    if (item.isC2a) {
-      this.scrollToElement(item.url ?? '#footer')
-      return;
-    }
-    this.router.navigate([`/details`, item.slug]);
-  }
-
-  private scrollToElement(url: string) {
-    const element = document.querySelector(url)! as HTMLElement;
-    const top = element.offsetTop ?? 0;
-    window.scroll({top, behavior: 'smooth'});
   }
 
   private compileProjects(): Project[] {
@@ -101,11 +70,6 @@ export class GridBackgroundComponent implements OnChanges {
       displayInHeader: true,
     };
     return [c2aProject, ...newProjects];
-  }
-
-  private displayCardRight(index: number): boolean {
-    const colIndex = index % this.numberOfRows;
-    return colIndex >= Math.floor(this.numberOfRows / 2);
   }
 
   private createColums(items: Project[]) {

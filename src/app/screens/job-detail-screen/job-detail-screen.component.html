@@ -14,7 +14,7 @@
         [hasTag]="i === 0">
       </app-cf-content-block>
     </app-content-block>
-    <app-content-block blockTitle="Featured projects" [preventAnimation]="true">
+    <app-content-block *ngIf="projects.length > 0" blockTitle="Featured projects" [preventAnimation]="true">
       <app-timeline id="project-timeline" class="project-timeline">
         <app-timeline-projects-item
           *ngFor="let proj of projects"

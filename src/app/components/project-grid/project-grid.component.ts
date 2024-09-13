@@ -13,6 +13,6 @@ export class ProjectGridComponent {
   constructor(public readonly router: Router) {}
 
   public goToPage(id: string) {
-    this.router.navigate([`/details`, {id}]);
+    this.router.navigate([`/details/${id}`]);
   }
 }

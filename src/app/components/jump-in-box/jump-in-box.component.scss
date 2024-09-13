@@ -1,23 +1,25 @@
-.jump-block {
-  position: relative;
-  transition: all 0.5s;
-
-  &.left {
-    left: 0;
+@media screen and (min-width: 640px) {
+  .jump-block {
+    position: relative;
+    transition: all 0.5s;
+  
+    &.left {
+      left: 0;
+    }
+  
+    &.right {
+      right: 0;
+    }
   }
 
-  &.right {
-    right: 0;
-  }
-}
+  .outside {
 
-.outside {
+    &.left {
+      left: -100vw;
+    }
 
-  &.left {
-    left: -100vw;
-  }
-
-  &.right {
-    right: -200vw;
+    &.right {
+      right: -200vw;
+    }
   }
 }

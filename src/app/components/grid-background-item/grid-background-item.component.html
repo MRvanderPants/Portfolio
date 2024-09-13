@@ -1,0 +1,29 @@
+<div
+  class="grid-item"
+  (click)="goToPage(item)"
+  [ngStyle]="{
+    height: itemHeight + 'px',
+    width: itemWidth + 'px',
+    top: calculateMarginTop(index) + 'px',
+    'background-image': 'url(\'' + item.screenshots![0] + '\')'
+  }">
+  <img *ngIf="item.logo" class="logo" [src]="item.logo" alt="logo" />
+  <div
+    class="side-panel"
+    [ngStyle]="{
+      width: itemWidth + 'px',
+      left: calculateSideLeft(index)
+    }">
+    <div class="wrapper">
+      <p class="title">{{ item.title }}</p>
+      <p class="description">{{ item.description }}</p>
+    </div>
+    <div class="tech-wrapper">
+      <div class="tech" *ngFor="let language of item.languages">
+        <div class="fold">
+          <i class="icon {{ language | prefixIcon }}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

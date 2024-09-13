@@ -7,5 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class FooterComponent {
   @Input() public theme: 'blue' | 'default' = 'default';
-  public year = new Date().getFullYear();
 }

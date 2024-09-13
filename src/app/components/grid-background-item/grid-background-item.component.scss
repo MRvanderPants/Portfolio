@@ -1,0 +1,59 @@
+.grid-item {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  position: relative;
+  transition: all .2s ease-in-out;
+
+  -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000015;
+  -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000015;
+  box-shadow:         0 0.25rem 1rem 0.25rem #00000015;
+
+  &:hover {
+    transform: translate(25px, -50px);
+    z-index: var(--z-content);
+
+    -webkit-box-shadow: -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+    -moz-box-shadow:    -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+    box-shadow:         -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+
+    .side-panel {
+      opacity: 1;
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(30deg) scaleX(1.25) scaleY(1.6);
+
+      -webkit-box-shadow: -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+      -moz-box-shadow:    -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+      box-shadow:         -25px calc(0.25rem + 50px) 1rem 0.25rem #00000015;
+
+      .fold {
+        transform: rotateY(0deg) rotateX(-45deg) scaleX(0.8) scaleY(1.2) translateX(13px) translateY(5px) !important;
+      }
+    }
+  }
+
+  &:active {
+    transform: rotateX(30deg);
+  }
+
+  &:nth-child(odd) {
+    position: relative;
+    top: -25%;
+  }
+
+  .logo {
+    border-radius: 0.25rem;
+    bottom: 1rem;
+    height: 4rem;
+    left: 1rem;
+    position: absolute;
+    width: 4rem;
+
+    -webkit-box-shadow: 0 0.25rem 1rem 0.25rem #00000025;
+    -moz-box-shadow:    0 0.25rem 1rem 0.25rem #00000025;
+    box-shadow:         0 0.25rem 1rem 0.25rem #00000025;
+  }
+}

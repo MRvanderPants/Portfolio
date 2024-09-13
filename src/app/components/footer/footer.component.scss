@@ -16,7 +16,7 @@
   .content {
     background-color: var(--col-blue-desaturated-dark);
     margin: auto;
-    padding: 2rem 10vw;
+    padding: 2rem 1rem;
 
     .content-wrapper {
       display: flex;
@@ -60,93 +60,6 @@
       background-repeat: no-repeat;
       background-position: center;
     }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-
-      .row {
-        &.shade {
-          opacity: 0.8;
-        }
-
-        &.grow {
-          flex-grow: 1;
-        }
-
-        .title {
-          color: var(--col-green);
-          font-family: 'Montserrat', sans-serif;
-          font-size: 1.25rem;
-          font-weight: 600;
-          padding-bottom: 0.25rem;
-          letter-spacing: 0.04rem;
-        }
-
-        .sub-title {
-          color: var(--col-white);
-          font-family: 'Montserrat', sans-serif;
-          font-size: 0.9rem;
-          font-weight: 400;
-          line-height: 1.25rem;
-          margin-left: 0.5rem;
-          padding-bottom: 1.5rem;
-        }
-
-        .item {
-          align-items: center;
-          color: var(--col-white);
-          display: flex;
-          transition: opacity .2s;
-          margin-bottom: 0.5rem;
-
-          &:hover {
-            opacity: 0.6;
-          }
-
-          &:active {
-            opacity: 0.4;
-          }
-
-          .icon {
-            font-size: 1.25rem;
-            margin-right: 0.75rem;
-
-            &.linkedin, &.github {
-              height: 1rem;
-              margin-left: 3px;
-              width: 1rem;
-            }
-
-            &.twitter {
-              height: 1.5rem;
-              margin-left: -1px;
-              margin-right: 0.5rem;
-              width: 1.5rem;
-            }
-          }
-
-          .label {
-            font-size: 0.9rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-.bottom-lint {
-  background-color: var(--col-blue-desaturated-medium);
-  padding: 0.5rem 1rem;
-
-  .label {
-    color: var(--col-grey);
-    font-size: 0.6rem;
-    text-align: left;
-
-    .deco {
-      opacity: 0.7;
-    }
   }
 }
 
@@ -176,25 +89,6 @@
         margin-bottom: 0;
         width: 20vw;
       }
-      
-      .wrapper {
-        flex-direction: row;
-
-        .row {
-          padding-right: 6rem;
-
-          .sub-title {
-            padding-bottom: 0.5rem;
-          }
-        }
-      }
-    }
-  }
-
-  .bottom-lint {
-    .label {
-      font-size: 0.8rem;
-      text-align: center;
     }
   }
 }
