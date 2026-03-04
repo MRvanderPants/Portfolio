@@ -1,9 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-tech-list',
-  templateUrl: './tech-list.component.html',
-  styleUrls: ['./tech-list.component.scss']
+    selector: 'app-tech-list',
+    templateUrl: './tech-list.component.html',
+    styleUrls: ['./tech-list.component.scss'],
+    standalone: true,
+    imports: [NgFor]
 })
 export class TechListComponent {
   @Input() public tags: string[] = [];

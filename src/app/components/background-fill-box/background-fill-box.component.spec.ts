@@ -8,8 +8,8 @@ describe('BackgroundFillBoxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackgroundFillBoxComponent ]
-    })
+    imports: [BackgroundFillBoxComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(BackgroundFillBoxComponent);

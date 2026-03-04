@@ -8,8 +8,8 @@ describe('GridBackgroundItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GridBackgroundItemComponent ]
-    })
+    imports: [GridBackgroundItemComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(GridBackgroundItemComponent);

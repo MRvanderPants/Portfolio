@@ -8,8 +8,8 @@ describe('BackgroundWrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackgroundWrapperComponent ]
-    })
+    imports: [BackgroundWrapperComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(BackgroundWrapperComponent);

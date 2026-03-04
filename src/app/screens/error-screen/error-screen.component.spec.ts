@@ -8,8 +8,8 @@ describe('ErrorScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ErrorScreenComponent ]
-    })
+    imports: [ErrorScreenComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ErrorScreenComponent);

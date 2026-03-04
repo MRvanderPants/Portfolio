@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-back-to-top',
-  templateUrl: './back-to-top.component.html',
-  styleUrls: ['./back-to-top.component.scss']
+    selector: 'app-back-to-top',
+    templateUrl: './back-to-top.component.html',
+    styleUrls: ['./back-to-top.component.scss'],
+    standalone: true
 })
 export class BackToTopComponent implements OnInit {
   public showButton = false;

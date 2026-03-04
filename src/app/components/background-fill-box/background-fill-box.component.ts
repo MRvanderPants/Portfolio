@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-background-fill-box',
-  templateUrl: './background-fill-box.component.html',
-  styleUrls: ['./background-fill-box.component.scss']
+    selector: 'app-background-fill-box',
+    templateUrl: './background-fill-box.component.html',
+    styleUrls: ['./background-fill-box.component.scss'],
+    standalone: true
 })
 export class BackgroundFillBoxComponent implements OnInit {
   @Input() public className: string = '';

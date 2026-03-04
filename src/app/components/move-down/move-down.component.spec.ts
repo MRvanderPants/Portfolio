@@ -8,8 +8,8 @@ describe('MoveDownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MoveDownComponent ]
-    })
+    imports: [MoveDownComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(MoveDownComponent);

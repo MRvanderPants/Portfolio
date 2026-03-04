@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Job } from 'src/types';
+import { NgIf, NgFor } from '@angular/common';
 
 export interface TimelineItem {
   titles: string[];
@@ -9,9 +10,11 @@ export interface TimelineItem {
 }
 
 @Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+    selector: 'app-timeline',
+    templateUrl: './timeline.component.html',
+    styleUrls: ['./timeline.component.scss'],
+    standalone: true,
+    imports: [NgIf, NgFor]
 })
 export class TimelineComponent implements OnInit, OnChanges {
   @Input() public id: string = '';

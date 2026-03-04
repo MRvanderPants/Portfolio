@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform, ElementRef } from '@angular/core';
 
 @Pipe({
-  name: 'fadeIn'
+    name: 'fadeIn',
+    standalone: true
 })
 export class FadeInPipe implements PipeTransform {
 

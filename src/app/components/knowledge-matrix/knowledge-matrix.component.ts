@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Technology, TechnologyCategory } from 'src/types/technology';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-knowledge-matrix',
-  templateUrl: './knowledge-matrix.component.html',
-  styleUrls: ['./knowledge-matrix.component.scss']
+    selector: 'app-knowledge-matrix',
+    templateUrl: './knowledge-matrix.component.html',
+    styleUrls: ['./knowledge-matrix.component.scss'],
+    standalone: true,
+    imports: [NgIf, NgFor]
 })
 export class KnowledgeMatrixComponent {
   @Input() public technologies: Technology[] = [];

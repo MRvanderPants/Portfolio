@@ -1,9 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-move-down',
-  templateUrl: './move-down.component.html',
-  styleUrls: ['./move-down.component.scss']
+    selector: 'app-move-down',
+    templateUrl: './move-down.component.html',
+    styleUrls: ['./move-down.component.scss'],
+    standalone: true
 })
 export class MoveDownComponent implements OnInit {
   public showButton = true;

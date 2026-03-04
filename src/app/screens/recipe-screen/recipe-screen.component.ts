@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { NgIf, NgFor } from '@angular/common';
 
 export type Recipe = {
   title: string;
@@ -15,9 +16,11 @@ export type Recipe = {
 };
 
 @Component({
-  selector: 'app-recipe-screen',
-  templateUrl: './recipe-screen.component.html',
-  styleUrls: ['./recipe-screen.component.scss']
+    selector: 'app-recipe-screen',
+    templateUrl: './recipe-screen.component.html',
+    styleUrls: ['./recipe-screen.component.scss'],
+    standalone: true,
+    imports: [NgIf, RouterLink, NgFor]
 })
 export class RecipeScreenComponent {
 

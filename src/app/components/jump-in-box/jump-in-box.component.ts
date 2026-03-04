@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-jump-in-box',
-  templateUrl: './jump-in-box.component.html',
-  styleUrls: ['./jump-in-box.component.scss']
+    selector: 'app-jump-in-box',
+    templateUrl: './jump-in-box.component.html',
+    styleUrls: ['./jump-in-box.component.scss'],
+    standalone: true
 })
 export class JumpInBoxComponent implements OnInit {
   @Input() public className: string = '';

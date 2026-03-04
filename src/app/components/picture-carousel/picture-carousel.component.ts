@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Project } from 'src/types';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-picture-carousel',
-  templateUrl: './picture-carousel.component.html',
-  styleUrls: ['./picture-carousel.component.scss']
+    selector: 'app-picture-carousel',
+    templateUrl: './picture-carousel.component.html',
+    styleUrls: ['./picture-carousel.component.scss'],
+    standalone: true,
+    imports: [NgFor, NgIf]
 })
 export class PictureCarouselComponent {
   @Input() public project: Project | null = null;

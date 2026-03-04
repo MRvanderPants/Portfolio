@@ -1,9 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { JumpInBoxComponent } from '../jump-in-box/jump-in-box.component';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-content-block',
-  templateUrl: './content-block.component.html',
-  styleUrls: ['./content-block.component.scss']
+    selector: 'app-content-block',
+    templateUrl: './content-block.component.html',
+    styleUrls: ['./content-block.component.scss'],
+    standalone: true,
+    imports: [NgIf, JumpInBoxComponent]
 })
 export class ContentBlockComponent {
   @Input() public blockTitle: string = '';

@@ -8,8 +8,8 @@ describe('JumpInBoxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JumpInBoxComponent ]
-    })
+    imports: [JumpInBoxComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(JumpInBoxComponent);

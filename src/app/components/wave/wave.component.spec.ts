@@ -8,8 +8,8 @@ describe('WaveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WaveComponent ]
-    })
+    imports: [WaveComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(WaveComponent);

@@ -8,8 +8,8 @@ describe('ParagraphComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParagraphComponent ]
-    })
+    imports: [ParagraphComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ParagraphComponent);

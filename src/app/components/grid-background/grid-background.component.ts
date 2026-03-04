@@ -1,11 +1,15 @@
 import { Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from 'src/types';
+import { GridBackgroundItemComponent } from '../grid-background-item/grid-background-item.component';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-grid-background',
-  templateUrl: './grid-background.component.html',
-  styleUrls: ['./grid-background.component.scss']
+    selector: 'app-grid-background',
+    templateUrl: './grid-background.component.html',
+    styleUrls: ['./grid-background.component.scss'],
+    standalone: true,
+    imports: [NgFor, GridBackgroundItemComponent]
 })
 export class GridBackgroundComponent implements OnChanges {
   @ViewChild('wrapper', {read: ElementRef})wrapper?: ElementRef;

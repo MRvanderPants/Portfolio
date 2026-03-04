@@ -1,11 +1,23 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DataService } from 'src/services/data.service';
 import { Discipline, Job, Project } from 'src/types';
+import { BackToTopComponent } from '../../components/back-to-top/back-to-top.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { TimelineResumeItemComponent } from '../../components/timeline-resume-item/timeline-resume-item.component';
+import { NgFor } from '@angular/common';
+import { TimelineComponent } from '../../components/timeline/timeline.component';
+import { JumpInBoxComponent } from '../../components/jump-in-box/jump-in-box.component';
+import { WorkPanelComponent } from '../../components/work-panel/work-panel.component';
+import { ContentBlockComponent } from '../../components/content-block/content-block.component';
+import { MoveDownComponent } from '../../components/move-down/move-down.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
-  selector: 'app-home-screen',
-  templateUrl: './home-screen.component.html',
-  styleUrls: ['./home-screen.component.scss']
+    selector: 'app-home-screen',
+    templateUrl: './home-screen.component.html',
+    styleUrls: ['./home-screen.component.scss'],
+    standalone: true,
+    imports: [HeaderComponent, MoveDownComponent, ContentBlockComponent, WorkPanelComponent, JumpInBoxComponent, TimelineComponent, NgFor, TimelineResumeItemComponent, FooterComponent, BackToTopComponent]
 })
 export class HomeScreenComponent implements OnInit {
   @ViewChild('tech', {read: ElementRef})techWrapper?: ElementRef;

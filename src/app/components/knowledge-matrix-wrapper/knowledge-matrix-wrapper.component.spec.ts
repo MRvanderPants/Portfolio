@@ -8,8 +8,8 @@ describe('KnowledgeMatrixWrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KnowledgeMatrixWrapperComponent ]
-    })
+    imports: [KnowledgeMatrixWrapperComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(KnowledgeMatrixWrapperComponent);

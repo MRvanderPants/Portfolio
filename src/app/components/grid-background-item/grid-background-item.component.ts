@@ -1,14 +1,18 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from 'src/types';
+import { PrefixIconPipe } from '../pipes/prefix-icon.pipe';
+import { NgStyle, NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-grid-background-item',
-  templateUrl: './grid-background-item.component.html',
-  styleUrls: [
-    './grid-background-item.component.scss',
-    './grid-background-side.component.scss'
-  ]
+    selector: 'app-grid-background-item',
+    templateUrl: './grid-background-item.component.html',
+    styleUrls: [
+        './grid-background-item.component.scss',
+        './grid-background-side.component.scss'
+    ],
+    standalone: true,
+    imports: [NgStyle, NgIf, NgFor, PrefixIconPipe]
 })
 export class GridBackgroundItemComponent {
   @Input() public item!: Project;

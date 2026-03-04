@@ -1,10 +1,15 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Project } from 'src/types';
+import { ProjectGridComponent } from '../project-grid/project-grid.component';
+import { GridBackgroundComponent } from '../grid-background/grid-background.component';
+import { HeaderContentComponent } from '../header-content/header-content.component';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [HeaderContentComponent, GridBackgroundComponent, ProjectGridComponent]
 })
 export class HeaderComponent implements OnInit {
   @Input() public projects: Project[] = [];

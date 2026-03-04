@@ -8,8 +8,8 @@ describe('ContentBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentBlockComponent ]
-    })
+    imports: [ContentBlockComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ContentBlockComponent);

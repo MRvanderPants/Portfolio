@@ -8,8 +8,8 @@ describe('AnimatedLogoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnimatedLogoComponent ]
-    })
+    imports: [AnimatedLogoComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(AnimatedLogoComponent);

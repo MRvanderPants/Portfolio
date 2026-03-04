@@ -8,8 +8,8 @@ describe('DisciplineScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisciplineScreenComponent ]
-    })
+    imports: [DisciplineScreenComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(DisciplineScreenComponent);

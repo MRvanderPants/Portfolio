@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-mobile-nav',
-  templateUrl: './mobile-nav.component.html',
-  styleUrls: ['./mobile-nav.component.scss']
+    selector: 'app-mobile-nav',
+    templateUrl: './mobile-nav.component.html',
+    styleUrls: ['./mobile-nav.component.scss'],
+    standalone: true,
+    imports: [RouterLink]
 })
 export class MobileNavComponent implements OnInit {
 

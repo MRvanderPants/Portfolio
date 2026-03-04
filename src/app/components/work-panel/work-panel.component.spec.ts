@@ -8,8 +8,8 @@ describe('WorkPanelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkPanelComponent ]
-    })
+    imports: [WorkPanelComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(WorkPanelComponent);
