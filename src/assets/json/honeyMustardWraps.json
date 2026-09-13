@@ -1,0 +1,42 @@
+{
+    "title": "Honing Mosterd LunchWraps",
+    "ingredients": [{
+        "key": "Volkoren Wraps",
+        "value": "1 Pak"
+    }, {
+        "key": "Voorgesneden Kipreepjes / kipfilet",
+        "value": "1 Pakje"
+    }, {
+        "key": "Sla (gesneden)",
+        "value": "1 handje per wrap"
+    }, {
+        "key": "Geraspte kaas",
+        "value": "1.5 El per wrap"
+    }, {
+        "key": "Honing Mosterd Saus",
+        "value": "1 El per wrap"
+    }, {
+        "key": "Creme Fraiche",
+        "value": "1 El per wrap"
+    }],
+    "directions": [{
+        "key": "Leg de wraps op het aanrecht, en smeer de creme fraich uit over de wraps."
+    }, {
+        "key": "Strooi een handje vol sla en geraspte kaas uit in het midden van de wrap."
+    }, {
+        "key": "Leg vervolgens een rij aan plakjes kip in het midden. Laat aan alle kanten ongeveer 1/3e ruimte vrij van de wrap."
+    }, {
+        "key": "Verdeel 1 El honing mosterd saus uit over de kip."
+    }, {
+        "key": "Pak de onderste 2 a 3cm van de wrap en vouw deze naar binnen. Pak vervolgens de zijkanten van de wrap en vouw deze voor 1/3e naar binnen en duw deze stevig aan. Rol nu de wrap dicht van onder naar boven en let hierbij op dat de zijkanten netjes recht blijven liggen. Schep het restant van de mix uit de wrap wanneer je de bovenkant bereikt, en breng een beetje creme fraich aan op het bovenste stukje wrap met een mes om de wrap dicht te plakken. Gebruik een keukenpapiertje om de wrap een beetje schoon te vegen indien nodig."
+    }, {
+        "key": "Tip: grill de wraps kort in een tosti of panini ijzer om de wrap iets knapperiger te maken, en de kaas een beetje te laten smelten."
+    }],
+    "tags": [
+        "kip",
+        "sla",
+        "lunch",
+        "bijgerecht",
+        "koud"
+    ]
+}

@@ -53,5 +53,11 @@
   }, {
     "key": "Mango Salsa met komkommer",
     "value": "assets/json/mangoSalsa.json"
+  }, {
+    "key": "Honing Mosterd Lunchwraps",
+    "value": "assets/json/honeyMustardWraps.json"
+  }, {
+    "key": "BLT Lunchwraps",
+    "value": "assets/json/bltWraps.json"
   }
 ]
